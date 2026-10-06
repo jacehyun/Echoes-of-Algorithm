@@ -1,0 +1,203 @@
+[gd_scene format=3 uid="uid://bly5me14jyxgi"]
+
+[ext_resource type="Texture2D" uid="uid://e8086mtus0yy" path="res://AdvancedLevel/Enemy 3_4/Attacking/frame_000.png" id="1_lrn2h"]
+[ext_resource type="Script" uid="uid://b7g853ctkl2yl" path="res://Advanced Level Scripts etc/enemy_3_4.gd" id="1_t5abo"]
+[ext_resource type="Texture2D" uid="uid://doyrunlsomqs2" path="res://AdvancedLevel/Enemy 3_4/Attacking/frame_001.png" id="2_t5abo"]
+[ext_resource type="Texture2D" uid="uid://pwyaivyq6aik" path="res://AdvancedLevel/Enemy 3_4/Attacking/frame_002.png" id="3_lctx2"]
+[ext_resource type="Texture2D" uid="uid://btqjwf7r6vess" path="res://AdvancedLevel/Enemy 3_4/Attacking/frame_003.png" id="4_expim"]
+[ext_resource type="Texture2D" uid="uid://cgu3su3frt0fk" path="res://AdvancedLevel/Enemy 3_4/Attacking/frame_004.png" id="5_bhtbo"]
+[ext_resource type="Texture2D" uid="uid://du18x7tu6vyuk" path="res://AdvancedLevel/Enemy 3_4/Attacking/frame_005.png" id="6_er6st"]
+[ext_resource type="Texture2D" uid="uid://c6d7ggflkbe3m" path="res://AdvancedLevel/Enemy 3_4/Dying/frame_000.png" id="7_31yg2"]
+[ext_resource type="Texture2D" uid="uid://dvbvm8w8733at" path="res://AdvancedLevel/Enemy 3_4/Dying/frame_001.png" id="8_p3esr"]
+[ext_resource type="Texture2D" uid="uid://buraij60hadn1" path="res://AdvancedLevel/Enemy 3_4/Dying/frame_004.png" id="9_hc4o8"]
+[ext_resource type="Texture2D" uid="uid://btid7gebgy14v" path="res://AdvancedLevel/Enemy 3_4/Dying/frame_003.png" id="10_qdhx1"]
+[ext_resource type="Texture2D" uid="uid://b66vxfqen85u8" path="res://AdvancedLevel/Enemy 3_4/Dying/frame_002.png" id="11_8wf32"]
+[ext_resource type="Texture2D" uid="uid://fcau3v7tgqh2" path="res://AdvancedLevel/Enemy 3_4/Getting Hit/frame_001.png" id="12_xwoym"]
+[ext_resource type="Texture2D" uid="uid://cghkf5pgdtc2a" path="res://AdvancedLevel/Enemy 3_4/Getting Hit/frame_003.png" id="13_gwjmf"]
+[ext_resource type="Texture2D" uid="uid://0tpgcvalw4ot" path="res://AdvancedLevel/Enemy 3_4/Getting Hit/frame_002.png" id="14_b8gxh"]
+[ext_resource type="Texture2D" uid="uid://bnqo2fk5bdvfq" path="res://AdvancedLevel/Enemy 3_4/Getting Hit/frame_000.png" id="15_t06ki"]
+[ext_resource type="Texture2D" uid="uid://eiw0o0kmuijq" path="res://AdvancedLevel/Enemy 3_4/Idle/frame_000.png" id="16_ri0yj"]
+[ext_resource type="Texture2D" uid="uid://ctnx70pdges1h" path="res://AdvancedLevel/Enemy 3_4/Idle/frame_001.png" id="17_o85kl"]
+[ext_resource type="Texture2D" uid="uid://gynkxvvety0f" path="res://AdvancedLevel/Enemy 3_4/Idle/frame_002.png" id="18_eafvi"]
+[ext_resource type="Texture2D" uid="uid://dlg0kye3b0gq0" path="res://AdvancedLevel/Enemy 3_4/Idle/frame_003.png" id="19_cknar"]
+[ext_resource type="Texture2D" uid="uid://bc7fhqhwcbceu" path="res://AdvancedLevel/Enemy 3_4/Idle/frame_004.png" id="20_kgie7"]
+[ext_resource type="Texture2D" uid="uid://btod2j13hk2d1" path="res://AdvancedLevel/Enemy 3_4/Idle/frame_005.png" id="21_ura31"]
+[ext_resource type="Texture2D" uid="uid://wqslvxogp2ts" path="res://AdvancedLevel/Enemy 3_4/Idle/frame_006.png" id="22_qr624"]
+[ext_resource type="Texture2D" uid="uid://crivixyrymq2c" path="res://AdvancedLevel/Enemy 3_4/Idle/frame_007.png" id="23_wukyg"]
+[ext_resource type="Texture2D" uid="uid://yqym8ncrbm3b" path="res://AdvancedLevel/Enemy 3_4/Walking/frame_000.png" id="24_cfhab"]
+[ext_resource type="Texture2D" uid="uid://olybm8vcuwqd" path="res://AdvancedLevel/Enemy 3_4/Walking/frame_001.png" id="25_7hkfj"]
+[ext_resource type="Texture2D" uid="uid://diugyfxlusvhg" path="res://AdvancedLevel/Enemy 3_4/Walking/frame_002.png" id="26_yvtym"]
+[ext_resource type="Texture2D" uid="uid://c13xg6hpln7t8" path="res://AdvancedLevel/Enemy 3_4/Walking/frame_003.png" id="27_qhd6s"]
+[ext_resource type="Texture2D" uid="uid://xbhtpq5m6gxm" path="res://AdvancedLevel/Enemy 3_4/Walking/frame_004.png" id="28_cllsg"]
+[ext_resource type="Texture2D" uid="uid://c1e5jm8sty4i5" path="res://AdvancedLevel/Enemy 3_4/Walking/frame_005.png" id="29_odod5"]
+[ext_resource type="Texture2D" uid="uid://coys27s3c56mr" path="res://AdvancedLevel/Enemy 3_4/Walking/frame_006.png" id="30_i3c5c"]
+[ext_resource type="Texture2D" uid="uid://fsi28rukcuxk" path="res://AdvancedLevel/Enemy 3_4/Walking/frame_007.png" id="31_nt3o1"]
+[ext_resource type="Texture2D" uid="uid://eoql5vrxubpf" path="res://Level1_1/panels/dialogue.png" id="32_5lgtu"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="33_x7tpx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q2jat"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lrn2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t5abo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lctx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_expim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bhtbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_er6st")
+}],
+"loop": true,
+"name": &"Attacking 3_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_31yg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p3esr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hc4o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qdhx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8wf32")
+}],
+"loop": true,
+"name": &"Dying 3_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_xwoym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gwjmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b8gxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_t06ki")
+}],
+"loop": true,
+"name": &"Getting Hit 3_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ri0yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_o85kl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_eafvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cknar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kgie7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ura31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_qr624")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wukyg")
+}],
+"loop": true,
+"name": &"Idle 3_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_cfhab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_7hkfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_yvtym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qhd6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_cllsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_odod5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_i3c5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_nt3o1")
+}],
+"loop": true,
+"name": &"Walking 3_4",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vrmg2"]
+radius = 57.14018
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fgbe3"]
+texture = ExtResource("32_5lgtu")
+expand_margin_bottom = 25.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_u2mlg"]
+font = ExtResource("33_x7tpx")
+font_size = 6
+font_color = Color(0, 0, 0, 1)
+
+[node name="Enemy 3_4" type="CharacterBody2D" unique_id=1227167195]
+script = ExtResource("1_t5abo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1545138138]
+position = Vector2(-0.5000076, -1.5)
+scale = Vector2(1.9107143, 1.875)
+sprite_frames = SubResource("SpriteFrames_q2jat")
+animation = &"Attacking 3_4"
+frame_progress = 0.9489329
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1623271411]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_vrmg2")
+
+[node name="DialogueBox" type="Panel" parent="." unique_id=432787399]
+visible = false
+offset_left = -100.0
+offset_top = -45.0
+offset_right = -28.0
+offset_bottom = 11.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_fgbe3")
+
+[node name="Label" type="Label" parent="DialogueBox" unique_id=1651850784]
+texture_filter = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 16.0
+offset_right = 67.0
+offset_bottom = 39.0
+label_settings = SubResource("LabelSettings_u2mlg")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

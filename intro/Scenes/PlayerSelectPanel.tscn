@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://b0apjmimp4rjy"]
+
+[ext_resource type="Script" uid="uid://bpekmsd5a5vgq" path="res://intro/Scenes/player_select_panel.gd" id="1_2dfqf"]
+[ext_resource type="Texture2D" uid="uid://d00byovu4hv87" path="res://intro/Assets/Background Image/NewPlayerPanel.png" id="2_ftaqi"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="3_4enos"]
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://intro/Assets/Font/PressStart2P-Regular.ttf" id="4_eflf2"]
+[ext_resource type="Texture2D" uid="uid://6442kribpajv" path="res://AAA INTRO/Assets/Buttons/next button.png" id="4_n6y4w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shnmr"]
+texture = ExtResource("2_ftaqi")
+expand_margin_left = 300.0
+expand_margin_top = 200.0
+expand_margin_right = 300.0
+expand_margin_bottom = 200.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_wdlno"]
+color = Color(0.2, 0.101960786, 0.22352941, 1)
+
+[sub_resource type="Theme" id="Theme_7dyl4"]
+default_font = ExtResource("4_eflf2")
+default_font_size = 13
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eflf2"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_n6y4w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4enos"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_n6y4w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wdlno"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_n6y4w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nuhfr"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_n6y4w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n6y4w"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_n6y4w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uqi5n"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_n6y4w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_scejk"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_n6y4w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0moi"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_n6y4w")
+
+[node name="PlayerSelectPanel" type="CanvasLayer" unique_id=382453067]
+script = ExtResource("1_2dfqf")
+
+[node name="Panel" type="Panel" parent="." unique_id=283304545]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1155499121]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=823971376]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_shnmr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer" unique_id=261584954]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1739783754]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4enos")
+text = "WHO'S PLAYING?"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=648744000]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_wdlno")
+
+[node name="PlayerList" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=622219939]
+layout_mode = 2
+size_flags_vertical = 8
+theme = SubResource("Theme_7dyl4")
+theme_override_constants/separation = 15
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=377195845]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_wdlno")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1144184937]
+layout_mode = 2
+
+[node name="NewPlayerButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=979058528]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.25105312, 0.52863944, 0.087895386, 1)
+theme_override_colors/font_hover_color = Color(0.029506527, 0.029506546, 0.029506704, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.32072186, 0.63905543, 0.13392553, 1)
+theme_override_fonts/font = ExtResource("3_4enos")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxTexture_eflf2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4enos")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wdlno")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_nuhfr")
+text = "New Player"
+
+[node name="CancelButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=78595295]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.2629418, 0.5819277, 0.06327018, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.3319192, 0.5687976, 0.11813622, 1)
+theme_override_fonts/font = ExtResource("3_4enos")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxTexture_n6y4w")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uqi5n")
+theme_override_styles/hover = SubResource("StyleBoxTexture_scejk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_x0moi")
+text = "Cancel"

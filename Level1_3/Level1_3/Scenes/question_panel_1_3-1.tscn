@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://bu5ouwt84qd8i"]
+
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://panels/Question Panel.png" id="1_if7dc"]
+[ext_resource type="Script" uid="uid://d2qn7u7u77qk3" path="res://Level1_3/Scenes/question_panel_1_3-1.gd" id="1_mp7tk"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="2_mp7tk"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://panels/answerbutton.png" id="3_nm30w"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://panels/hoverbutton.png" id="4_tdeo2"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="5_2deif"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ymkel"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_if7dc")
+
+[sub_resource type="LabelSettings" id="LabelSettings_k0jgu"]
+font = ExtResource("2_mp7tk")
+font_size = 17
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n52gk"]
+line_spacing = 5.0
+font = ExtResource("2_mp7tk")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b1pib"]
+line_spacing = 15.0
+font = ExtResource("5_2deif")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="QuestionPanel1_3-1" type="Control" unique_id=1885695574]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mp7tk")
+
+[node name="QuestionBox" type="Panel" parent="." unique_id=1985836548]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 98.0
+offset_right = 1001.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ymkel")
+
+[node name="Label" type="Label" parent="QuestionBox" unique_id=425218359]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043895748
+anchor_top = 0.20392157
+anchor_right = 0.946502
+anchor_bottom = 0.44509804
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "Question:
+What is a dataset?
+"
+label_settings = SubResource("LabelSettings_k0jgu")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptA" type="TextureButton" parent="QuestionBox" unique_id=274175662]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 215.0
+offset_right = 347.0
+offset_bottom = 298.0
+texture_normal = ExtResource("3_nm30w")
+texture_hover = ExtResource("4_tdeo2")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptA" unique_id=1002368924]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 26.0
+offset_right = 285.0
+offset_bottom = 53.0
+text = "A. A collection of data
+used for training models"
+label_settings = SubResource("LabelSettings_n52gk")
+
+[node name="OptB" type="TextureButton" parent="QuestionBox" unique_id=136069752]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 327.0
+offset_right = 345.0
+offset_bottom = 410.0
+texture_normal = ExtResource("3_nm30w")
+texture_hover = ExtResource("4_tdeo2")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptB" unique_id=2002771386]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 34.0
+offset_right = 292.0
+offset_bottom = 59.0
+text = "B. A computer virus"
+label_settings = SubResource("LabelSettings_n52gk")
+
+[node name="OptC" type="TextureButton" parent="QuestionBox" unique_id=1628949998]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 215.0
+offset_right = 664.0
+offset_bottom = 298.0
+texture_normal = ExtResource("3_nm30w")
+texture_hover = ExtResource("4_tdeo2")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptC" unique_id=4081215]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 27.0
+offset_right = 290.0
+offset_bottom = 54.0
+text = "C. A type of hardware
+device"
+label_settings = SubResource("LabelSettings_n52gk")
+
+[node name="OptD" type="TextureButton" parent="QuestionBox" unique_id=794645027]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 325.0
+offset_right = 661.0
+offset_bottom = 408.0
+texture_normal = ExtResource("3_nm30w")
+texture_hover = ExtResource("4_tdeo2")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptD" unique_id=987157560]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 28.0
+offset_right = 293.0
+offset_bottom = 55.0
+text = "D. A programming
+language"
+label_settings = SubResource("LabelSettings_n52gk")
+
+[node name="HintLabel" type="Label" parent="QuestionBox" unique_id=1665684642]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 435.0
+offset_right = 694.0
+offset_bottom = 491.0
+text = " Hint 💡: Machine learning models need many examples of data
+to learn patterns."
+label_settings = SubResource("LabelSettings_b1pib")

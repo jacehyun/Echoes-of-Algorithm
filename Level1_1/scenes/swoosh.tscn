@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c0rmajbae4k04"]
+
+[ext_resource type="Texture2D" uid="uid://drr6lfb6o3e1r" path="res://Level1_1/assets/Sprites/Swoosh/1.png" id="1_e6vri"]
+[ext_resource type="Script" uid="uid://c5v7kbsanfc0t" path="res://Level1_1/scripts/swoosh.gd" id="1_iskvo"]
+[ext_resource type="Texture2D" uid="uid://cyn1lxinxyebj" path="res://Level1_1/assets/Sprites/Swoosh/2.png" id="2_iskvo"]
+[ext_resource type="Texture2D" uid="uid://bolr3i2dvlafr" path="res://Level1_1/assets/Sprites/Swoosh/3.png" id="3_chg0a"]
+[ext_resource type="Texture2D" uid="uid://ffxrcymr16vw" path="res://Level1_1/assets/Sprites/Swoosh/4.png" id="4_mdx1d"]
+[ext_resource type="Texture2D" uid="uid://l24rf5yqvg5p" path="res://Level1_1/assets/Sprites/Swoosh/5.png" id="5_pdpvc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alat8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e6vri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_iskvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_chg0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mdx1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pdpvc")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oftdp"]
+size = Vector2(1136, 45)
+
+[node name="Swoosh" type="Area2D" unique_id=20603946]
+script = ExtResource("1_iskvo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=585869276]
+position = Vector2(640.296, 346.99997)
+scale = Vector2(2.3536448, 1.1290323)
+sprite_frames = SubResource("SpriteFrames_alat8")
+animation = &"fly"
+autoplay = "fly"
+frame = 4
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1802976864]
+position = Vector2(655, 374)
+shape = SubResource("RectangleShape2D_oftdp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

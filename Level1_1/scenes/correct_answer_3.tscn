@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://dfkdspju5ms48"]
+
+[ext_resource type="Script" uid="uid://2qvnvgaicclx" path="res://Level1_1/scripts/correct_answer_3.gd" id="1_7hug0"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="2_m02dg"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="3_q346j"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="4_lqedc"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="5_oganb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j7tbc"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("2_m02dg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vjox8"]
+font = ExtResource("3_q346j")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6xd7h"]
+line_spacing = 15.0
+font = ExtResource("3_q346j")
+font_size = 13
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7umyk"]
+font = ExtResource("3_q346j")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="CorrectAnswer3" type="Control" unique_id=1018464345]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7hug0")
+
+[node name="CorrectAnsBox" type="Panel" parent="." unique_id=844578498]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 133.0
+offset_right = 952.0
+offset_bottom = 538.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j7tbc")
+
+[node name="Label" type="Label" parent="CorrectAnsBox" unique_id=762748007]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041152265
+anchor_top = 0.13333334
+anchor_right = 0.9437585
+anchor_bottom = 0.29382715
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "The answer is ...
+C. Spam Email Filter"
+label_settings = SubResource("LabelSettings_vjox8")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CorrectAnsBox" unique_id=1414315780]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02028263
+anchor_top = 0.34828368
+anchor_right = 0.9116415
+anchor_bottom = 0.59324133
+offset_left = 35.20166
+offset_top = 17.945099
+offset_right = 35.20172
+offset_bottom = 59.73726
+grow_horizontal = 2
+text = "That's right! ✅
+Spam filters analyze email patterns to classify messages as spam or not spam using Machine Learning."
+label_settings = SubResource("LabelSettings_6xd7h")
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Okay" type="TextureButton" parent="CorrectAnsBox" unique_id=423384620]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 317.0
+offset_right = 425.0
+offset_bottom = 374.0
+texture_normal = ExtResource("4_lqedc")
+texture_hover = ExtResource("5_oganb")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="CorrectAnsBox/Okay" unique_id=269122155]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 201.0
+offset_bottom = 43.0
+text = "Nice!"
+label_settings = SubResource("LabelSettings_7umyk")
+horizontal_alignment = 1

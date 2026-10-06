@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://chb4k12tjfyj"]
+
+[ext_resource type="Script" uid="uid://d114cvh7m0j25" path="res://intro/Scenes/difficulty_selection.gd" id="1_oyccv"]
+[ext_resource type="Texture2D" uid="uid://rghd7j1ppsyv" path="res://intro/Assets/Background Image/startpage_bg.png" id="2_djj0i"]
+[ext_resource type="PackedScene" uid="uid://bt875swtyavm0" path="res://intro/Character/intro_player.tscn" id="2_oyccv"]
+[ext_resource type="PackedScene" uid="uid://duhp7h6i08ug8" path="res://Level1_1/Settings.tscn" id="4_posuv"]
+[ext_resource type="PackedScene" uid="uid://c6ckltvqki3in" path="res://intro/Scenes/DifficultySelectPanel.tscn" id="4_x3ap8"]
+[ext_resource type="AudioStream" uid="uid://dnuudjakr7yyt" path="res://intro/Assets/Music/xDeviruchi - Title Theme .wav" id="7_posuv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_srjxl"]
+distance = 22.0
+
+[node name="Difficulty Selection" type="Node2D" unique_id=1511288676]
+script = ExtResource("1_oyccv")
+
+[node name="StartpageBg" type="Sprite2D" parent="." unique_id=139807168]
+position = Vector2(72.50002, -80.00001)
+scale = Vector2(0.16718748, 0.2050114)
+texture = ExtResource("2_djj0i")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1735385224]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="Intro Player" parent="." unique_id=1464439105 instance=ExtResource("2_oyccv")]
+position = Vector2(-95, -11)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2146931744]
+position = Vector2(74, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1736988612]
+position = Vector2(0, 5)
+shape = SubResource("WorldBoundaryShape2D_srjxl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=882096691]
+
+[node name="DifficultySelectPanel" parent="CanvasLayer" unique_id=2048455406 instance=ExtResource("4_x3ap8")]
+
+[node name="Settings" parent="CanvasLayer" unique_id=1111660280 instance=ExtResource("4_posuv")]
+mouse_filter = 2
+
+[node name="introbg" type="AudioStreamPlayer2D" parent="." unique_id=544007229]
+stream = ExtResource("7_posuv")

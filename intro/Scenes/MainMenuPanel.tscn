@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://bqtnv1svwt0tg"]
+
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://intro/Assets/Font/PressStart2P-Regular.ttf" id="1_1jp3b"]
+[ext_resource type="Script" uid="uid://bw06mfbqq8t1s" path="res://intro/Scenes/main_menu_panel.gd" id="1_gsj3h"]
+[ext_resource type="Texture2D" uid="uid://dnpcna3lrh8yc" path="res://intro/Assets/Buttons/basic button.png" id="2_gsj3h"]
+[ext_resource type="Texture2D" uid="uid://b58f7jqpvhku1" path="res://intro/Assets/Buttons/left button.png" id="4_o6vl3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6vl3"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+texture = ExtResource("2_gsj3h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bhvdo"]
+texture = ExtResource("2_gsj3h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c46n8"]
+texture = ExtResource("2_gsj3h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a1mat"]
+texture = ExtResource("2_gsj3h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5dl34"]
+texture = ExtResource("2_gsj3h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ushq7"]
+texture = ExtResource("4_o6vl3")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5dl34"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3l7j3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7l3ar"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a68ne"]
+
+[node name="MainMenu" type="Control" unique_id=1951417428]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gsj3h")
+
+[node name="MainMenuButtons_Container" type="HBoxContainer" parent="." unique_id=1661794632]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -387.5
+offset_top = -135.0
+offset_right = 387.5
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="NewGame_Button2" type="Button" parent="MainMenuButtons_Container" unique_id=2141841320]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1jp3b")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_o6vl3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bhvdo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c46n8")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a1mat")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5dl34")
+text = "New Game"
+
+[node name="Continue_Button" type="Button" parent="MainMenuButtons_Container" unique_id=758259454]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1jp3b")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_o6vl3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bhvdo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c46n8")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a1mat")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5dl34")
+text = "Continue"
+
+[node name="Leaderboard" type="Button" parent="MainMenuButtons_Container" unique_id=2108107650]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1jp3b")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_o6vl3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bhvdo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c46n8")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a1mat")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5dl34")
+text = "Leaderboards"
+
+[node name="Glossary_Button" type="Button" parent="MainMenuButtons_Container" unique_id=1360537527]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1jp3b")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_o6vl3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bhvdo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c46n8")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a1mat")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5dl34")
+text = "Glossary"
+
+[node name="Return_Button" type="Button" parent="." unique_id=1549279756]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 65.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ushq7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5dl34")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3l7j3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7l3ar")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a68ne")
+
+[connection signal="pressed" from="MainMenuButtons_Container/NewGame_Button2" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="MainMenuButtons_Container/Continue_Button" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="MainMenuButtons_Container/Leaderboard" to="." method="_on_leaderboard_button_pressed"]
+[connection signal="pressed" from="MainMenuButtons_Container/Glossary_Button" to="." method="_on_glossary_button_pressed"]
+[connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]

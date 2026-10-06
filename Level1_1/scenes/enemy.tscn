@@ -1,0 +1,241 @@
+[gd_scene format=3 uid="uid://c5wbdclcv48io"]
+
+[ext_resource type="Script" uid="uid://cynew8lhe0oxo" path="res://Level1_1/scripts/enemy.gd" id="1_56e18"]
+[ext_resource type="Texture2D" uid="uid://c434d6k7t5m2o" path="res://Level1_1/assets/Sprites/DeathVillainAnimation/frame_008.png" id="2_4qc2n"]
+[ext_resource type="Texture2D" uid="uid://dq8qe88trebb1" path="res://Level1_1/assets/Sprites/DeathVillainAnimation/frame_007.png" id="3_kebrx"]
+[ext_resource type="Texture2D" uid="uid://c343vfqdi6tfg" path="res://Level1_1/assets/Sprites/DeathVillainAnimation/frame_006.png" id="4_pvmo7"]
+[ext_resource type="Texture2D" uid="uid://dkskgnwdn1lx3" path="res://Level1_1/assets/Sprites/DeathVillainAnimation/frame_005.png" id="5_qhnpt"]
+[ext_resource type="Texture2D" uid="uid://brbv5pv1vs55b" path="res://Level1_1/assets/Sprites/DeathVillainAnimation/frame_004.png" id="6_kmohj"]
+[ext_resource type="Texture2D" uid="uid://bdrw8rj7k5oxu" path="res://Level1_1/assets/Sprites/DeathVillainAnimation/frame_003.png" id="7_vgc5n"]
+[ext_resource type="Texture2D" uid="uid://baphjnkcpp6qv" path="res://Level1_1/assets/Sprites/DeathVillainAnimation/frame_002.png" id="8_f7grd"]
+[ext_resource type="Texture2D" uid="uid://ddt1067xs12mc" path="res://Level1_1/assets/Sprites/DeathVillainAnimation/frame_000.png" id="9_vmkk3"]
+[ext_resource type="Texture2D" uid="uid://dnolgegb1qp6l" path="res://Level1_1/assets/Sprites/DeathVillainAnimation/frame_001.png" id="10_3ambm"]
+[ext_resource type="Texture2D" uid="uid://c0b4sddbmqkxa" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_000.png" id="11_crqr6"]
+[ext_resource type="Texture2D" uid="uid://cib5n48yoo58m" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_001.png" id="12_yjtbs"]
+[ext_resource type="Texture2D" uid="uid://bejqxsagl8tic" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_002.png" id="13_g4dh8"]
+[ext_resource type="Texture2D" uid="uid://m86v5vaxg4c5" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_003.png" id="14_svl5u"]
+[ext_resource type="Texture2D" uid="uid://b6jdf1dpabdbk" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_004.png" id="15_5vkn0"]
+[ext_resource type="Texture2D" uid="uid://djc1lotc7aa2u" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_005.png" id="16_j8a80"]
+[ext_resource type="Texture2D" uid="uid://b170niq30oi0q" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_006.png" id="17_8ugj7"]
+[ext_resource type="Texture2D" uid="uid://pqf5ixvrdpj3" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_007.png" id="18_t0an7"]
+[ext_resource type="Texture2D" uid="uid://cm1xyjouy1kat" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_008.png" id="19_1knsq"]
+[ext_resource type="Texture2D" uid="uid://c7uxn387y0seo" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_009.png" id="20_fbpt6"]
+[ext_resource type="Texture2D" uid="uid://dkbrl5whcj8ex" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_010.png" id="21_85q6w"]
+[ext_resource type="Texture2D" uid="uid://rhk6k6oqnnfs" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_011.png" id="22_7jiwx"]
+[ext_resource type="Texture2D" uid="uid://bmyf7vquuqeyt" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_012.png" id="23_lmx0i"]
+[ext_resource type="Texture2D" uid="uid://3d680b7m3nck" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_013.png" id="24_ofhdd"]
+[ext_resource type="Texture2D" uid="uid://chos2gfovup6x" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_014.png" id="25_jrxom"]
+[ext_resource type="Texture2D" uid="uid://d07f7bhcnhwa4" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_015.png" id="26_6tn78"]
+[ext_resource type="Texture2D" uid="uid://c7krl8xmhnlyn" path="res://Level1_1/assets/Sprites/BeginnerEnemy/frame_016.png" id="27_mfuv8"]
+[ext_resource type="Texture2D" uid="uid://bktb240fy57ke" path="res://Level1_1/assets/Sprites/Enemy Walking Animation/frame_000.png" id="28_wh8m8"]
+[ext_resource type="Texture2D" uid="uid://b6ynunyd5iqqj" path="res://Level1_1/assets/Sprites/Enemy Walking Animation/frame_001.png" id="29_ekq2w"]
+[ext_resource type="Texture2D" uid="uid://buwe5umkvwhmy" path="res://Level1_1/assets/Sprites/Enemy Walking Animation/frame_002.png" id="30_15rx6"]
+[ext_resource type="Texture2D" uid="uid://kwrmbw7w1q2v" path="res://Level1_1/assets/Sprites/Enemy Walking Animation/frame_003.png" id="31_dlhu3"]
+[ext_resource type="Texture2D" uid="uid://d8imts2jcj7p" path="res://Level1_1/assets/Sprites/Enemy Walking Animation/frame_004.png" id="32_bk8s2"]
+[ext_resource type="Texture2D" uid="uid://cnq5kfcyjsfk" path="res://Level1_1/assets/Sprites/Enemy Walking Animation/frame_005.png" id="33_qmjd3"]
+[ext_resource type="Texture2D" uid="uid://dlfcgtmyxbcej" path="res://Level1_1/assets/Sprites/Enemy Walking Animation/frame_006.png" id="34_6rld2"]
+[ext_resource type="Texture2D" uid="uid://cl843m4xaqtn3" path="res://Level1_1/assets/Sprites/Enemy Walking Animation/frame_007.png" id="35_mppb5"]
+[ext_resource type="Texture2D" uid="uid://bah525v6nuxa6" path="res://Level1_1/assets/Attacking/frame_000.png" id="36_56e18"]
+[ext_resource type="Texture2D" uid="uid://dkjo1dluwbdew" path="res://Level1_1/assets/Attacking/frame_001.png" id="37_4qc2n"]
+[ext_resource type="Texture2D" uid="uid://d1hq73wi2tk4t" path="res://Level1_1/assets/Attacking/frame_002.png" id="38_kebrx"]
+[ext_resource type="Texture2D" uid="uid://b3703136nac1u" path="res://Level1_1/assets/Attacking/frame_003.png" id="39_pvmo7"]
+[ext_resource type="Texture2D" uid="uid://bbioan7jjeeq4" path="res://Level1_1/assets/Attacking/frame_004.png" id="40_qhnpt"]
+[ext_resource type="Texture2D" uid="uid://dxvbs1sinli0b" path="res://Level1_1/assets/Attacking/frame_005.png" id="41_kmohj"]
+[ext_resource type="Texture2D" uid="uid://dbdhxubcu4hli" path="res://Level1_1/assets/Attacking/frame_006.png" id="42_vgc5n"]
+[ext_resource type="Texture2D" uid="uid://dljrpph2bomx3" path="res://Level1_1/assets/Attacking/frame_007.png" id="43_f7grd"]
+[ext_resource type="Texture2D" uid="uid://eoql5vrxubpf" path="res://Level1_1/panels/dialogue.png" id="44_18308"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="45_o5yo3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hb8ge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4qc2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kebrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pvmo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qhnpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kmohj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vgc5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_f7grd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vmkk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3ambm")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_crqr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yjtbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_g4dh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_svl5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5vkn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_j8a80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8ugj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_t0an7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1knsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_fbpt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_85q6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_7jiwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lmx0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ofhdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_jrxom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_6tn78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_mfuv8")
+}],
+"loop": true,
+"name": &"Idle_Movement Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_wh8m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ekq2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_15rx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dlhu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_bk8s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_qmjd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_6rld2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_mppb5")
+}],
+"loop": false,
+"name": &"Running-West",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_56e18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_4qc2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_kebrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_pvmo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_qhnpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_kmohj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_vgc5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_f7grd")
+}],
+"loop": true,
+"name": &"Skill",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e1ltt"]
+radius = 19.026299
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6q4o"]
+texture = ExtResource("44_18308")
+expand_margin_bottom = 25.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_2tuss"]
+font = ExtResource("45_o5yo3")
+font_size = 6
+font_color = Color(0, 0, 0, 1)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=54512109 groups=["enemy"]]
+script = ExtResource("1_56e18")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1789673358 groups=["enemy"]]
+sprite_frames = SubResource("SpriteFrames_hb8ge")
+animation = &"Skill"
+autoplay = "Idle_Movement Right"
+frame_progress = 0.5474763
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725191453]
+position = Vector2(1, -1)
+shape = SubResource("CircleShape2D_e1ltt")
+
+[node name="DialogueBox" type="Panel" parent="." unique_id=1712206307]
+visible = false
+offset_left = -86.0
+offset_top = -65.0
+offset_right = -14.0
+offset_bottom = -9.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_x6q4o")
+
+[node name="Label" type="Label" parent="DialogueBox" unique_id=1490842816]
+texture_filter = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 16.0
+offset_right = 67.0
+offset_bottom = 39.0
+label_settings = SubResource("LabelSettings_2tuss")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

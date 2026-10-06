@@ -1,0 +1,15 @@
+# Godot generated/cache
+.godot/
+
+# Android exports/build outputs
+*.apk
+*.apk.idsig
+*.aab
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/

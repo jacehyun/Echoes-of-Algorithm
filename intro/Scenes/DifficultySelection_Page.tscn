@@ -1,0 +1,375 @@
+[gd_scene format=3 uid="uid://4ikyygggvbhw"]
+
+[ext_resource type="Script" uid="uid://8u0i0kcfw76p" path="res://intro/Scenes/difficulty_selection_page.gd" id="1_5sr7g"]
+[ext_resource type="Texture2D" uid="uid://rghd7j1ppsyv" path="res://AAA INTRO/Assets/Background Image/startpage_bg.png" id="2_po4ao"]
+[ext_resource type="Texture2D" uid="uid://b58f7jqpvhku1" path="res://AAA INTRO/Assets/Buttons/left button.png" id="3_y6x74"]
+[ext_resource type="Texture2D" uid="uid://cmxuojh0bot4o" path="res://AAA INTRO/Assets/Buttons/setting button.png" id="4_crsxl"]
+[ext_resource type="Texture2D" uid="uid://bq4jnma2yuke6" path="res://AAA INTRO/Assets/Background Image/topic container.png" id="5_3s2re"]
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://intro/Assets/Font/PressStart2P-Regular.ttf" id="6_y0pj4"]
+[ext_resource type="Texture2D" uid="uid://b6e44f2incaff" path="res://AAA INTRO/Assets/Buttons/beginner button.png" id="7_crsxl"]
+[ext_resource type="Texture2D" uid="uid://omc5v2dsxw3h" path="res://AAA INTRO/Assets/Buttons/intermediate button.png" id="8_3s2re"]
+[ext_resource type="Texture2D" uid="uid://d0b8ps1wt43lk" path="res://AAA INTRO/Assets/Buttons/advanced button.png" id="9_y0pj4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yk3hh"]
+texture = ExtResource("2_po4ao")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5oce"]
+texture = ExtResource("3_y6x74")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_031i7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i3j7j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rdedn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jt6pf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pkjhq"]
+texture = ExtResource("4_crsxl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjfe5"]
+texture = ExtResource("5_3s2re")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bglwt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lseak"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_28tcw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujjc5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_icejs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gq8tn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fm7fm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dttod"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5k0mm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_22p1g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8iigr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ix0lp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_smrbp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_omhln"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oqqac"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hm0jw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dnsd6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_031i7"]
+texture = ExtResource("7_crsxl")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkjhq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjfe5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eovej"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tj0wd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t0j85"]
+texture = ExtResource("8_3s2re")
+modulate_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0fbfj"]
+texture = ExtResource("9_y0pj4")
+modulate_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+
+[node name="DifficultySelectionPage" type="Control" unique_id=1745528054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5sr7g")
+
+[node name="DifficultySelection_BG" type="Panel" parent="." unique_id=470973156]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yk3hh")
+
+[node name="Return_Button" type="Button" parent="DifficultySelection_BG" unique_id=1162091061]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 65.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_m5oce")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_031i7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i3j7j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rdedn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jt6pf")
+
+[node name="SettingsMenu_Button" type="Button" parent="DifficultySelection_BG" unique_id=2059348567]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = 90.0
+grow_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_pkjhq")
+
+[node name="SettingsMenu_Panel" type="PanelContainer" parent="DifficultySelection_BG" unique_id=184129197]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -185.0
+offset_right = 175.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gjfe5")
+
+[node name="MarginContainer" type="MarginContainer" parent="DifficultySelection_BG/SettingsMenu_Panel" unique_id=1329186177]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DifficultySelection_BG/SettingsMenu_Panel/MarginContainer" unique_id=387485528]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Resume_Button" type="Button" parent="DifficultySelection_BG/SettingsMenu_Panel/MarginContainer/VBoxContainer" unique_id=447591482]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bglwt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lseak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_28tcw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ujjc5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_icejs")
+text = "Resume"
+
+[node name="Settings_Button" type="Button" parent="DifficultySelection_BG/SettingsMenu_Panel/MarginContainer/VBoxContainer" unique_id=593592121]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gq8tn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fm7fm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dttod")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5k0mm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_22p1g")
+text = "Settings"
+
+[node name="Exit_Button" type="Button" parent="DifficultySelection_BG/SettingsMenu_Panel/MarginContainer/VBoxContainer" unique_id=784230561]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8iigr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ix0lp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_smrbp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_omhln")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oqqac")
+text = "Exit"
+
+[node name="Settings_Panel" type="PanelContainer" parent="DifficultySelection_BG" unique_id=1326543463]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ExitConfirmation_Panel" type="PanelContainer" parent="DifficultySelection_BG" unique_id=884192927]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -185.0
+offset_right = 225.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gjfe5")
+
+[node name="MarginContainer" type="MarginContainer" parent="DifficultySelection_BG/ExitConfirmation_Panel" unique_id=1734534204]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DifficultySelection_BG/ExitConfirmation_Panel/MarginContainer" unique_id=1393067648]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Label" type="Label" parent="DifficultySelection_BG/ExitConfirmation_Panel/MarginContainer/VBoxContainer" unique_id=1363639209]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hm0jw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dnsd6")
+text = "Are you sure you
+want to exit?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DifficultySelection_BG/ExitConfirmation_Panel/MarginContainer/VBoxContainer" unique_id=389703559]
+layout_mode = 2
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="ConfirmExit_Button" type="Button" parent="DifficultySelection_BG/ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1164449681]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bglwt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lseak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_28tcw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ujjc5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_icejs")
+text = "Yes"
+
+[node name="CancelExit_Button" type="Button" parent="DifficultySelection_BG/ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1168012481]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gq8tn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fm7fm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dttod")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5k0mm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_22p1g")
+text = "Cancel"
+
+[node name="DifficultySelectButton_Container" type="HBoxContainer" parent="DifficultySelection_BG" unique_id=820192584]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -135.0
+offset_right = 500.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Beginner_Button" type="Button" parent="DifficultySelection_BG/DifficultySelectButton_Container" unique_id=1541926896]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_031i7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pkjhq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gjfe5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_eovej")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tj0wd")
+text = "Beginner"
+
+[node name="Intermediate_Button" type="Button" parent="DifficultySelection_BG/DifficultySelectButton_Container" unique_id=881493696]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_t0j85")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pkjhq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gjfe5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_eovej")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tj0wd")
+text = "Intermediate"
+
+[node name="Advanced_Button" type="Button" parent="DifficultySelection_BG/DifficultySelectButton_Container" unique_id=739670659]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_0fbfj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pkjhq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gjfe5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_eovej")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tj0wd")
+text = "Advanced"
+
+[node name="LevelLockWarning_Panel" type="PanelContainer" parent="DifficultySelection_BG" unique_id=1488411577]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -185.0
+offset_right = 275.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gjfe5")
+
+[node name="MarginContainer" type="MarginContainer" parent="DifficultySelection_BG/LevelLockWarning_Panel" unique_id=642759922]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DifficultySelection_BG/LevelLockWarning_Panel/MarginContainer" unique_id=191210045]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Label" type="Label" parent="DifficultySelection_BG/LevelLockWarning_Panel/MarginContainer/VBoxContainer" unique_id=1976973705]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hm0jw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dnsd6")
+text = "You haven't finished
+Beginner level yet."
+horizontal_alignment = 1
+
+[node name="Okay_Button" type="Button" parent="DifficultySelection_BG/LevelLockWarning_Panel/MarginContainer/VBoxContainer" unique_id=1371912034]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_y0pj4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bglwt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lseak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_28tcw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ujjc5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_icejs")
+text = "Okay!"
+
+[connection signal="pressed" from="DifficultySelection_BG/Return_Button" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="DifficultySelection_BG/SettingsMenu_Button" to="." method="_on_settings_menu_button_pressed"]
+[connection signal="pressed" from="DifficultySelection_BG/SettingsMenu_Panel/MarginContainer/VBoxContainer/Resume_Button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="DifficultySelection_BG/SettingsMenu_Panel/MarginContainer/VBoxContainer/Settings_Button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="DifficultySelection_BG/SettingsMenu_Panel/MarginContainer/VBoxContainer/Exit_Button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="DifficultySelection_BG/ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer/ConfirmExit_Button" to="." method="_on_confirm_exit_button_pressed"]
+[connection signal="pressed" from="DifficultySelection_BG/ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer/CancelExit_Button" to="." method="_on_cancel_exit_button_pressed"]
+[connection signal="pressed" from="DifficultySelection_BG/DifficultySelectButton_Container/Beginner_Button" to="." method="_on_beginner_button_pressed"]
+[connection signal="pressed" from="DifficultySelection_BG/DifficultySelectButton_Container/Intermediate_Button" to="." method="_on_intermediate_button_pressed"]
+[connection signal="pressed" from="DifficultySelection_BG/DifficultySelectButton_Container/Advanced_Button" to="." method="_on_advanced_button_pressed"]
+[connection signal="pressed" from="DifficultySelection_BG/LevelLockWarning_Panel/MarginContainer/VBoxContainer/Okay_Button" to="." method="_on_okay_button_pressed"]

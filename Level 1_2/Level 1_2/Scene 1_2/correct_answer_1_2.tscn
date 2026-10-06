@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://h4utrqy082x2"]
+
+[ext_resource type="Script" uid="uid://di1xub6wu1mic" path="res://Level 1_2/Level 1_2/Scene 1_2/correct_answer_1_2.gd" id="1_4hw7e"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="2_m5w38"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="3_y0w12"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="4_kpdij"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="5_v82lm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v8b4e"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("2_m5w38")
+
+[sub_resource type="LabelSettings" id="LabelSettings_chrac"]
+font = ExtResource("3_y0w12")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4j1r6"]
+line_spacing = 5.0
+font = ExtResource("3_y0w12")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_khs6g"]
+font = ExtResource("3_y0w12")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="CorrectAnswer 1_2" type="Control" unique_id=2137282641]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4hw7e")
+
+[node name="CorrectAnsBox" type="Panel" parent="." unique_id=905927129]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 135.0
+offset_right = 1014.0
+offset_bottom = 558.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_v8b4e")
+
+[node name="Label" type="Label" parent="CorrectAnsBox" unique_id=952996801]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.050734293
+anchor_top = 0.2316785
+anchor_right = 0.95334053
+anchor_bottom = 0.3560284
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "The answer is ... 
+A. Supervised Learning"
+label_settings = SubResource("LabelSettings_chrac")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CorrectAnsBox" unique_id=611679224]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.059810888
+anchor_top = 0.41856948
+anchor_right = 0.93831545
+anchor_bottom = 0.5963658
+offset_left = 35.20166
+offset_top = 17.945099
+offset_right = 35.20172
+offset_bottom = 59.73726
+grow_horizontal = 2
+text = "That's right! ✅
+Supervised Learning trains a model using labeled input and output data.
+"
+label_settings = SubResource("LabelSettings_4j1r6")
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Okay" type="TextureButton" parent="CorrectAnsBox" unique_id=302058908]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 340.0
+offset_right = 473.0
+offset_bottom = 397.0
+texture_normal = ExtResource("4_kpdij")
+texture_hover = ExtResource("5_v82lm")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="CorrectAnsBox/Okay" unique_id=291963711]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 201.0
+offset_bottom = 43.0
+text = "Nice!"
+label_settings = SubResource("LabelSettings_khs6g")
+horizontal_alignment = 1

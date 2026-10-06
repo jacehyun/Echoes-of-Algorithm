@@ -1,0 +1,384 @@
+[gd_scene format=3 uid="uid://c7f3aywudovdd"]
+
+[ext_resource type="Texture2D" uid="uid://rghd7j1ppsyv" path="res://intro/Assets/Background Image/startpage_bg.png" id="1_ap6w6"]
+[ext_resource type="Script" uid="uid://b4atamxcfnxwc" path="res://intro/Scenes/start.gd" id="1_g8sip"]
+[ext_resource type="PackedScene" uid="uid://bt875swtyavm0" path="res://intro/Character/intro_player.tscn" id="2_n7il1"]
+[ext_resource type="PackedScene" uid="uid://dhlxgdqb82o62" path="res://intro/Scenes/StartPanel.tscn" id="3_oyos7"]
+[ext_resource type="Texture2D" uid="uid://cmxuojh0bot4o" path="res://Level1_1/setting button.png" id="4_vo4vr"]
+[ext_resource type="Texture2D" uid="uid://bq4jnma2yuke6" path="res://intro/Assets/Background Image/topic container.png" id="5_ixyfc"]
+[ext_resource type="Script" uid="uid://di4getpquaqej" path="res://intro/Scenes/settings_intro.gd" id="5_q0sw6"]
+[ext_resource type="AudioStream" uid="uid://dnuudjakr7yyt" path="res://intro/Assets/Music/xDeviruchi - Title Theme .wav" id="6_722fv"]
+[ext_resource type="Texture2D" uid="uid://nw3ucoeibgmm" path="res://intro/Assets/Buttons/volume icon.png" id="6_q0sw6"]
+[ext_resource type="Texture2D" uid="uid://basp0wn0gv05u" path="res://intro/Assets/Buttons/volume icon grabber.png" id="7_etw6e"]
+[ext_resource type="Texture2D" uid="uid://dtfw54o2fhnnh" path="res://intro/Assets/Buttons/volume slider.png" id="8_4wupn"]
+[ext_resource type="Texture2D" uid="uid://btw850ycpdpot" path="res://intro/Assets/Buttons/volume grabber.png" id="9_tgu2q"]
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://intro/Assets/Font/PressStart2P-Regular.ttf" id="10_fr3g1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oyos7"]
+distance = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etw6e"]
+texture = ExtResource("4_vo4vr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4wupn"]
+texture = ExtResource("4_vo4vr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tgu2q"]
+texture = ExtResource("4_vo4vr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fr3g1"]
+texture = ExtResource("4_vo4vr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rufa8"]
+texture = ExtResource("4_vo4vr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ta1yw"]
+texture = ExtResource("5_ixyfc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qpw6a"]
+texture = ExtResource("6_q0sw6")
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r6aay"]
+content_margin_top = 12.0
+content_margin_bottom = 12.0
+texture = ExtResource("8_4wupn")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22ood"]
+texture = ExtResource("9_tgu2q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7qubq"]
+texture = ExtResource("9_tgu2q")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3g5ch"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ddup"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iogic"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jog0i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fruqp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_psunf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gxxrm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7oysb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ri5yi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s7cat"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rnujd"]
+texture = ExtResource("5_ixyfc")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_toorl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k70ay"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gtj5f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q80sp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_icfu6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v538a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_451wf"]
+
+[node name="Start" type="Node2D" unique_id=1992812276]
+script = ExtResource("1_g8sip")
+
+[node name="StartpageBg" type="Sprite2D" parent="." unique_id=918933872]
+position = Vector2(72.50001, -80.00001)
+scale = Vector2(0.16718748, 0.2050114)
+texture = ExtResource("1_ap6w6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=445322476]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="Intro Player" parent="." unique_id=1464439105 instance=ExtResource("2_n7il1")]
+position = Vector2(-95, -16)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1662143913]
+position = Vector2(74, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=120055809]
+position = Vector2(0, -5)
+shape = SubResource("WorldBoundaryShape2D_oyos7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1049075583]
+
+[node name="StartPanel" parent="CanvasLayer" unique_id=1099237404 instance=ExtResource("3_oyos7")]
+mouse_filter = 1
+
+[node name="Settings" type="Control" parent="CanvasLayer" unique_id=366012681]
+layout_mode = 3
+anchor_right = 0.998
+anchor_bottom = 0.95100003
+offset_right = 0.5599365
+offset_bottom = 33.27997
+mouse_filter = 2
+script = ExtResource("5_q0sw6")
+
+[node name="SettingsMenu_Button" type="Button" parent="CanvasLayer/Settings" unique_id=907191921]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = 90.0
+grow_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_etw6e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4wupn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tgu2q")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_fr3g1")
+theme_override_styles/focus = SubResource("StyleBoxTexture_rufa8")
+
+[node name="SettingsMenu_BG" type="Panel" parent="CanvasLayer/Settings" unique_id=838354867]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SettingsMenu_Panel" type="PanelContainer" parent="CanvasLayer/Settings" unique_id=710314035]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = -228.5
+offset_right = 235.0
+offset_bottom = 96.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ta1yw")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Settings/SettingsMenu_Panel" unique_id=1580384506]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Settings/SettingsMenu_Panel/MarginContainer" unique_id=1753795353]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Settings/SettingsMenu_Panel/MarginContainer/VBoxContainer" unique_id=171894068]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Settings/SettingsMenu_Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2072152562]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 30
+
+[node name="Button" type="Button" parent="CanvasLayer/Settings/SettingsMenu_Panel/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=2086896559]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_qpw6a")
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Settings/SettingsMenu_Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1018171513]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_icons/grabber = ExtResource("7_etw6e")
+theme_override_icons/grabber_highlight = ExtResource("7_etw6e")
+theme_override_icons/grabber_disabled = ExtResource("7_etw6e")
+theme_override_styles/slider = SubResource("StyleBoxTexture_r6aay")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_22ood")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_7qubq")
+max_value = 1.0
+step = 0.01
+value = 0.5
+ticks_position = 3
+
+[node name="Resume_Button" type="Button" parent="CanvasLayer/Settings/SettingsMenu_Panel/MarginContainer/VBoxContainer" unique_id=1572871299]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fr3g1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3g5ch")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2ddup")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iogic")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jog0i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fruqp")
+text = "Resume"
+
+[node name="Exit_Button" type="Button" parent="CanvasLayer/Settings/SettingsMenu_Panel/MarginContainer/VBoxContainer" unique_id=1487703596]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fr3g1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_psunf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gxxrm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7oysb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ri5yi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s7cat")
+text = "Exit"
+
+[node name="Settings_Panel" type="PanelContainer" parent="CanvasLayer/Settings" unique_id=1573523816]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -112.5
+offset_right = 175.0
+offset_bottom = 112.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rnujd")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Settings/Settings_Panel" unique_id=1994017997]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Settings/Settings_Panel/MarginContainer" unique_id=1538318586]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Resume_Button" type="Button" parent="CanvasLayer/Settings/Settings_Panel/MarginContainer/VBoxContainer" unique_id=1203726210]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fr3g1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3g5ch")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2ddup")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iogic")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jog0i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fruqp")
+text = "Resume"
+
+[node name="Settings_Button" type="Button" parent="CanvasLayer/Settings/Settings_Panel/MarginContainer/VBoxContainer" unique_id=901286924]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fr3g1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_toorl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k70ay")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gtj5f")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_q80sp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_icfu6")
+text = "Settings"
+
+[node name="Exit_Button" type="Button" parent="CanvasLayer/Settings/Settings_Panel/MarginContainer/VBoxContainer" unique_id=810674457]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fr3g1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_psunf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gxxrm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7oysb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ri5yi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s7cat")
+text = "Exit"
+
+[node name="ExitConfirmation_Panel" type="PanelContainer" parent="CanvasLayer/Settings" unique_id=1500108248]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -185.0
+offset_right = 225.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ta1yw")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Settings/ExitConfirmation_Panel" unique_id=476605124]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Settings/ExitConfirmation_Panel/MarginContainer" unique_id=31849935]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Settings/ExitConfirmation_Panel/MarginContainer/VBoxContainer" unique_id=1782620276]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fr3g1")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v538a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_451wf")
+text = "Are you sure you
+want to exit?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Settings/ExitConfirmation_Panel/MarginContainer/VBoxContainer" unique_id=372643241]
+layout_mode = 2
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="ConfirmExit_Button" type="Button" parent="CanvasLayer/Settings/ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1071785308]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fr3g1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3g5ch")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2ddup")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iogic")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jog0i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fruqp")
+text = "Yes"
+
+[node name="CancelExit_Button" type="Button" parent="CanvasLayer/Settings/ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1269880559]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fr3g1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_toorl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k70ay")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gtj5f")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_q80sp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_icfu6")
+text = "Cancel"
+
+[node name="introbg" type="AudioStreamPlayer2D" parent="." unique_id=840542166]
+stream = ExtResource("6_722fv")
+
+[connection signal="pressed" from="CanvasLayer/Settings/SettingsMenu_Button" to="CanvasLayer/Settings" method="_on_settings_menu_button_pressed"]
+[connection signal="value_changed" from="CanvasLayer/Settings/SettingsMenu_Panel/MarginContainer/VBoxContainer/HBoxContainer/HSlider" to="CanvasLayer/Settings" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Settings/SettingsMenu_Panel/MarginContainer/VBoxContainer/Resume_Button" to="CanvasLayer/Settings" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Settings/SettingsMenu_Panel/MarginContainer/VBoxContainer/Exit_Button" to="CanvasLayer/Settings" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Settings/ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer/ConfirmExit_Button" to="CanvasLayer/Settings" method="_on_confirm_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Settings/ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer/CancelExit_Button" to="CanvasLayer/Settings" method="_on_cancel_exit_button_pressed"]

@@ -1,0 +1,433 @@
+[gd_scene format=3 uid="uid://dk3cq2nnn7v5b"]
+
+[ext_resource type="Script" uid="uid://cplw7uuutr04j" path="res://roaming_scene_adv_2.gd" id="1_cdp10"]
+[ext_resource type="Texture2D" uid="uid://cng85iq5btcts" path="res://AdvancedLevel/Advance Scenery/advance new (1).png" id="2_nqnqn"]
+[ext_resource type="PackedScene" uid="uid://dsuhv36g38sgi" path="res://Level1_1/scenes/scroll.tscn" id="3_ekfva"]
+[ext_resource type="Script" uid="uid://ceh5bg0winrbr" path="res://Level1_1/scenes/scroll2.gd" id="4_psuk0"]
+[ext_resource type="PackedScene" uid="uid://dbys26aexumur" path="res://Level1_1/scenes/player.tscn" id="5_s6xof"]
+[ext_resource type="Script" uid="uid://yojjx8n16xed" path="res://Level1_1/scripts/interaction_manager.gd" id="6_14x52"]
+[ext_resource type="PackedScene" uid="uid://c7g0ibqsgrpyh" path="res://Level1_1/scenes/touch_controls.tscn" id="7_xiju0"]
+[ext_resource type="Texture2D" uid="uid://gdn3nyw5j44b" path="res://Level1_1/panels/Heart.PNG" id="8_k0s75"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="9_dgw31"]
+[ext_resource type="PackedScene" uid="uid://d08ietvn8xjn" path="res://Level1_1/scenes/interaction_prompt.tscn" id="10_j27gm"]
+[ext_resource type="Script" uid="uid://cacs4c3ssat4d" path="res://Advanced Roaming/info_panel3_2.gd" id="11_apr7a"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="12_q8346"]
+[ext_resource type="Script" uid="uid://015jt2r2plsf" path="res://Level1_1/scenes/welcome_panel2.gd" id="13_11dpf"]
+[ext_resource type="Texture2D" uid="uid://ww31mehqk04s" path="res://Level1_1/panels/DialoguePanel.png" id="14_my8y7"]
+[ext_resource type="PackedScene" uid="uid://duhp7h6i08ug8" path="res://Level1_1/Settings.tscn" id="15_38cac"]
+[ext_resource type="AudioStream" uid="uid://b62t8ciuc7h4j" path="res://Level1_1/sounds/RoamingSound.mp3" id="16_cawwt"]
+[ext_resource type="AudioStream" uid="uid://onhoinscvw2m" path="res://Level1_1/sounds/dialogtyping.mp3" id="17_r8lbb"]
+[ext_resource type="AudioStream" uid="uid://dsxb3ivjumkdd" path="res://Level1_1/sounds/warning.mp3" id="18_qk722"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2ulwv"]
+normal = Vector2(-1, 0)
+distance = 34.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_32jb4"]
+normal = Vector2(1, 0)
+distance = 34.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gknf1"]
+distance = 31.0
+
+[sub_resource type="Theme" id="Theme_hykws"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0bw8"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5058824)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7fh0"]
+bg_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_fa8in"]
+font = ExtResource("9_dgw31")
+font_size = 4
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q063k"]
+load_path = "res://.godot/imported/Question Panel.png-536518b8b4aa9f4841162b4cbffac91f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x1ga5"]
+texture = SubResource("CompressedTexture2D_q063k")
+
+[sub_resource type="LabelSettings" id="LabelSettings_b4ban"]
+font = ExtResource("9_dgw31")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndmxi"]
+texture = ExtResource("12_q8346")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_afgok"]
+texture = ExtResource("12_q8346")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_taksb"]
+texture = ExtResource("12_q8346")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpji0"]
+texture = ExtResource("14_my8y7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gh6o6"]
+texture = ExtResource("12_q8346")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4sgn7"]
+texture = ExtResource("12_q8346")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l7g5b"]
+texture = ExtResource("12_q8346")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tfflu"]
+texture = ExtResource("14_my8y7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wafqb"]
+texture = ExtResource("12_q8346")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0iyf"]
+texture = ExtResource("12_q8346")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ecs6"]
+texture = ExtResource("12_q8346")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v381u"]
+bg_color = Color(0.6, 0.6, 0.6, 0.78039217)
+
+[node name="RoamingSceneAdv2" type="Node2D" unique_id=669755482]
+script = ExtResource("1_cdp10")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=71686693]
+position = Vector2(73, -79.5)
+scale = Vector2(0.16770834, 0.20842822)
+texture = ExtResource("2_nqnqn")
+
+[node name="Scroll" parent="." unique_id=945990366 instance=ExtResource("3_ekfva")]
+position = Vector2(-47, 8)
+script = ExtResource("4_psuk0")
+
+[node name="Player" parent="." unique_id=1671932887 instance=ExtResource("5_s6xof")]
+position = Vector2(-13, -30)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1677792799]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=191239825]
+position = Vector2(224, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1275847148]
+position = Vector2(26, -105)
+shape = SubResource("WorldBoundaryShape2D_2ulwv")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=319589969]
+position = Vector2(112, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=544312455]
+position = Vector2(-223, -101)
+shape = SubResource("WorldBoundaryShape2D_32jb4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=536740680]
+position = Vector2(56, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1758922502]
+position = Vector2(0, -3)
+shape = SubResource("WorldBoundaryShape2D_gknf1")
+
+[node name="InteractionManager" type="Node2D" parent="." unique_id=1006947177 groups=["Player"]]
+script = ExtResource("6_14x52")
+
+[node name="Control" type="Control" parent="." unique_id=1531171732]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -55.0
+offset_top = -44.0
+offset_right = -15.0
+offset_bottom = -4.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TouchControls" parent="Control" unique_id=1819261268 instance=ExtResource("7_xiju0")]
+
+[node name="Health" type="ProgressBar" parent="Control" unique_id=220368313]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -110.0
+offset_right = 40.0
+offset_bottom = -97.0
+size_flags_horizontal = 0
+theme = SubResource("Theme_hykws")
+theme_override_colors/font_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 6
+theme_override_styles/background = SubResource("StyleBoxFlat_a0bw8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_f7fh0")
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Heart" type="Sprite2D" parent="Control/Health" unique_id=2090443237]
+position = Vector2(1, 5)
+scale = Vector2(0.11, 0.09497393)
+texture = ExtResource("8_k0s75")
+
+[node name="Label" type="Label" parent="Control/Health" unique_id=289957410]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 59.0
+offset_bottom = 10.0
+text = "Level 3"
+label_settings = SubResource("LabelSettings_fa8in")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1940377772]
+
+[node name="InteractionPrompt" parent="CanvasLayer" unique_id=1229392418 instance=ExtResource("10_j27gm")]
+offset_left = 455.0
+offset_top = 484.0
+offset_right = 695.0
+offset_bottom = 507.0
+metadata/_edit_use_anchors_ = true
+
+[node name="InfoPanel2" type="Control" parent="CanvasLayer" unique_id=1100188342]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_apr7a")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="CanvasLayer/InfoPanel2" unique_id=2054293954]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 150.0
+offset_right = 941.0
+offset_bottom = 582.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_x1ga5")
+metadata/_edit_use_anchors_ = true
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/InfoPanel2/Panel" unique_id=2077932619]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 82.0
+offset_right = 528.0
+offset_bottom = 105.0
+text = "Overfitting and Generalization"
+label_settings = SubResource("LabelSettings_b4ban")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ContentLabel" type="RichTextLabel" parent="CanvasLayer/InfoPanel2/Panel" unique_id=1272487042]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 142.0
+offset_right = 524.0
+offset_bottom = 360.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("9_dgw31")
+theme_override_fonts/bold_font = ExtResource("9_dgw31")
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 10
+bbcode_enabled = true
+text = "Overfitting and Generalization describe how well a machine learning model performs on new, unseen data. A good model should not just memorize past data but should also apply what it learned to new situations. Study these carefully before proceeding!
+
+1. Overfitting
+
+Overfitting happens when a model memorizes the training data instead of learning general patterns. It becomes too focused on the data it has seen and fails when given new or different data.
+
+This usually occurs when the model is too complex or trained too much on the same data.
+
+Key idea:
+The model performs very well on old data but poorly on new data.
+
+2. Generalization
+
+Generalization is the ability of a model to apply what it has learned to new, unseen data. A well-trained model should not rely on memorization but should understand patterns that work in different situations.
+
+Key idea:
+A good model works not just on old data, but also on new data.
+
+3. Why This Matters
+
+The goal of machine learning is not just to perform well on training data, but to be useful in real-world situations.
+
+A model that overfits → fails in new situations
+A model that generalizes → works in both known and unknown cases
+
+Key idea:
+Success is measured by how well the model handles new data, not just familiar data.
+
+💡 Quick Tip to Remember:
+
+Overfitting → Memorizing
+Generalization → Adapting to new data"
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/InfoPanel2/Panel" unique_id=2000577321]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 324.0
+offset_right = 348.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("9_dgw31")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_ndmxi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_afgok")
+theme_override_styles/hover = SubResource("StyleBoxTexture_taksb")
+text = "Close"
+metadata/_edit_use_anchors_ = true
+
+[node name="WelcomePanel" type="Control" parent="CanvasLayer" unique_id=184223588]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_11dpf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel1" type="Panel" parent="CanvasLayer/WelcomePanel" unique_id=542877991]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 401.0
+offset_right = 1157.0
+offset_bottom = 707.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_hpji0")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelText1" type="RichTextLabel" parent="CanvasLayer/WelcomePanel/Panel1" unique_id=702619688]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 86.0
+offset_right = 909.0
+offset_bottom = 240.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("9_dgw31")
+text = "Excellent work out there! You handled that Guardian perfectly. You know the drill—grab the data scattered in this cave, study the concepts, and keep pushing forward. The next challenge is waiting!"
+scroll_active = false
+metadata/_edit_use_anchors_ = true
+
+[node name="NextButton" type="Button" parent="CanvasLayer/WelcomePanel/Panel1" unique_id=1266782659]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 169.0
+offset_right = 935.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("9_dgw31")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_gh6o6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4sgn7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l7g5b")
+text = "Next"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/WelcomePanel" unique_id=446602435]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 402.0
+offset_right = 1157.0
+offset_bottom = 708.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_tfflu")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelText2" type="RichTextLabel" parent="CanvasLayer/WelcomePanel/Panel2" unique_id=1431987294]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 87.0
+offset_right = 924.0
+offset_bottom = 241.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("9_dgw31")
+text = "Good luck po! "
+scroll_active = false
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/WelcomePanel/Panel2" unique_id=1239281230]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 171.0
+offset_right = 936.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("9_dgw31")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_wafqb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x0iyf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6ecs6")
+text = "Got it!"
+metadata/_edit_use_anchors_ = true
+
+[node name="ReadyFight2" type="Control" parent="CanvasLayer" unique_id=1372848281]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/ReadyFight2" unique_id=2088086002]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 724.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v381u")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/ReadyFight2/Panel" unique_id=1471704075]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 242.0
+offset_right = 1073.0
+offset_bottom = 457.0
+theme_override_colors/default_color = Color(0.8940833, 4.885271e-06, 8.663535e-07, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("9_dgw31")
+theme_override_font_sizes/normal_font_size = 30
+text = "Knowledge acquired. Another Guardian has detected your presence. You know what to do!"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" parent="CanvasLayer" unique_id=1111660280 instance=ExtResource("15_38cac")]
+offset_left = -99.0
+offset_top = 38.0
+offset_right = -45.0
+offset_bottom = 101.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="sfx_roaming" type="AudioStreamPlayer2D" parent="." unique_id=816807193]
+stream = ExtResource("16_cawwt")
+
+[node name="sfx_dialogtyping" type="AudioStreamPlayer2D" parent="." unique_id=1679063716]
+stream = ExtResource("17_r8lbb")
+
+[node name="sfx_warning" type="AudioStreamPlayer2D" parent="." unique_id=581201588]
+stream = ExtResource("18_qk722")
+volume_db = 21.717
+
+[connection signal="pressed" from="CanvasLayer/WelcomePanel/Panel1/NextButton" to="CanvasLayer/WelcomePanel" method="_on_next_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/WelcomePanel/Panel2/CloseButton" to="CanvasLayer/WelcomePanel" method="_on_close_button_pressed"]

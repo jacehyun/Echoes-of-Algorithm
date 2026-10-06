@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://rig3no6ck4yb"]
+
+[ext_resource type="Script" uid="uid://ch8fnv0mnpbbg" path="res://Level1_1/scripts/question_panel_3.gd" id="1_qlva1"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="2_24m11"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="3_altjr"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="4_3y4h6"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="5_g3c80"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="6_5niur"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i08gk"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("2_24m11")
+
+[sub_resource type="LabelSettings" id="LabelSettings_hnn55"]
+line_spacing = 5.0
+font = ExtResource("3_altjr")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mtlik"]
+line_spacing = 5.0
+font = ExtResource("3_altjr")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ro7j"]
+line_spacing = 15.0
+font = ExtResource("6_5niur")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="QuestionPanel3" type="Control" unique_id=474280121]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qlva1")
+
+[node name="QuestionBox" type="Panel" parent="." unique_id=1677301505]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 110.0
+offset_right = 971.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_i08gk")
+
+[node name="Label" type="Label" parent="QuestionBox" unique_id=929330912]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.040238462
+anchor_top = 0.1440678
+anchor_right = 0.9428446
+anchor_bottom = 0.37957612
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "Question:
+Which of the following is an example of Machine Learning in daily life?
+"
+label_settings = SubResource("LabelSettings_hnn55")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptA" type="TextureButton" parent="QuestionBox" unique_id=124940962]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 211.0
+offset_right = 319.0
+offset_bottom = 294.0
+texture_normal = ExtResource("4_3y4h6")
+texture_hover = ExtResource("5_g3c80")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptA" unique_id=351378665]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 32.0
+offset_right = 297.0
+offset_bottom = 59.0
+text = "A. Calculator"
+label_settings = SubResource("LabelSettings_mtlik")
+
+[node name="OptB" type="TextureButton" parent="QuestionBox" unique_id=1103870534]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 298.0
+offset_right = 318.0
+offset_bottom = 381.0
+texture_normal = ExtResource("4_3y4h6")
+texture_hover = ExtResource("5_g3c80")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptB" unique_id=1715895609]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 36.0
+offset_right = 304.0
+offset_bottom = 79.0
+text = "B. Keyboard"
+label_settings = SubResource("LabelSettings_mtlik")
+
+[node name="OptC" type="TextureButton" parent="QuestionBox" unique_id=1164985817]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 212.0
+offset_right = 626.0
+offset_bottom = 295.0
+texture_normal = ExtResource("4_3y4h6")
+texture_hover = ExtResource("5_g3c80")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptC" unique_id=376806740]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 33.0
+offset_right = 301.0
+offset_bottom = 60.0
+text = "C. Spam Email Filter"
+label_settings = SubResource("LabelSettings_mtlik")
+
+[node name="OptD" type="TextureButton" parent="QuestionBox" unique_id=791535370]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 298.0
+offset_right = 626.0
+offset_bottom = 381.0
+texture_normal = ExtResource("4_3y4h6")
+texture_hover = ExtResource("5_g3c80")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptD" unique_id=1079283654]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 36.0
+offset_right = 289.0
+offset_bottom = 63.0
+text = " D. USB drive"
+label_settings = SubResource("LabelSettings_mtlik")
+
+[node name="HintLabel" type="Label" parent="QuestionBox" unique_id=828303463]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 416.0
+offset_right = 665.0
+offset_bottom = 472.0
+text = " Hint 💡: Which of these actually 'learns' to block junk 
+instead of just being a physical tool?"
+label_settings = SubResource("LabelSettings_0ro7j")
+horizontal_alignment = 1

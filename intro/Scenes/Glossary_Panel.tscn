@@ -1,0 +1,284 @@
+[gd_scene format=3 uid="uid://cv5mj2cq7qmnk"]
+
+[ext_resource type="Script" uid="uid://cj5xa0j1bctkv" path="res://intro/Scenes/glossary_panel.gd" id="1_2sx11"]
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://intro/Assets/Font/PressStart2P-Regular.ttf" id="2_2sx11"]
+[ext_resource type="Texture2D" uid="uid://dnpcna3lrh8yc" path="res://intro/Assets/Buttons/basic button.png" id="3_3lxvf"]
+[ext_resource type="Texture2D" uid="uid://b58f7jqpvhku1" path="res://intro/Assets/Buttons/left button.png" id="3_mhw5h"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="5_3lxvf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kapyv"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pg82k"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sky0r"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rc8yl"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_su7ee"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_es11t"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_540v5"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1tgtw"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhw5h"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2sx11"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3lxvf"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u35pb"]
+texture = ExtResource("3_mhw5h")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wt4x3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_os0iy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_suy2p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5b4g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wt4x3"]
+texture = ExtResource("5_3lxvf")
+
+[sub_resource type="LabelSettings" id="LabelSettings_os0iy"]
+line_spacing = 20.0
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_suy2p"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a5b4g"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2txhr"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wj0qg"]
+texture = ExtResource("3_3lxvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_orsmn"]
+texture = ExtResource("3_3lxvf")
+
+[node name="Glossary" type="Control" unique_id=387903825]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2sx11")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=919068980]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -124.0
+offset_top = 50.0
+offset_right = 124.0
+offset_bottom = 125.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_kapyv")
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=663806979]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2sx11")
+theme_override_font_sizes/font_size = 25
+text = "Glossary"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Topic Buttons" type="HBoxContainer" parent="." unique_id=114270998]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -387.5
+offset_top = -78.5
+offset_right = 387.5
+offset_bottom = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Topic 1" type="Button" parent="Topic Buttons" unique_id=653239054]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2sx11")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_pg82k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sky0r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rc8yl")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_su7ee")
+theme_override_styles/focus = SubResource("StyleBoxTexture_es11t")
+text = "Topic 1"
+
+[node name="Topic 2" type="Button" parent="Topic Buttons" unique_id=1757741633]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2sx11")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_540v5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1tgtw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mhw5h")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2sx11")
+theme_override_styles/focus = SubResource("StyleBoxTexture_3lxvf")
+text = "Locked"
+
+[node name="Topic 3" type="Button" parent="Topic Buttons" unique_id=1214258842]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2sx11")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_540v5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1tgtw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mhw5h")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2sx11")
+theme_override_styles/focus = SubResource("StyleBoxTexture_3lxvf")
+text = "Locked"
+
+[node name="Return_Button" type="Button" parent="." unique_id=1394992726]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 65.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_u35pb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wt4x3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_os0iy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_suy2p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a5b4g")
+
+[node name="Topic1_Panel" type="PanelContainer" parent="." unique_id=522675646]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -312.5
+offset_right = 300.0
+offset_bottom = 312.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wt4x3")
+
+[node name="MarginContainer" type="MarginContainer" parent="Topic1_Panel" unique_id=699463977]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Topic1_Panel/MarginContainer" unique_id=964315886]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Topic1_Panel/MarginContainer/VBoxContainer" unique_id=385319604]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Label" type="Label" parent="Topic1_Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=256951893]
+custom_minimum_size = Vector2(542, 630)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/paragraph_spacing = 0
+theme_override_fonts/font = ExtResource("2_2sx11")
+theme_override_font_sizes/font_size = 17
+text = "GLOSSARY OF TERMS
+
+Artificial Intelligence (AI)
+A field of computer science that focuses on creating systems capable of performing tasks that normally require human intelligence, such as learning, reasoning, and decision-making.
+
+Dataset
+A collection of data used to train and test a machine learning model. It contains examples that help the system learn patterns and relationships.
+
+Feature
+An input variable or attribute used by a machine learning model to make predictions. Examples include values such as age, temperature, or study hours.
+
+Label
+The correct output or target value associated with a data example. Labels are used in supervised learning to teach the model the correct answer.
+
+Machine Learning (ML)
+A branch of artificial intelligence that allows computers to learn patterns from data and improve their performance without being explicitly programmed.
+
+Prediction
+The output or result produced by a machine learning model after analyzing input data.
+
+Reinforcement Learning
+A type of machine learning where a system learns by interacting with an environment and receiving rewards or penalties based on its actions.
+
+Supervised Learning
+A type of machine learning where the model is trained using labeled data, meaning the input data and the correct output are already known.
+
+Unsupervised Learning
+A type of machine learning where the model analyzes unlabeled data and discovers patterns or groupings without predefined answers."
+label_settings = SubResource("LabelSettings_os0iy")
+autowrap_mode = 2
+
+[node name="Okay" type="Button" parent="Topic1_Panel/MarginContainer/VBoxContainer" unique_id=1753150136]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2sx11")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_suy2p")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a5b4g")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2txhr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_wj0qg")
+theme_override_styles/focus = SubResource("StyleBoxTexture_orsmn")
+text = "Okay"
+
+[connection signal="pressed" from="Topic Buttons/Topic 1" to="." method="_on_topic_1_pressed"]
+[connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="Topic1_Panel/MarginContainer/VBoxContainer/Okay" to="." method="_on_okay_pressed"]

@@ -1,0 +1,397 @@
+[gd_scene format=3 uid="uid://duimebtpa11fi"]
+
+[ext_resource type="Script" uid="uid://cm2sw0wpq8idu" path="res://Level1_1/scenes/roaming_scene.gd" id="1_n8hnf"]
+[ext_resource type="Texture2D" uid="uid://c6ljmyp7u1qmk" path="res://Level1_1/panels/beginnerbg.png" id="2_xmlad"]
+[ext_resource type="PackedScene" uid="uid://dsuhv36g38sgi" path="res://Level1_1/scenes/scroll.tscn" id="3_ny3oh"]
+[ext_resource type="Script" uid="uid://ceh5bg0winrbr" path="res://Level1_1/scenes/scroll2.gd" id="4_xdxrf"]
+[ext_resource type="PackedScene" uid="uid://dbys26aexumur" path="res://Level1_1/scenes/player.tscn" id="5_aiw8x"]
+[ext_resource type="Script" uid="uid://yojjx8n16xed" path="res://Level1_1/scripts/interaction_manager.gd" id="6_h6dmg"]
+[ext_resource type="Texture2D" uid="uid://gdn3nyw5j44b" path="res://Level1_1/panels/Heart.PNG" id="7_wbrxq"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="8_gy3f8"]
+[ext_resource type="PackedScene" uid="uid://c7g0ibqsgrpyh" path="res://Level1_1/scenes/touch_controls.tscn" id="9_t2rsh"]
+[ext_resource type="PackedScene" uid="uid://d08ietvn8xjn" path="res://Level1_1/scenes/interaction_prompt.tscn" id="10_ks6es"]
+[ext_resource type="Script" uid="uid://c5mmgpf2td4ky" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/info_panel_boss.gd" id="10_n8hnf"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="12_n3wlp"]
+[ext_resource type="Script" uid="uid://015jt2r2plsf" path="res://Level1_1/scenes/welcome_panel2.gd" id="13_y2ggo"]
+[ext_resource type="Texture2D" uid="uid://ww31mehqk04s" path="res://Level1_1/panels/DialoguePanel.png" id="14_c7b6q"]
+[ext_resource type="AudioStream" uid="uid://b62t8ciuc7h4j" path="res://Level1_1/sounds/RoamingSound.mp3" id="15_mj6yw"]
+[ext_resource type="PackedScene" uid="uid://duhp7h6i08ug8" path="res://Level1_1/Settings.tscn" id="15_ny3oh"]
+[ext_resource type="AudioStream" uid="uid://onhoinscvw2m" path="res://Level1_1/sounds/dialogtyping.mp3" id="16_4kou6"]
+[ext_resource type="AudioStream" uid="uid://dsxb3ivjumkdd" path="res://Level1_1/sounds/warning.mp3" id="17_xmlad"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_crh5d"]
+normal = Vector2(-1, 0)
+distance = 34.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_anv3s"]
+normal = Vector2(1, 0)
+distance = 34.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h8x3c"]
+distance = 31.0
+
+[sub_resource type="Theme" id="Theme_ny3oh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdxrf"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5058824)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aiw8x"]
+bg_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_h6dmg"]
+font = ExtResource("8_gy3f8")
+font_size = 4
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6n02p"]
+load_path = "res://.godot/imported/Question Panel.png-536518b8b4aa9f4841162b4cbffac91f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yr2l2"]
+texture = SubResource("CompressedTexture2D_6n02p")
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ay8p"]
+font = ExtResource("8_gy3f8")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q0ho6"]
+texture = ExtResource("12_n3wlp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_byk5x"]
+texture = ExtResource("12_n3wlp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6cyxi"]
+texture = ExtResource("12_n3wlp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5oh6m"]
+texture = ExtResource("14_c7b6q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xp82c"]
+texture = ExtResource("12_n3wlp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_alie4"]
+texture = ExtResource("12_n3wlp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_31es7"]
+texture = ExtResource("12_n3wlp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xpghr"]
+texture = ExtResource("14_c7b6q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shys1"]
+texture = ExtResource("12_n3wlp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ay8p"]
+texture = ExtResource("12_n3wlp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yg366"]
+texture = ExtResource("12_n3wlp")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yg366"]
+bg_color = Color(0.6, 0.6, 0.6, 0.78039217)
+
+[node name="RoamingScene4" type="Node2D" unique_id=348193935]
+script = ExtResource("1_n8hnf")
+
+[node name="Beginnerbg" type="Sprite2D" parent="." unique_id=1385307537]
+position = Vector2(76, -81.0625)
+scale = Vector2(0.3674665, 0.45440817)
+texture = ExtResource("2_xmlad")
+
+[node name="Scroll" parent="." unique_id=945990366 instance=ExtResource("3_ny3oh")]
+position = Vector2(13, 11)
+script = ExtResource("4_xdxrf")
+
+[node name="Player" parent="." unique_id=1671932887 instance=ExtResource("5_aiw8x")]
+position = Vector2(-13, -30)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1549024697]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=103955784]
+position = Vector2(224, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=25525703]
+position = Vector2(26, -105)
+shape = SubResource("WorldBoundaryShape2D_crh5d")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=83850450]
+position = Vector2(112, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1167125658]
+position = Vector2(-223, -101)
+shape = SubResource("WorldBoundaryShape2D_anv3s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1260708964]
+position = Vector2(56, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1963867483]
+position = Vector2(0, -3)
+shape = SubResource("WorldBoundaryShape2D_h8x3c")
+
+[node name="InteractionManager" type="Node2D" parent="." unique_id=80655908 groups=["Player"]]
+script = ExtResource("6_h6dmg")
+
+[node name="Control" type="Control" parent="." unique_id=748719375]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -55.0
+offset_top = -44.0
+offset_right = -15.0
+offset_bottom = -4.0
+
+[node name="TouchControls" parent="Control" unique_id=1819261268 instance=ExtResource("9_t2rsh")]
+
+[node name="Health" type="ProgressBar" parent="Control" unique_id=1882172505]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -110.0
+offset_right = 40.0
+offset_bottom = -97.0
+size_flags_horizontal = 0
+theme = SubResource("Theme_ny3oh")
+theme_override_colors/font_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 6
+theme_override_styles/background = SubResource("StyleBoxFlat_xdxrf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_aiw8x")
+show_percentage = false
+
+[node name="Heart" type="Sprite2D" parent="Control/Health" unique_id=291101822]
+position = Vector2(1, 5)
+scale = Vector2(0.11, 0.09497393)
+texture = ExtResource("7_wbrxq")
+
+[node name="Label" type="Label" parent="Control/Health" unique_id=715124121]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 59.0
+offset_bottom = 10.0
+text = "Level 1"
+label_settings = SubResource("LabelSettings_h6dmg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=816778923]
+
+[node name="InfoPanel2" type="Control" parent="CanvasLayer" unique_id=421588603]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_n8hnf")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/InfoPanel2" unique_id=263245922]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 150.0
+offset_right = 941.0
+offset_bottom = 582.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yr2l2")
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/InfoPanel2/Panel" unique_id=1160795871]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 82.0
+offset_right = 528.0
+offset_bottom = 105.0
+text = "Machine Learning Fundamentals"
+label_settings = SubResource("LabelSettings_5ay8p")
+horizontal_alignment = 1
+
+[node name="ContentLabel" type="RichTextLabel" parent="CanvasLayer/InfoPanel2/Panel" unique_id=1164752432]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 142.0
+offset_right = 524.0
+offset_bottom = 360.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("8_gy3f8")
+theme_override_fonts/bold_font = ExtResource("8_gy3f8")
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 10
+bbcode_enabled = true
+text = "1. Dataset
+A dataset is a collection of data used to train a machine learning model. Because machine learning systems learn by studying examples, they need a large set of data to analyze patterns and relationships. The dataset provides the information that allows the model to recognize trends and improve its predictions.
+
+2. Supervised Learning
+Supervised Learning is a type of machine learning where the system is trained using labeled data. This means the dataset already contains both the input information and the correct answers. During training, the model studies these examples so it can learn how to produce the correct output when it encounters new data.
+
+3. Features
+In Machine Learning, features are the input variables used by a model to make predictions. Features represent the pieces of information given to the system so it can analyze patterns and determine possible outcomes. Examples of features include a student’s study hours, the number of assignments completed, or the daily temperature.
+
+4. Input and Output Example
+To better understand features, imagine a dataset that contains student study hours and exam results. In this case, the study hours act as the input data while the exam results represent the output. The input variables that help predict the output are called features. By analyzing these features, the model can learn how study time may affect exam performance."
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/InfoPanel2/Panel" unique_id=30321624]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 324.0
+offset_right = 348.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("8_gy3f8")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_q0ho6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_byk5x")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6cyxi")
+text = "Close"
+
+[node name="WelcomePanel" type="Control" parent="CanvasLayer" unique_id=685238139]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_y2ggo")
+
+[node name="Panel1" type="Panel" parent="CanvasLayer/WelcomePanel" unique_id=2079946563]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 401.0
+offset_right = 1157.0
+offset_bottom = 707.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5oh6m")
+
+[node name="PanelText1" type="RichTextLabel" parent="CanvasLayer/WelcomePanel/Panel1" unique_id=464334489]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 86.0
+offset_right = 909.0
+offset_bottom = 240.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("8_gy3f8")
+theme_override_font_sizes/normal_font_size = 13
+text = "And that’s another one for the win column! You’re looking sharper with every encounter. Since the coast is clear, why not poke around the cave? See what intel you can dig up and get comfortable with the findings. I’m ready to jump to the next sector whenever you are."
+scroll_active = false
+
+[node name="NextButton" type="Button" parent="CanvasLayer/WelcomePanel/Panel1" unique_id=515403370]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 169.0
+offset_right = 935.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("8_gy3f8")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_xp82c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_alie4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_31es7")
+text = "Next"
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/WelcomePanel" unique_id=47961813]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 402.0
+offset_right = 1157.0
+offset_bottom = 708.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xpghr")
+
+[node name="PanelText2" type="RichTextLabel" parent="CanvasLayer/WelcomePanel/Panel2" unique_id=1940114831]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 87.0
+offset_right = 924.0
+offset_bottom = 241.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("8_gy3f8")
+text = "Good luck, you can do it!"
+scroll_active = false
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/WelcomePanel/Panel2" unique_id=1835604377]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 171.0
+offset_right = 936.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("8_gy3f8")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_shys1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5ay8p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yg366")
+text = "Got it!"
+
+[node name="ReadyFight2" type="Control" parent="CanvasLayer" unique_id=1674797837]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/ReadyFight2" unique_id=1852614392]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 724.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yg366")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/ReadyFight2/Panel" unique_id=236567702]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 242.0
+offset_right = 1084.0
+offset_bottom = 497.0
+theme_override_colors/default_color = Color(0.8940833, 4.885271e-06, 8.663535e-07, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("8_gy3f8")
+theme_override_font_sizes/normal_font_size = 30
+text = "Knowledge acquired.THE BOSS has detected your presence.You know what to do!"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InteractionPrompt" parent="CanvasLayer" unique_id=1229392418 instance=ExtResource("10_ks6es")]
+offset_left = 700.0
+offset_top = 509.0
+offset_right = 940.0
+offset_bottom = 532.0
+theme_override_constants/outline_size = 80
+
+[node name="Settings" parent="CanvasLayer" unique_id=1111660280 instance=ExtResource("15_ny3oh")]
+offset_left = -99.0
+offset_top = 38.0
+offset_right = -45.0
+offset_bottom = 101.0
+mouse_filter = 2
+
+[node name="sfx_roaming" type="AudioStreamPlayer2D" parent="." unique_id=292481865]
+stream = ExtResource("15_mj6yw")
+
+[node name="sfx_dialogtyping" type="AudioStreamPlayer2D" parent="." unique_id=687588563]
+stream = ExtResource("16_4kou6")
+
+[node name="sfx_warning" type="AudioStreamPlayer2D" parent="." unique_id=1312363237]
+stream = ExtResource("17_xmlad")
+volume_db = 21.717
+
+[connection signal="pressed" from="CanvasLayer/WelcomePanel/Panel1/NextButton" to="CanvasLayer/WelcomePanel" method="_on_next_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/WelcomePanel/Panel2/CloseButton" to="CanvasLayer/WelcomePanel" method="_on_close_button_pressed"]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dbln0uabv3lel"]
+
+[ext_resource type="Texture2D" uid="uid://c6ljmyp7u1qmk" path="res://Level1_1/panels/beginnerbg.png" id="1_shcoe"]
+
+[node name="IntroScene" type="Node2D" unique_id=1519233302]
+
+[node name="Beginnerbg" type="Sprite2D" parent="." unique_id=838482589]
+position = Vector2(73.750015, -84.24999)
+scale = Vector2(0.35993302, 0.42632845)
+texture = ExtResource("1_shcoe")

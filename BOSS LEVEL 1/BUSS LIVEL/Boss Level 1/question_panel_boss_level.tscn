@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://bhcxu8a6ruku1"]
+
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="1_14ehd"]
+[ext_resource type="Script" uid="uid://tgmk88o854ik" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/question_panel_boss_level.gd" id="1_jwk4q"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="2_jwk4q"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="3_55iyb"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="4_hi3mh"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="5_d0i4w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fuvu4"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_14ehd")
+
+[sub_resource type="LabelSettings" id="LabelSettings_g45m6"]
+font = ExtResource("2_jwk4q")
+font_size = 13
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3xgsb"]
+line_spacing = 5.0
+font = ExtResource("2_jwk4q")
+font_size = 13
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7mcad"]
+line_spacing = 15.0
+font = ExtResource("5_d0i4w")
+font_size = 13
+font_color = Color(0, 0, 0, 1)
+
+[node name="Question Panel Boss Level" type="Control" unique_id=1113061319]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jwk4q")
+
+[node name="QuestionBox" type="Panel" parent="." unique_id=687704006]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 98.0
+offset_right = 1001.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_fuvu4")
+
+[node name="Label" type="Label" parent="QuestionBox" unique_id=79296755]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04389575
+anchor_top = 0.12156863
+anchor_right = 0.946502
+anchor_bottom = 0.4
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "Question:
+
+Inside the cave, the explorer collects 200 glowing crystals and records their properties such as color, size, and brightness to study patterns.?
+"
+label_settings = SubResource("LabelSettings_g45m6")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptA" type="TextureButton" parent="QuestionBox" unique_id=862831684]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 215.0
+offset_right = 347.0
+offset_bottom = 298.0
+texture_normal = ExtResource("3_55iyb")
+texture_hover = ExtResource("4_hi3mh")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptA" unique_id=2057066781]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 29.0
+offset_right = 293.0
+offset_bottom = 54.0
+text = "A. Feature"
+label_settings = SubResource("LabelSettings_3xgsb")
+
+[node name="OptB" type="TextureButton" parent="QuestionBox" unique_id=1261908916]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 312.0
+offset_right = 349.0
+offset_bottom = 395.0
+texture_normal = ExtResource("3_55iyb")
+texture_hover = ExtResource("4_hi3mh")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptB" unique_id=583188861]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 35.0
+offset_right = 294.0
+offset_bottom = 60.0
+text = "B. Dataset"
+label_settings = SubResource("LabelSettings_3xgsb")
+
+[node name="OptC" type="TextureButton" parent="QuestionBox" unique_id=119732807]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 215.0
+offset_right = 664.0
+offset_bottom = 298.0
+texture_normal = ExtResource("3_55iyb")
+texture_hover = ExtResource("4_hi3mh")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptC" unique_id=450736280]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 29.0
+offset_right = 291.0
+offset_bottom = 56.0
+text = "C. Algorithm"
+label_settings = SubResource("LabelSettings_3xgsb")
+
+[node name="OptD" type="TextureButton" parent="QuestionBox" unique_id=1968362032]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 311.0
+offset_right = 664.0
+offset_bottom = 394.0
+texture_normal = ExtResource("3_55iyb")
+texture_hover = ExtResource("4_hi3mh")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptD" unique_id=2041330721]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 33.0
+offset_right = 295.0
+offset_bottom = 58.0
+text = "D. Prediction"
+label_settings = SubResource("LabelSettings_3xgsb")
+
+[node name="HintLabel" type="Label" parent="QuestionBox" unique_id=1988392503]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 426.0
+offset_right = 694.0
+offset_bottom = 498.0
+text = " Hint 💡: Machine learning needs a collection 
+of data examples before it can learn patterns.
+"
+label_settings = SubResource("LabelSettings_7mcad")
+horizontal_alignment = 1

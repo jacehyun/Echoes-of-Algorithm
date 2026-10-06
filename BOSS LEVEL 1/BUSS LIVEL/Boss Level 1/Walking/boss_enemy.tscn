@@ -1,0 +1,242 @@
+[gd_scene format=3 uid="uid://dohybotanpvy8"]
+
+[ext_resource type="Script" uid="uid://clt0yedxapkot" path="res://Boss Level 1/Walking/boss_enemy.gd" id="1_ae7ha"]
+[ext_resource type="Texture2D" uid="uid://cbvwdbkdo82en" path="res://Boss Level 1/Walking/frame_000.png" id="1_vtql7"]
+[ext_resource type="Texture2D" uid="uid://bps2eix58q8yv" path="res://Boss Level 1/Walking/frame_001.png" id="2_bqqc3"]
+[ext_resource type="Texture2D" uid="uid://bu3ark1n7r5hk" path="res://Boss Level 1/Walking/frame_002.png" id="3_pnd0f"]
+[ext_resource type="Texture2D" uid="uid://iqjg78unabfw" path="res://Boss Level 1/Walking/frame_003.png" id="4_bnt6y"]
+[ext_resource type="Texture2D" uid="uid://lihuppryot6c" path="res://Boss Level 1/Walking/frame_004.png" id="5_8tx04"]
+[ext_resource type="Texture2D" uid="uid://eoql5vrxubpf" path="res://panels/dialogue.png" id="5_nqajq"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="6_4fssg"]
+[ext_resource type="Texture2D" uid="uid://2mtrexqfi6sd" path="res://Boss Level 1/Walking/frame_005.png" id="6_qgnpe"]
+[ext_resource type="Texture2D" uid="uid://43ffk7jowu88" path="res://Boss Level 1/Walking/frame_006.png" id="7_7cw44"]
+[ext_resource type="Texture2D" uid="uid://d2d66qugs5w7b" path="res://Boss Level 1/Walking/frame_007.png" id="8_c6k41"]
+[ext_resource type="Texture2D" uid="uid://dy2pj785hduy6" path="res://Boss Level 1/Walking/frame_008.png" id="9_xjj6x"]
+[ext_resource type="Texture2D" uid="uid://chwpobny5r32b" path="res://Boss Level 1/Walking/frame_009.png" id="10_qjffb"]
+[ext_resource type="Texture2D" uid="uid://cib1cs5sgk2mw" path="res://Boss Level 1/Walking/frame_010.png" id="11_cm5p3"]
+[ext_resource type="Texture2D" uid="uid://bku2nhkbrndwv" path="res://Boss Level 1/Walking/frame_011.png" id="12_fcac7"]
+[ext_resource type="Texture2D" uid="uid://3egxfknkr5hq" path="res://Boss Level 1/Walking/frame_012.png" id="13_8kf86"]
+[ext_resource type="Texture2D" uid="uid://wr4fwlipbd43" path="res://Boss Level 1/Walking/frame_013.png" id="14_o5ybr"]
+[ext_resource type="Texture2D" uid="uid://8tx63ecrptoo" path="res://Boss Level 1/Walking/frame_014.png" id="15_vp3oi"]
+[ext_resource type="Texture2D" uid="uid://evtjtyxgh0vs" path="res://Boss Level 1/Walking/frame_015.png" id="16_qhv67"]
+[ext_resource type="Texture2D" uid="uid://dsm6l4hjjtyf3" path="res://Boss Level 1/Walking/frame_016.png" id="17_6nl71"]
+[ext_resource type="Texture2D" uid="uid://k37jkdhgpcky" path="res://Boss Level 1/Walking/Attacking/Idle/frame_000.png" id="18_7xxmy"]
+[ext_resource type="Texture2D" uid="uid://cr3s8ygx1svaj" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/Dying/frame_000.png" id="18_k42yx"]
+[ext_resource type="Texture2D" uid="uid://byekyn2vgluhl" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/Dying/frame_001.png" id="19_ae7ha"]
+[ext_resource type="Texture2D" uid="uid://bwqd5axa6mb5f" path="res://Boss Level 1/Walking/Attacking/Idle/frame_001.png" id="19_v4k30"]
+[ext_resource type="Texture2D" uid="uid://b1o72vohcywk5" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/Dying/frame_002.png" id="20_3clju"]
+[ext_resource type="Texture2D" uid="uid://ct1jdmu0peiwp" path="res://Boss Level 1/Walking/Attacking/Idle/frame_002.png" id="20_ft5do"]
+[ext_resource type="Texture2D" uid="uid://5nkkfs6bmqya" path="res://Boss Level 1/Walking/Attacking/Idle/frame_006.png" id="21_qvwoi"]
+[ext_resource type="Texture2D" uid="uid://c15yhcac4ga3" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/Dying/frame_003.png" id="21_wpjtm"]
+[ext_resource type="Texture2D" uid="uid://cion7686ap7xh" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/Dying/frame_004.png" id="22_j3igt"]
+[ext_resource type="Texture2D" uid="uid://6gx3qi57jpif" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/Dying/frame_005.png" id="23_qgch1"]
+[ext_resource type="Texture2D" uid="uid://ejsmr47o1cry" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/Dying/frame_006.png" id="24_ksuwd"]
+[ext_resource type="Texture2D" uid="uid://0k5bbfgkun2s" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/Dying/frame_007.png" id="25_vrfw3"]
+[ext_resource type="Texture2D" uid="uid://ds6r8u4sx1e5i" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/frame_000.png" id="26_jaaha"]
+[ext_resource type="Texture2D" uid="uid://wev8puvhwcbu" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/frame_001.png" id="27_qqtfs"]
+[ext_resource type="Texture2D" uid="uid://bhey5pokdeifs" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/frame_002.png" id="28_bv8gj"]
+[ext_resource type="Texture2D" uid="uid://76mo13gjnqtu" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/frame_003.png" id="29_7k8y0"]
+[ext_resource type="Texture2D" uid="uid://pge8le6aquy5" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/frame_004.png" id="30_wvpcj"]
+[ext_resource type="Texture2D" uid="uid://dd5cqwheuntp7" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/frame_005.png" id="31_scqka"]
+[ext_resource type="Texture2D" uid="uid://cox64bwutvtkp" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/frame_006.png" id="32_xvj4i"]
+[ext_resource type="Texture2D" uid="uid://dg0sifxkbw74u" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/frame_007.png" id="33_la26l"]
+[ext_resource type="Texture2D" uid="uid://dncm30iv8vnkv" path="res://Boss Level 1/Walking/Attacking/Idle/Getting Hit/frame_008.png" id="34_ek4ua"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_44anx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vtql7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bqqc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pnd0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bnt6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8tx04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qgnpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7cw44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c6k41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xjj6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qjffb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cm5p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fcac7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8kf86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o5ybr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vp3oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qhv67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6nl71")
+}],
+"loop": true,
+"name": &"Attacking Boss ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_k42yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ae7ha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3clju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wpjtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_j3igt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_qgch1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ksuwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_vrfw3")
+}],
+"loop": true,
+"name": &"Dying Boss",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_jaaha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qqtfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_bv8gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_7k8y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_wvpcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_scqka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_xvj4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_la26l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ek4ua")
+}],
+"loop": true,
+"name": &"Getting Hit Boss",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_7xxmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_v4k30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ft5do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qvwoi")
+}],
+"loop": true,
+"name": &"Idle Boss",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vtql7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bqqc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pnd0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bnt6y")
+}],
+"loop": true,
+"name": &"Walking Boss",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnd13"]
+radius = 26.459696
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_osn8n"]
+texture = ExtResource("5_nqajq")
+expand_margin_bottom = 25.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_kn8vr"]
+font = ExtResource("6_4fssg")
+font_size = 6
+font_color = Color(0, 0, 0, 1)
+
+[node name="Boss Enemy" type="Node2D" unique_id=1102918378]
+script = ExtResource("1_ae7ha")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=344752596]
+position = Vector2(-87, -60)
+scale = Vector2(7.5178576, 5.5625005)
+sprite_frames = SubResource("SpriteFrames_44anx")
+animation = &"Getting Hit Boss"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=227752987]
+position = Vector2(6.118765, -2.337079)
+shape = SubResource("CircleShape2D_lnd13")
+
+[node name="DialogueBox" type="Panel" parent="AnimatedSprite2D" unique_id=626641549]
+visible = false
+offset_left = -86.0
+offset_top = -65.0
+offset_right = -14.0
+offset_bottom = -9.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_osn8n")
+
+[node name="Label" type="Label" parent="AnimatedSprite2D/DialogueBox" unique_id=635970890]
+texture_filter = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 16.0
+offset_right = 67.0
+offset_bottom = 39.0
+label_settings = SubResource("LabelSettings_kn8vr")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

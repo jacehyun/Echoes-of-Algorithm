@@ -1,0 +1,366 @@
+[gd_scene format=3 uid="uid://c2v5eh7bu8uy7"]
+
+[ext_resource type="Script" uid="uid://t31iynuuvbsg" path="res://INTERMEDIATE LEVEL/intermediate_level_int_2_4.gd" id="1_jmro7"]
+[ext_resource type="Texture2D" uid="uid://ygn7x1v3cktb" path="res://INTERMEDIATE LEVEL/INTERMIDIATE BG/intermediate bg.png" id="2_vwqxg"]
+[ext_resource type="PackedScene" uid="uid://csi8ojkwc6gwy" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/enemy_2_4.tscn" id="3_q84ot"]
+[ext_resource type="PackedScene" uid="uid://dbys26aexumur" path="res://Level1_1/scenes/player.tscn" id="4_t0np4"]
+[ext_resource type="PackedScene" uid="uid://c7g0ibqsgrpyh" path="res://Level1_1/scenes/touch_controls.tscn" id="5_xbpgu"]
+[ext_resource type="Texture2D" uid="uid://gdn3nyw5j44b" path="res://Level1_1/panels/Heart.PNG" id="6_t8svy"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="7_6gwlh"]
+[ext_resource type="PackedScene" uid="uid://881rhojjo4ig" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/question_panel_2_4_1.tscn" id="8_ad1dd"]
+[ext_resource type="PackedScene" uid="uid://d036h48lc03wk" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/correct_answer_2_4_1.tscn" id="9_vqsvv"]
+[ext_resource type="PackedScene" uid="uid://cub0bssyhdfl2" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/question_panel_2_4_2.tscn" id="10_isko0"]
+[ext_resource type="PackedScene" uid="uid://cs4qv4x2yfhu" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/correct_answer_2_4_2.tscn" id="11_7hs8m"]
+[ext_resource type="PackedScene" uid="uid://d0bgiq1htlkrf" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/question_panel_2_4_3.tscn" id="12_k7s3d"]
+[ext_resource type="PackedScene" uid="uid://tbsas4bmtf6t" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/correct_answer_2_4_3.tscn" id="13_0057a"]
+[ext_resource type="PackedScene" uid="uid://cgywvqks2s7pi" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/question_panel_2_4_4.tscn" id="14_mf7pg"]
+[ext_resource type="PackedScene" uid="uid://depxgcdk54i7y" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/correct_answer_2_4_4.tscn" id="15_irsko"]
+[ext_resource type="Texture2D" uid="uid://cxv5gg8ivb82u" path="res://Level1_1/panels/YouDiedPanel.png" id="16_glwtc"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="17_4aufg"]
+[ext_resource type="PackedScene" uid="uid://duhp7h6i08ug8" path="res://Level1_1/Settings.tscn" id="18_jnpxx"]
+[ext_resource type="Script" uid="uid://c4nlaseg6u5lu" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/level_cleared2_4.gd" id="19_q84ot"]
+[ext_resource type="Texture2D" uid="uid://bp8cdw2cw0cxl" path="res://Level1_1/panels/BossPanel.png" id="20_r4lpn"]
+[ext_resource type="AudioStream" uid="uid://cdybt5jrmpqh2" path="res://Level1_1/sounds/gameover.mp3" id="21_jju0u"]
+[ext_resource type="AudioStream" uid="uid://drskur6iatltb" path="res://Level1_1/sounds/BgMusicScene.mp3" id="22_n8b2s"]
+[ext_resource type="AudioStream" uid="uid://5h65pylwri1h" path="res://Level1_1/sounds/levelcleared.mp3" id="23_e7fuq"]
+[ext_resource type="AudioStream" uid="uid://2hymadsnj5h3" path="res://Level1_1/sounds/enemy1.mp3" id="24_l3ny3"]
+[ext_resource type="AudioStream" uid="uid://dq5b7emfskscc" path="res://Level1_1/sounds/rightAnswer.wav" id="25_q84ot"]
+[ext_resource type="AudioStream" uid="uid://dlymrnsvyqo2i" path="res://Level1_1/sounds/wrongAnswer.mp3" id="26_t0np4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
+distance = 31.0
+
+[sub_resource type="Theme" id="Theme_wbipp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5gdm0"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5058824)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnxm6"]
+bg_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_pimv2"]
+font = ExtResource("7_6gwlh")
+font_size = 4
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lnu2h"]
+normal = Vector2(1, 0)
+distance = 31.0
+
+[sub_resource type="Animation" id="Animation_mhao1"]
+resource_name = "question1_show"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0806a"]
+_data = {
+&"question1_show": SubResource("Animation_mhao1")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcf6v"]
+bg_color = Color(0, 0, 0, 0.90588236)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hwgov"]
+texture = ExtResource("16_glwtc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gk12h"]
+texture = ExtResource("17_4aufg")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fcf6v"]
+texture = ExtResource("17_4aufg")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2b5y"]
+texture = ExtResource("17_4aufg")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbipp"]
+texture = ExtResource("17_4aufg")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5gdm0"]
+texture = ExtResource("17_4aufg")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m515p"]
+texture = ExtResource("20_r4lpn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cos4y"]
+texture = ExtResource("17_4aufg")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_top = 60.0
+expand_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v4ie5"]
+texture = ExtResource("17_4aufg")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_top = 60.0
+expand_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ll82f"]
+texture = ExtResource("17_4aufg")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_top = 60.0
+expand_margin_bottom = 60.0
+
+[node name="Level2_4" type="Node2D" unique_id=2127336151]
+script = ExtResource("1_jmro7")
+
+[node name="Beginnerbg" type="Sprite2D" parent="." unique_id=1782419481]
+position = Vector2(72, -80)
+scale = Vector2(0.16770834, 0.20728931)
+texture = ExtResource("2_vwqxg")
+
+[node name="Enemy2_4" parent="." unique_id=10219249 instance=ExtResource("3_q84ot")]
+position = Vector2(121, -51)
+
+[node name="Player" parent="." unique_id=1671932887 instance=ExtResource("4_t0np4")]
+position = Vector2(-13, -30)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1020257412]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1312571148]
+position = Vector2(56, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=271412874]
+position = Vector2(0, -3)
+shape = SubResource("WorldBoundaryShape2D_uwrxv")
+
+[node name="Control" type="Control" parent="." unique_id=182970636]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -55.0
+offset_top = -44.0
+offset_right = -15.0
+offset_bottom = -4.0
+
+[node name="TouchControls" parent="Control" unique_id=1819261268 instance=ExtResource("5_xbpgu")]
+
+[node name="Health" type="ProgressBar" parent="Control" unique_id=42838900]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -110.0
+offset_right = 40.0
+offset_bottom = -97.0
+size_flags_horizontal = 0
+theme = SubResource("Theme_wbipp")
+theme_override_colors/font_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 6
+theme_override_styles/background = SubResource("StyleBoxFlat_5gdm0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pnxm6")
+show_percentage = false
+
+[node name="Heart" type="Sprite2D" parent="Control/Health" unique_id=449150263]
+position = Vector2(1, 5)
+scale = Vector2(0.11, 0.09497393)
+texture = ExtResource("6_t8svy")
+
+[node name="Label" type="Label" parent="Control/Health" unique_id=997179999]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 59.0
+offset_bottom = 10.0
+text = "Level 2"
+label_settings = SubResource("LabelSettings_pimv2")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1343977935]
+position = Vector2(-84, -48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=550958875]
+position = Vector2(-17, -30)
+shape = SubResource("WorldBoundaryShape2D_lnu2h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=795134324]
+
+[node name="Question_Panel2_4_1" parent="CanvasLayer" unique_id=2020742692 instance=ExtResource("8_ad1dd")]
+visible = false
+
+[node name="Correct_answer2_4_1" parent="CanvasLayer" unique_id=878796582 instance=ExtResource("9_vqsvv")]
+visible = false
+
+[node name="Question_Panel2_4_2" parent="CanvasLayer" unique_id=1971695456 instance=ExtResource("10_isko0")]
+visible = false
+
+[node name="Correct_answer2_4_2" parent="CanvasLayer" unique_id=802325365 instance=ExtResource("11_7hs8m")]
+visible = false
+
+[node name="Question_Panel2_4_3" parent="CanvasLayer" unique_id=109337158 instance=ExtResource("12_k7s3d")]
+visible = false
+
+[node name="Correct_answer2_4_3" parent="CanvasLayer" unique_id=572180330 instance=ExtResource("13_0057a")]
+visible = false
+
+[node name="Question_Panel2_4_4" parent="CanvasLayer" unique_id=325437373 instance=ExtResource("14_mf7pg")]
+visible = false
+
+[node name="Correct_answer2_4_4" parent="CanvasLayer" unique_id=668215303 instance=ExtResource("15_irsko")]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=99409497]
+libraries/ = SubResource("AnimationLibrary_0806a")
+
+[node name="FadeScreen" type="ColorRect" parent="CanvasLayer" unique_id=1853275088]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="GameOver" type="Control" parent="CanvasLayer" unique_id=939333618]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1277.0
+offset_bottom = 725.0
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/GameOver" unique_id=1369066357]
+layout_mode = 0
+offset_right = 1290.0
+offset_bottom = 731.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fcf6v")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/GameOver" unique_id=1268938515]
+layout_mode = 0
+offset_left = -110.0
+offset_top = 66.0
+offset_right = 1416.0
+offset_bottom = 735.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_hwgov")
+
+[node name="TryAgain" type="Button" parent="CanvasLayer/GameOver/Panel" unique_id=911316795]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 450.0
+offset_right = 633.0
+offset_bottom = 624.0
+theme_override_colors/font_hover_color = Color(0.4546166, 0.45144266, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.31448293, 0.50542307, 0.19167912, 1)
+theme_override_fonts/font = ExtResource("7_6gwlh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gk12h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcf6v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b2b5y")
+text = "Try Again"
+
+[node name="Exit" type="Button" parent="CanvasLayer/GameOver/Panel" unique_id=1704830501]
+layout_mode = 0
+offset_left = 836.0
+offset_top = 454.0
+offset_right = 1099.0
+offset_bottom = 628.0
+theme_override_fonts/font = ExtResource("7_6gwlh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gk12h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wbipp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5gdm0")
+text = "Exit"
+
+[node name="Settings" parent="CanvasLayer" unique_id=1111660280 instance=ExtResource("18_jnpxx")]
+offset_left = -99.0
+offset_top = 38.0
+offset_right = -45.0
+offset_bottom = 101.0
+mouse_filter = 2
+
+[node name="LevelCleared" type="Control" parent="CanvasLayer" unique_id=599369752]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("19_q84ot")
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/LevelCleared" unique_id=59787560]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 33.925003
+anchor_bottom = 19.475
+offset_right = -0.00012207031
+
+[node name="Panel" type="Panel" parent="CanvasLayer/LevelCleared" unique_id=1443230279]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 33.0
+offset_right = 1337.0
+offset_bottom = 687.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_m515p")
+
+[node name="NextLevel" type="Button" parent="CanvasLayer/LevelCleared/Panel" unique_id=1527267392]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 503.0
+offset_right = 806.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6gwlh")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_cos4y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v4ie5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ll82f")
+text = "Proceed to next level"
+
+[node name="Sfx_gameover" type="AudioStreamPlayer2D" parent="." unique_id=1349749760]
+stream = ExtResource("21_jju0u")
+
+[node name="Sfx_bgmusic" type="AudioStreamPlayer2D" parent="." unique_id=887289134]
+stream = ExtResource("22_n8b2s")
+
+[node name="Sfx_levelCleared" type="AudioStreamPlayer2D" parent="." unique_id=470119086]
+stream = ExtResource("23_e7fuq")
+
+[node name="Sfx_enemy" type="AudioStreamPlayer2D" parent="." unique_id=212788706]
+stream = ExtResource("24_l3ny3")
+volume_db = 10.217
+
+[node name="Sfx_rightAnswer" type="AudioStreamPlayer2D" parent="." unique_id=597894631]
+stream = ExtResource("25_q84ot")
+
+[node name="Sfx_wrongAnswer" type="AudioStreamPlayer2D" parent="." unique_id=566325397]
+stream = ExtResource("26_t0np4")
+volume_db = 5.0
+
+[connection signal="enemy_died" from="Enemy2_4" to="." method="_on_enemy_died"]
+[connection signal="pressed" from="CanvasLayer/GameOver/Panel/TryAgain" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameOver/Panel/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/LevelCleared/Panel/NextLevel" to="CanvasLayer/LevelCleared" method="_on_next_level_pressed"]

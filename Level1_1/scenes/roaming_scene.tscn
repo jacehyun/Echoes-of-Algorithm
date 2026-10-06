@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://bisr2ilkkrn5b"]
+
+[ext_resource type="Script" uid="uid://cm2sw0wpq8idu" path="res://Level1_1/scenes/roaming_scene.gd" id="1_anv3s"]
+[ext_resource type="Texture2D" uid="uid://c6ljmyp7u1qmk" path="res://Level1_1/panels/beginnerbg.png" id="1_ddxdl"]
+[ext_resource type="PackedScene" uid="uid://dsuhv36g38sgi" path="res://Level1_1/scenes/scroll.tscn" id="1_o3hlb"]
+[ext_resource type="PackedScene" uid="uid://dbys26aexumur" path="res://Level1_1/scenes/player.tscn" id="2_nmh8v"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="3_dyvoi"]
+[ext_resource type="PackedScene" uid="uid://c2i21wynvk30g" path="res://Level1_1/scenes/canvas_layer.tscn" id="4_dyvoi"]
+[ext_resource type="Texture2D" uid="uid://gdn3nyw5j44b" path="res://Level1_1/panels/Heart.PNG" id="6_2jcho"]
+[ext_resource type="Script" uid="uid://yojjx8n16xed" path="res://Level1_1/scripts/interaction_manager.gd" id="6_h8x3c"]
+[ext_resource type="PackedScene" uid="uid://c7g0ibqsgrpyh" path="res://Level1_1/scenes/touch_controls.tscn" id="8_anv3s"]
+[ext_resource type="AudioStream" uid="uid://b62t8ciuc7h4j" path="res://Level1_1/sounds/RoamingSound.mp3" id="10_crh5d"]
+[ext_resource type="AudioStream" uid="uid://onhoinscvw2m" path="res://Level1_1/sounds/dialogtyping.mp3" id="11_lh3jl"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_crh5d"]
+normal = Vector2(-1, 0)
+distance = 34.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_anv3s"]
+normal = Vector2(1, 0)
+distance = 34.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h8x3c"]
+distance = 31.0
+
+[sub_resource type="Theme" id="Theme_lh3jl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0cil"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5058824)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11b4o"]
+bg_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_o2fxh"]
+font = ExtResource("3_dyvoi")
+font_size = 4
+font_color = Color(0, 0, 0, 1)
+
+[node name="RoamingScene" type="Node2D" unique_id=348193935]
+script = ExtResource("1_anv3s")
+
+[node name="Beginnerbg" type="Sprite2D" parent="." unique_id=1385307537]
+position = Vector2(76, -81.0625)
+scale = Vector2(0.3674665, 0.45440817)
+texture = ExtResource("1_ddxdl")
+
+[node name="Scroll" parent="." unique_id=945990366 instance=ExtResource("1_o3hlb")]
+
+[node name="Player" parent="." unique_id=1671932887 instance=ExtResource("2_nmh8v")]
+position = Vector2(-13, -30)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1549024697]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=103955784]
+position = Vector2(224, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=25525703]
+position = Vector2(26, -105)
+shape = SubResource("WorldBoundaryShape2D_crh5d")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=83850450]
+position = Vector2(112, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1167125658]
+position = Vector2(-223, -101)
+shape = SubResource("WorldBoundaryShape2D_anv3s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1260708964]
+position = Vector2(56, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1963867483]
+position = Vector2(0, -3)
+shape = SubResource("WorldBoundaryShape2D_h8x3c")
+
+[node name="CanvasLayer" parent="." unique_id=12867465 instance=ExtResource("4_dyvoi")]
+
+[node name="InteractionManager" type="Node2D" parent="." unique_id=80655908 groups=["Player"]]
+script = ExtResource("6_h8x3c")
+
+[node name="Control" type="Control" parent="." unique_id=748719375]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -55.0
+offset_top = -44.0
+offset_right = -15.0
+offset_bottom = -4.0
+
+[node name="TouchControls" parent="Control" unique_id=1819261268 instance=ExtResource("8_anv3s")]
+
+[node name="Health" type="ProgressBar" parent="Control" unique_id=123903868]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -110.0
+offset_right = 40.0
+offset_bottom = -97.0
+size_flags_horizontal = 0
+theme = SubResource("Theme_lh3jl")
+theme_override_colors/font_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 6
+theme_override_styles/background = SubResource("StyleBoxFlat_n0cil")
+theme_override_styles/fill = SubResource("StyleBoxFlat_11b4o")
+show_percentage = false
+
+[node name="Heart" type="Sprite2D" parent="Control/Health" unique_id=683247802]
+position = Vector2(1, 5)
+scale = Vector2(0.11, 0.09497393)
+texture = ExtResource("6_2jcho")
+
+[node name="Label" type="Label" parent="Control/Health" unique_id=1685632783]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 59.0
+offset_bottom = 10.0
+text = "Level 1"
+label_settings = SubResource("LabelSettings_o2fxh")
+
+[node name="sfx_roaming" type="AudioStreamPlayer2D" parent="." unique_id=867857664]
+stream = ExtResource("10_crh5d")
+
+[node name="sfx_dialogtyping" type="AudioStreamPlayer2D" parent="." unique_id=1565733066]
+stream = ExtResource("11_lh3jl")

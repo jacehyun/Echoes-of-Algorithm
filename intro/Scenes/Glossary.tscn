@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b8vhqto4dlybm"]
+
+[ext_resource type="Texture2D" uid="uid://rghd7j1ppsyv" path="res://intro/Assets/Background Image/startpage_bg.png" id="1_16vin"]
+[ext_resource type="Script" uid="uid://bpc7gjowkbimr" path="res://intro/Scenes/glossary.gd" id="1_m4ys7"]
+[ext_resource type="PackedScene" uid="uid://bt875swtyavm0" path="res://intro/Character/intro_player.tscn" id="2_8cxgq"]
+[ext_resource type="PackedScene" uid="uid://cv5mj2cq7qmnk" path="res://intro/Scenes/Glossary_Panel.tscn" id="3_8cxgq"]
+[ext_resource type="PackedScene" uid="uid://duhp7h6i08ug8" path="res://Level1_1/Settings.tscn" id="3_m4ys7"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_54w1v"]
+distance = 22.0
+
+[node name="Glossary" type="Node2D" unique_id=561553749]
+script = ExtResource("1_m4ys7")
+
+[node name="StartpageBg" type="Sprite2D" parent="." unique_id=159140689]
+position = Vector2(72.00001, -80.00001)
+scale = Vector2(0.16666666, 0.2050114)
+texture = ExtResource("1_16vin")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1346100125]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="Intro Player" parent="." unique_id=1464439105 instance=ExtResource("2_8cxgq")]
+position = Vector2(-95, -17)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2091236019]
+position = Vector2(74, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2118011590]
+position = Vector2(0, -5)
+shape = SubResource("WorldBoundaryShape2D_54w1v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=62193402]
+
+[node name="Glossary" parent="CanvasLayer" unique_id=387903825 instance=ExtResource("3_8cxgq")]
+
+[node name="Settings" parent="CanvasLayer" unique_id=1111660280 instance=ExtResource("3_m4ys7")]
+mouse_filter = 2

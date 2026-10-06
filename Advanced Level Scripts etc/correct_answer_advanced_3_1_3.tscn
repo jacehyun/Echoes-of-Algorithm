@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://bbv4ylotoh0hx"]
+
+[ext_resource type="Script" uid="uid://dy5c77nv1kt1u" path="res://Level1_1/scripts/correct_answer.gd" id="1_q3jfp"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="2_67mh6"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="3_mbdik"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="4_ejxv0"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="5_gwfb7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u0ix1"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("2_67mh6")
+
+[sub_resource type="LabelSettings" id="LabelSettings_l4f28"]
+font = ExtResource("3_mbdik")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k6txk"]
+line_spacing = 5.0
+font = ExtResource("3_mbdik")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jwmke"]
+font = ExtResource("3_mbdik")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="CorrectAnswerAdvanced3" type="Control" unique_id=2043359055]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q3jfp")
+
+[node name="CorrectAnsBox" type="Panel" parent="." unique_id=1457797468]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 135.0
+offset_right = 1014.0
+offset_bottom = 558.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_u0ix1")
+
+[node name="Label" type="Label" parent="CorrectAnsBox" unique_id=798585000]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0413885
+anchor_top = 0.16548465
+anchor_right = 0.94399476
+anchor_bottom = 0.33002365
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "The answer is ...
+B. Evaluation"
+label_settings = SubResource("LabelSettings_l4f28")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CorrectAnsBox" unique_id=539399989]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021092592
+anchor_top = 0.34334543
+anchor_right = 0.86221397
+anchor_bottom = 0.6280668
+offset_left = 35.20166
+offset_top = 17.945099
+offset_right = 35.20172
+offset_bottom = 59.73726
+grow_horizontal = 2
+text = "That's right! ✅
+Evaluation is the process of checking how well a model performs.
+"
+label_settings = SubResource("LabelSettings_k6txk")
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Okay" type="TextureButton" parent="CorrectAnsBox" unique_id=1938988079]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 340.0
+offset_right = 473.0
+offset_bottom = 397.0
+texture_normal = ExtResource("4_ejxv0")
+texture_hover = ExtResource("5_gwfb7")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="CorrectAnsBox/Okay" unique_id=1293318064]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 201.0
+offset_bottom = 43.0
+text = "Nice!"
+label_settings = SubResource("LabelSettings_jwmke")
+horizontal_alignment = 1

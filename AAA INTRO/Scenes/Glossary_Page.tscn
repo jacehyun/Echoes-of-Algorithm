@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://cpuiqlmskuax5"]
+
+[ext_resource type="Texture2D" uid="uid://rghd7j1ppsyv" path="res://Assets/Background Image/startpage_bg.png" id="1_ln531"]
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://Assets/Font/PressStart2P-Regular.ttf" id="2_mdj3d"]
+[ext_resource type="Texture2D" uid="uid://dnpcna3lrh8yc" path="res://Assets/Buttons/basic button.png" id="3_dgdet"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_up0sa"]
+texture = ExtResource("1_ln531")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ln531"]
+texture = ExtResource("3_dgdet")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jajhh"]
+texture = ExtResource("3_dgdet")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ny6hf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0lco"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3q5in"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmicw"]
+
+[node name="GlossaryPage" type="Control" unique_id=1748964541]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=900848579]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_up0sa")
+
+[node name="Glossary" type="Button" parent="Panel" unique_id=261525380]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 140.0
+offset_right = 701.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mdj3d")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_ln531")
+text = "Glossary"
+
+[node name="Topic Buttons" type="HBoxContainer" parent="Panel" unique_id=1352370600]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -361.0
+offset_top = -51.0
+offset_right = 414.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Topic 1" type="Button" parent="Panel/Topic Buttons" unique_id=2104059669]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mdj3d")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_jajhh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ny6hf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m0lco")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3q5in")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wmicw")
+text = "Topic 1"
+
+[node name="Topic 2" type="Button" parent="Panel/Topic Buttons" unique_id=924140216]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mdj3d")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_jajhh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ny6hf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m0lco")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3q5in")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wmicw")
+text = "Topic 2"
+
+[node name="Topic 3" type="Button" parent="Panel/Topic Buttons" unique_id=1929335782]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mdj3d")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_jajhh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ny6hf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m0lco")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3q5in")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wmicw")
+text = "Topic 3"

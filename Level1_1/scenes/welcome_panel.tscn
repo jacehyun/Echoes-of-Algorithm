@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bdfcosmqtyalj"]
+
+[ext_resource type="Script" uid="uid://je0q31xoikop" path="res://Level1_1/scenes/welcome_panel.gd" id="1_qflwk"]
+[ext_resource type="Texture2D" uid="uid://ww31mehqk04s" path="res://Level1_1/panels/DialoguePanel.png" id="1_sehfu"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="2_gsabq"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="3_gsabq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qflwk"]
+texture = ExtResource("1_sehfu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4mgc7"]
+texture = ExtResource("3_gsabq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i37lk"]
+texture = ExtResource("3_gsabq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vowf"]
+texture = ExtResource("3_gsabq")
+
+[node name="WelcomePanel" type="Control" unique_id=1131635997]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qflwk")
+
+[node name="Panel2" type="Panel" parent="." unique_id=162797645]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 402.0
+offset_right = 1157.0
+offset_bottom = 708.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qflwk")
+
+[node name="PanelText2" type="RichTextLabel" parent="Panel2" unique_id=690393316]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 87.0
+offset_right = 924.0
+offset_bottom = 241.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("2_gsabq")
+text = "Search the area for ancient scrolls and lost data. Go near them and interact to study their secrets. Remember what you read carefully! You will need this knowledge to answer the guardians' questions and defeat them in combat."
+scroll_active = false
+
+[node name="CloseButton" type="Button" parent="Panel2" unique_id=220293263]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 171.0
+offset_right = 936.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("2_gsabq")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_4mgc7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i37lk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7vowf")
+text = "Got it!"
+
+[node name="Panel1" type="Panel" parent="." unique_id=828190050]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 401.0
+offset_right = 1157.0
+offset_bottom = 707.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qflwk")
+
+[node name="PanelText1" type="RichTextLabel" parent="Panel1" unique_id=1201479775]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 86.0
+offset_right = 936.0
+offset_bottom = 240.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("2_gsabq")
+text = "Welcome to the Echoes of Algorithm!
+
+You have entered the Caverns of Knowledge. To survive the trials ahead, brute force will not be enough—your mind is your greatest weapon."
+scroll_active = false
+
+[node name="NextButton" type="Button" parent="Panel1" unique_id=289811765]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 169.0
+offset_right = 935.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("2_gsabq")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_4mgc7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i37lk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7vowf")
+text = "Next"
+
+[connection signal="pressed" from="Panel2/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="Panel1/NextButton" to="." method="_on_next_button_pressed"]

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://eq86f8dgqu7j"]
+
+[ext_resource type="Texture2D" uid="uid://rghd7j1ppsyv" path="res://intro/Assets/Background Image/startpage_bg.png" id="1_640nh"]
+[ext_resource type="Script" uid="uid://c1hhysstf5bg3" path="res://intro/Scenes/main_menu.gd" id="1_xidq1"]
+[ext_resource type="PackedScene" uid="uid://bt875swtyavm0" path="res://intro/Character/intro_player.tscn" id="2_xidq1"]
+[ext_resource type="PackedScene" uid="uid://bqtnv1svwt0tg" path="res://intro/Scenes/MainMenuPanel.tscn" id="3_640nh"]
+[ext_resource type="PackedScene" uid="uid://duhp7h6i08ug8" path="res://Level1_1/Settings.tscn" id="4_5phqo"]
+[ext_resource type="AudioStream" uid="uid://dnuudjakr7yyt" path="res://intro/Assets/Music/xDeviruchi - Title Theme .wav" id="6_0b21f"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lpcbe"]
+distance = 22.0
+
+[node name="MainMenu" type="Node2D" unique_id=5538740]
+script = ExtResource("1_xidq1")
+
+[node name="StartpageBg" type="Sprite2D" parent="." unique_id=1289192875]
+position = Vector2(72.50002, -80.00001)
+scale = Vector2(0.16718748, 0.2050114)
+texture = ExtResource("1_640nh")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1776892057]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="Intro Player" parent="." unique_id=1464439105 instance=ExtResource("2_xidq1")]
+position = Vector2(-95, -17)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=270159424]
+position = Vector2(74, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1606296546]
+position = Vector2(0, -5)
+shape = SubResource("WorldBoundaryShape2D_lpcbe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=106497325]
+
+[node name="MainMenu" parent="CanvasLayer" unique_id=1951417428 instance=ExtResource("3_640nh")]
+
+[node name="Settings" parent="CanvasLayer" unique_id=1111660280 instance=ExtResource("4_5phqo")]
+mouse_filter = 2
+
+[node name="introbg" type="AudioStreamPlayer2D" parent="." unique_id=503937932]
+stream = ExtResource("6_0b21f")

@@ -1,0 +1,352 @@
+[gd_scene format=3 uid="uid://ohwgm7budhpk"]
+
+[ext_resource type="Texture2D" uid="uid://cmxuojh0bot4o" path="res://AAA INTRO/Assets/Buttons/setting button.png" id="1_etcin"]
+[ext_resource type="Script" uid="uid://80n4eves4jug" path="res://Level1_1/Settings.gd" id="1_x52rt"]
+[ext_resource type="Texture2D" uid="uid://bq4jnma2yuke6" path="res://AAA INTRO/Assets/Background Image/topic container.png" id="2_x52rt"]
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://intro/Assets/Font/PressStart2P-Regular.ttf" id="3_85fff"]
+[ext_resource type="Texture2D" uid="uid://dtfw54o2fhnnh" path="res://intro/Assets/Buttons/volume slider.png" id="4_85fff"]
+[ext_resource type="Texture2D" uid="uid://nw3ucoeibgmm" path="res://intro/Assets/Buttons/volume icon.png" id="4_habx7"]
+[ext_resource type="Texture2D" uid="uid://basp0wn0gv05u" path="res://intro/Assets/Buttons/volume icon grabber.png" id="4_m058t"]
+[ext_resource type="Texture2D" uid="uid://btw850ycpdpot" path="res://intro/Assets/Buttons/volume grabber.png" id="5_m058t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dsx34"]
+texture = ExtResource("1_etcin")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x52rt"]
+texture = ExtResource("1_etcin")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85fff"]
+texture = ExtResource("1_etcin")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_habx7"]
+texture = ExtResource("1_etcin")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wx6vj"]
+texture = ExtResource("1_etcin")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m058t"]
+texture = ExtResource("2_x52rt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h20n2"]
+texture = ExtResource("4_habx7")
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1hpyi"]
+content_margin_top = 12.0
+content_margin_bottom = 12.0
+texture = ExtResource("4_85fff")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1kgr5"]
+texture = ExtResource("5_m058t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qlwap"]
+texture = ExtResource("5_m058t")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_habx7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wx6vj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8t8fa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1hpyi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1kgr5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o2vs7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mlyo2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_okxjw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nd40a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh6aa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8t8fa"]
+texture = ExtResource("2_x52rt")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qlwap"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h20n2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2om7e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jgvyf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_amhm6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i7myc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qqf2b"]
+
+[node name="Settings" type="Control" unique_id=1111660280]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x52rt")
+
+[node name="SettingsMenu_Button" type="Button" parent="." unique_id=301066914]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = 90.0
+grow_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_dsx34")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x52rt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_85fff")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_habx7")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wx6vj")
+
+[node name="SettingsMenu_Panel" type="PanelContainer" parent="." unique_id=244904741]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.5
+offset_top = -249.5
+offset_right = 212.5
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m058t")
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsMenu_Panel" unique_id=1093496254]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsMenu_Panel/MarginContainer" unique_id=1709506611]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsMenu_Panel/MarginContainer/VBoxContainer" unique_id=1773715154]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsMenu_Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=820216999]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 30
+
+[node name="Button" type="Button" parent="SettingsMenu_Panel/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=699809238]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_h20n2")
+
+[node name="HSlider" type="HSlider" parent="SettingsMenu_Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=896589386]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_icons/grabber = ExtResource("4_m058t")
+theme_override_icons/grabber_highlight = ExtResource("4_m058t")
+theme_override_icons/grabber_disabled = ExtResource("4_m058t")
+theme_override_styles/slider = SubResource("StyleBoxTexture_1hpyi")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_1kgr5")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_qlwap")
+max_value = 1.0
+step = 0.01
+value = 0.5
+ticks_position = 3
+
+[node name="Resume_Button" type="Button" parent="SettingsMenu_Panel/MarginContainer/VBoxContainer" unique_id=81369301]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_85fff")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_habx7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wx6vj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8t8fa")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1hpyi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1kgr5")
+text = "Resume"
+
+[node name="Restart_Button" type="Button" parent="SettingsMenu_Panel/MarginContainer/VBoxContainer" unique_id=1151035699]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_85fff")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_habx7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wx6vj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8t8fa")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1hpyi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1kgr5")
+text = "Restart"
+
+[node name="Exit_Button" type="Button" parent="SettingsMenu_Panel/MarginContainer/VBoxContainer" unique_id=347219970]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_85fff")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o2vs7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mlyo2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_okxjw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_nd40a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh6aa")
+text = "Exit"
+
+[node name="Settings_Panel" type="PanelContainer" parent="." unique_id=563597503]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -112.5
+offset_right = 175.0
+offset_bottom = 112.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8t8fa")
+
+[node name="MarginContainer" type="MarginContainer" parent="Settings_Panel" unique_id=1094403010]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings_Panel/MarginContainer" unique_id=1894032869]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Resume_Button" type="Button" parent="Settings_Panel/MarginContainer/VBoxContainer" unique_id=1191481412]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_85fff")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_habx7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wx6vj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8t8fa")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1hpyi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1kgr5")
+text = "Resume"
+
+[node name="Settings_Button" type="Button" parent="Settings_Panel/MarginContainer/VBoxContainer" unique_id=1365014454]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_85fff")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qlwap")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h20n2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2om7e")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jgvyf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_amhm6")
+text = "Settings"
+
+[node name="Exit_Button" type="Button" parent="Settings_Panel/MarginContainer/VBoxContainer" unique_id=1754185992]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_85fff")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o2vs7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mlyo2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_okxjw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_nd40a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh6aa")
+text = "Exit"
+
+[node name="ExitConfirmation_Panel" type="PanelContainer" parent="." unique_id=1530688840]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -185.0
+offset_right = 225.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m058t")
+
+[node name="MarginContainer" type="MarginContainer" parent="ExitConfirmation_Panel" unique_id=427854992]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExitConfirmation_Panel/MarginContainer" unique_id=1502248658]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Label" type="Label" parent="ExitConfirmation_Panel/MarginContainer/VBoxContainer" unique_id=375396159]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_85fff")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i7myc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qqf2b")
+text = "Are you sure you
+want to exit?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ExitConfirmation_Panel/MarginContainer/VBoxContainer" unique_id=2099630064]
+layout_mode = 2
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="ConfirmExit_Button" type="Button" parent="ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1641955688]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_85fff")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_habx7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wx6vj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8t8fa")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1hpyi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1kgr5")
+text = "Yes"
+
+[node name="CancelExit_Button" type="Button" parent="ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1208058616]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_85fff")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qlwap")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h20n2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2om7e")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jgvyf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_amhm6")
+text = "Cancel"
+
+[connection signal="pressed" from="SettingsMenu_Button" to="." method="_on_settings_menu_button_pressed"]
+[connection signal="value_changed" from="SettingsMenu_Panel/MarginContainer/VBoxContainer/HBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="SettingsMenu_Panel/MarginContainer/VBoxContainer/Resume_Button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="SettingsMenu_Panel/MarginContainer/VBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="SettingsMenu_Panel/MarginContainer/VBoxContainer/Restart_Button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="SettingsMenu_Panel/MarginContainer/VBoxContainer/Exit_Button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer/ConfirmExit_Button" to="." method="_on_confirm_exit_button_pressed"]
+[connection signal="pressed" from="ExitConfirmation_Panel/MarginContainer/VBoxContainer/HBoxContainer/CancelExit_Button" to="." method="_on_cancel_exit_button_pressed"]

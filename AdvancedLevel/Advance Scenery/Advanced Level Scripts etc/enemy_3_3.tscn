@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://bbo2tvkph1njk"]
+
+[ext_resource type="Script" uid="uid://cou0upfmgvq7h" path="res://AdvancedLevel/Advance Scenery/Advanced Level Scripts etc/enemy_3_3.gd" id="1_fb86l"]
+[ext_resource type="Texture2D" uid="uid://bgohpggq0ioiw" path="res://AdvancedLevel/Enemy 3_3/Attacking/frame_000.png" id="1_s2mqt"]
+[ext_resource type="Texture2D" uid="uid://d0lcc8mlr7hgu" path="res://AdvancedLevel/Enemy 3_3/Attacking/frame_001.png" id="2_fb86l"]
+[ext_resource type="Texture2D" uid="uid://bxy7hw5mfgqy7" path="res://AdvancedLevel/Enemy 3_3/Attacking/frame_002.png" id="3_ackqb"]
+[ext_resource type="Texture2D" uid="uid://denlhscf1lu8k" path="res://AdvancedLevel/Enemy 3_3/Attacking/frame_003.png" id="4_v2qrq"]
+[ext_resource type="Texture2D" uid="uid://b00one2x5hsg1" path="res://AdvancedLevel/Enemy 3_3/Attacking/frame_004.png" id="5_8c42r"]
+[ext_resource type="Texture2D" uid="uid://cv66klbldub8l" path="res://AdvancedLevel/Enemy 3_3/Attacking/frame_005.png" id="6_5iwba"]
+[ext_resource type="Texture2D" uid="uid://dilabcisg3p5y" path="res://AdvancedLevel/Enemy 3_3/Dying/frame_000.png" id="7_kyt3y"]
+[ext_resource type="Texture2D" uid="uid://ckybdxrb8yfsc" path="res://AdvancedLevel/Enemy 3_3/Dying/frame_001.png" id="8_eyhlt"]
+[ext_resource type="Texture2D" uid="uid://brsi52y8wcm42" path="res://AdvancedLevel/Enemy 3_3/Dying/frame_002.png" id="9_rew5p"]
+[ext_resource type="Texture2D" uid="uid://lmf51rp42s3w" path="res://AdvancedLevel/Enemy 3_3/Dying/frame_003.png" id="10_3bulj"]
+[ext_resource type="Texture2D" uid="uid://bqpge1fedv3qb" path="res://AdvancedLevel/Enemy 3_3/Dying/frame_004.png" id="11_0sea8"]
+[ext_resource type="Texture2D" uid="uid://d273a5jsn6fo5" path="res://AdvancedLevel/Enemy 3_3/Dying/frame_005.png" id="12_uj16i"]
+[ext_resource type="Texture2D" uid="uid://cls0ybcyjswvn" path="res://AdvancedLevel/Enemy 3_3/Dying/frame_006.png" id="13_x50cj"]
+[ext_resource type="Texture2D" uid="uid://bd2v5cyoqvrq5" path="res://AdvancedLevel/Enemy 3_3/Getting Hit/frame_000.png" id="14_7im1b"]
+[ext_resource type="Texture2D" uid="uid://cxrhj8hdlnubd" path="res://AdvancedLevel/Enemy 3_3/Getting Hit/frame_001.png" id="15_nqqd6"]
+[ext_resource type="Texture2D" uid="uid://cv8duye3hli81" path="res://AdvancedLevel/Enemy 3_3/Getting Hit/frame_002.png" id="16_s72s2"]
+[ext_resource type="Texture2D" uid="uid://cria6jowbgwdf" path="res://AdvancedLevel/Enemy 3_3/Getting Hit/frame_003.png" id="17_ih8wi"]
+[ext_resource type="Texture2D" uid="uid://c0r2fftm36ule" path="res://AdvancedLevel/Enemy 3_3/Getting Hit/frame_004.png" id="18_hn1hm"]
+[ext_resource type="Texture2D" uid="uid://ckpaj7e7alf5u" path="res://AdvancedLevel/Enemy 3_3/Ilde/frame_000.png" id="19_5wffd"]
+[ext_resource type="Texture2D" uid="uid://dep7c0ks7sg8s" path="res://AdvancedLevel/Enemy 3_3/Ilde/frame_001.png" id="20_cob02"]
+[ext_resource type="Texture2D" uid="uid://bgfvfdp8d8jq6" path="res://AdvancedLevel/Enemy 3_3/Ilde/frame_002.png" id="21_lkagi"]
+[ext_resource type="Texture2D" uid="uid://ceww2kqv8qhy7" path="res://AdvancedLevel/Enemy 3_3/Ilde/frame_003.png" id="22_5nsv1"]
+[ext_resource type="Texture2D" uid="uid://dpjdtp6c0xk5s" path="res://AdvancedLevel/Enemy 3_3/Ilde/frame_004.png" id="23_tcmg7"]
+[ext_resource type="Texture2D" uid="uid://cvuyc7y88erwo" path="res://AdvancedLevel/Enemy 3_3/Ilde/frame_005.png" id="24_qjmfd"]
+[ext_resource type="Texture2D" uid="uid://b2wki3sslsmfb" path="res://AdvancedLevel/Enemy 3_3/Ilde/frame_006.png" id="25_eitmj"]
+[ext_resource type="Texture2D" uid="uid://n4rt074jexw3" path="res://AdvancedLevel/Enemy 3_3/Ilde/frame_007.png" id="26_eghan"]
+[ext_resource type="Texture2D" uid="uid://y3nhkcv8dixv" path="res://AdvancedLevel/Enemy 3_3/Walking/frame_000.png" id="27_c6by6"]
+[ext_resource type="Texture2D" uid="uid://qsdcdwk8stk6" path="res://AdvancedLevel/Enemy 3_3/Walking/frame_001.png" id="28_t5xwh"]
+[ext_resource type="Texture2D" uid="uid://bj5sk5u6xinmg" path="res://AdvancedLevel/Enemy 3_3/Walking/frame_002.png" id="29_n4wyc"]
+[ext_resource type="Texture2D" uid="uid://chkow0vv1ume2" path="res://AdvancedLevel/Enemy 3_3/Walking/frame_003.png" id="30_fknol"]
+[ext_resource type="Texture2D" uid="uid://c7v1lc3hidoia" path="res://AdvancedLevel/Enemy 3_3/Walking/frame_004.png" id="31_dkyn1"]
+[ext_resource type="Texture2D" uid="uid://cgqi53bqlhmf8" path="res://AdvancedLevel/Enemy 3_3/Walking/frame_005.png" id="32_ityb8"]
+[ext_resource type="Texture2D" uid="uid://brkto4qv2w3kj" path="res://AdvancedLevel/Enemy 3_3/Walking/frame_006.png" id="33_73uui"]
+[ext_resource type="Texture2D" uid="uid://b4r1pjwccuux1" path="res://AdvancedLevel/Enemy 3_3/Walking/frame_007.png" id="34_5i2hy"]
+[ext_resource type="Texture2D" uid="uid://eoql5vrxubpf" path="res://Level1_1/panels/dialogue.png" id="35_73qb0"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="36_ogpfk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qwgho"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s2mqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fb86l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ackqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v2qrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8c42r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5iwba")
+}],
+"loop": true,
+"name": &"Attacking 3_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_kyt3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_eyhlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rew5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3bulj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0sea8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uj16i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_x50cj")
+}],
+"loop": false,
+"name": &"Dying 3_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_7im1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nqqd6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_s72s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ih8wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hn1hm")
+}],
+"loop": true,
+"name": &"Getting Hit 3_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_5wffd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cob02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lkagi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5nsv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tcmg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qjmfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_eitmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_eghan")
+}],
+"loop": true,
+"name": &"Idle 3_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_c6by6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_t5xwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_n4wyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_fknol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dkyn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ityb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_73uui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_5i2hy")
+}],
+"loop": true,
+"name": &"Walking 3_3",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_auvdh"]
+radius = 19.026299
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eg1t6"]
+texture = ExtResource("35_73qb0")
+expand_margin_bottom = 25.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_7rlar"]
+font = ExtResource("36_ogpfk")
+font_size = 6
+font_color = Color(0, 0, 0, 1)
+
+[node name="Enemy 3_3" type="CharacterBody2D" unique_id=765311446]
+position = Vector2(-61, -27)
+script = ExtResource("1_fb86l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=349880291]
+position = Vector2(71.75, 26.000002)
+scale = Vector2(2.0803573, 1.8928572)
+sprite_frames = SubResource("SpriteFrames_qwgho")
+animation = &"Dying 3_3"
+frame_progress = 0.34815627
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1091303956]
+position = Vector2(65, 50)
+shape = SubResource("CircleShape2D_auvdh")
+
+[node name="DialogueBox" type="Panel" parent="." unique_id=182250056]
+visible = false
+offset_left = -100.0
+offset_top = -45.0
+offset_right = -28.0
+offset_bottom = 11.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_eg1t6")
+
+[node name="Label" type="Label" parent="DialogueBox" unique_id=1491937814]
+texture_filter = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 16.0
+offset_right = 67.0
+offset_bottom = 39.0
+label_settings = SubResource("LabelSettings_7rlar")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

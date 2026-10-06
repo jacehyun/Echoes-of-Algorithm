@@ -1,0 +1,439 @@
+[gd_scene format=3 uid="uid://dg2wdgvmx37j1"]
+
+[ext_resource type="Script" uid="uid://d2htytlaukx8y" path="res://AAA INTRO/Scenes/dialogue_panel.gd" id="1_cfd0n"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="2_b5d2q"]
+[ext_resource type="Texture2D" uid="uid://b58f7jqpvhku1" path="res://intro/Assets/Buttons/left button.png" id="2_kgq8k"]
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://intro/Assets/Font/PressStart2P-Regular.ttf" id="4_m53c6"]
+[ext_resource type="Texture2D" uid="uid://6442kribpajv" path="res://AAA INTRO/Assets/Buttons/next button.png" id="5_coaoa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5d2q"]
+texture = ExtResource("2_kgq8k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cfd0n"]
+texture = ExtResource("2_kgq8k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kgq8k"]
+texture = ExtResource("2_kgq8k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m53c6"]
+texture = ExtResource("2_kgq8k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_coaoa"]
+texture = ExtResource("2_kgq8k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kh15g"]
+texture = ExtResource("2_b5d2q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m46qj"]
+texture = ExtResource("5_coaoa")
+expand_margin_left = 25.0
+expand_margin_right = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5jgvl"]
+texture = ExtResource("5_coaoa")
+expand_margin_left = 25.0
+expand_margin_right = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rppn"]
+texture = ExtResource("5_coaoa")
+expand_margin_left = 25.0
+expand_margin_right = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1776f"]
+texture = ExtResource("5_coaoa")
+expand_margin_left = 25.0
+expand_margin_right = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tl4dn"]
+texture = ExtResource("5_coaoa")
+expand_margin_left = 25.0
+expand_margin_right = 25.0
+
+[node name="Dialogue Panel" type="Control" unique_id=1573700213]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cfd0n")
+
+[node name="Return_Button" type="Button" parent="." unique_id=1664360897]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 65.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_b5d2q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cfd0n")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kgq8k")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_m53c6")
+theme_override_styles/focus = SubResource("StyleBoxTexture_coaoa")
+
+[node name="Dialogue Panel 1" type="PanelContainer" parent="." unique_id=152236422]
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -425.0
+offset_top = -310.0
+offset_right = 425.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kh15g")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogue Panel 1" unique_id=1025114345]
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue Panel 1/MarginContainer" unique_id=1285982288]
+custom_minimum_size = Vector2(735, 190)
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Dialogue Panel 1/MarginContainer/VBoxContainer" unique_id=1465307671]
+custom_minimum_size = Vector2(735, 135)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to the Data Cave…           
+
+You are Tejo, a young explorer who has entered the mysterious Data Realm, a world where knowledge and Machine Learning concepts live."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Dialogue Panel 1/MarginContainer/VBoxContainer" unique_id=724286020]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m46qj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5jgvl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5rppn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_1776f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_tl4dn")
+text = "Next..."
+
+[node name="Dialogue Panel 2" type="PanelContainer" parent="." unique_id=906473966]
+visible = false
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -425.0
+offset_top = -310.0
+offset_right = 425.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kh15g")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogue Panel 2" unique_id=428094680]
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue Panel 2/MarginContainer" unique_id=2046578453]
+custom_minimum_size = Vector2(735, 190)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="Dialogue Panel 2/MarginContainer/VBoxContainer" unique_id=1227879261]
+custom_minimum_size = Vector2(735, 135)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_font_sizes/font_size = 20
+text = "But the balance of this world has been disturbed by creatures called Data-Insects, which represent errors and misunderstandings in Machine Learning."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Dialogue Panel 2/MarginContainer/VBoxContainer" unique_id=564750021]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m46qj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5jgvl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5rppn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_1776f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_tl4dn")
+text = "Next..."
+
+[node name="Dialogue Panel 3" type="PanelContainer" parent="." unique_id=1471363043]
+visible = false
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -425.0
+offset_top = -310.0
+offset_right = 425.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kh15g")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogue Panel 3" unique_id=1772764749]
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue Panel 3/MarginContainer" unique_id=37196706]
+custom_minimum_size = Vector2(735, 190)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="Dialogue Panel 3/MarginContainer/VBoxContainer" unique_id=1179089651]
+custom_minimum_size = Vector2(735, 135)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_font_sizes/font_size = 20
+text = "To restore balance, Tejo must travel through three regions: Beginner, Intermediate, and Advanced."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Dialogue Panel 3/MarginContainer/VBoxContainer" unique_id=90162974]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m46qj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5jgvl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5rppn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_1776f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_tl4dn")
+text = "Next..."
+
+[node name="Dialogue Panel 4" type="PanelContainer" parent="." unique_id=1644108617]
+visible = false
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -425.0
+offset_top = -310.0
+offset_right = 425.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kh15g")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogue Panel 4" unique_id=455868669]
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue Panel 4/MarginContainer" unique_id=1769009935]
+custom_minimum_size = Vector2(735, 190)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="Dialogue Panel 4/MarginContainer/VBoxContainer" unique_id=786418388]
+custom_minimum_size = Vector2(735, 135)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_font_sizes/font_size = 20
+text = "Along the journey, Tejo must defeat Data-Insects by answering Machine Learning questions correctly. Each correct answer weakens the enemies."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Dialogue Panel 4/MarginContainer/VBoxContainer" unique_id=1686519749]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m46qj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5jgvl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5rppn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_1776f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_tl4dn")
+text = "Next..."
+
+[node name="Dialogue Panel 5" type="PanelContainer" parent="." unique_id=1178631995]
+visible = false
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -425.0
+offset_top = -310.0
+offset_right = 425.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kh15g")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogue Panel 5" unique_id=1401210526]
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue Panel 5/MarginContainer" unique_id=706437942]
+custom_minimum_size = Vector2(735, 190)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="Dialogue Panel 5/MarginContainer/VBoxContainer" unique_id=1107503314]
+custom_minimum_size = Vector2(735, 135)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_font_sizes/font_size = 20
+text = "At the end of every region, a powerful Boss will appear to test Tejo’s knowledge before moving forward."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Dialogue Panel 5/MarginContainer/VBoxContainer" unique_id=1936617179]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m46qj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5jgvl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5rppn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_1776f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_tl4dn")
+text = "Next..."
+
+[node name="Dialogue Panel 6" type="PanelContainer" parent="." unique_id=1568047244]
+visible = false
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -425.0
+offset_top = -310.0
+offset_right = 425.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kh15g")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogue Panel 6" unique_id=1348173009]
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue Panel 6/MarginContainer" unique_id=413047156]
+custom_minimum_size = Vector2(735, 190)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="Dialogue Panel 6/MarginContainer/VBoxContainer" unique_id=1487260017]
+custom_minimum_size = Vector2(735, 135)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_font_sizes/font_size = 20
+text = "Learn, fight, and restore knowledge to the Data Realm."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Dialogue Panel 6/MarginContainer/VBoxContainer" unique_id=502175440]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_m53c6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m46qj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5jgvl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5rppn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_1776f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_tl4dn")
+text = "Next..."
+
+[connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="Dialogue Panel 1/MarginContainer/VBoxContainer/Button" to="." method="_on_next1_pressed"]
+[connection signal="pressed" from="Dialogue Panel 2/MarginContainer/VBoxContainer/Button" to="." method="_on_next2_pressed"]
+[connection signal="pressed" from="Dialogue Panel 3/MarginContainer/VBoxContainer/Button" to="." method="_on_next3_pressed"]
+[connection signal="pressed" from="Dialogue Panel 4/MarginContainer/VBoxContainer/Button" to="." method="_on_next4_pressed"]
+[connection signal="pressed" from="Dialogue Panel 5/MarginContainer/VBoxContainer/Button" to="." method="_on_next5_pressed"]
+[connection signal="pressed" from="Dialogue Panel 6/MarginContainer/VBoxContainer/Button" to="." method="_on_next6_pressed"]

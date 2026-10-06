@@ -1,0 +1,441 @@
+[gd_scene format=3 uid="uid://clicajonhox7f"]
+
+[ext_resource type="Script" uid="uid://ciukatcrdy0nk" path="res://roaming_scene_adv_3.gd" id="1_f8etp"]
+[ext_resource type="Texture2D" uid="uid://cng85iq5btcts" path="res://AdvancedLevel/Advance Scenery/advance new (1).png" id="2_nxtls"]
+[ext_resource type="PackedScene" uid="uid://dsuhv36g38sgi" path="res://Level1_1/scenes/scroll.tscn" id="3_rbmas"]
+[ext_resource type="Script" uid="uid://ceh5bg0winrbr" path="res://Level1_1/scenes/scroll2.gd" id="4_amhck"]
+[ext_resource type="PackedScene" uid="uid://dbys26aexumur" path="res://Level1_1/scenes/player.tscn" id="5_x6aw3"]
+[ext_resource type="Script" uid="uid://yojjx8n16xed" path="res://Level1_1/scripts/interaction_manager.gd" id="6_ggqi4"]
+[ext_resource type="PackedScene" uid="uid://c7g0ibqsgrpyh" path="res://Level1_1/scenes/touch_controls.tscn" id="7_jwb83"]
+[ext_resource type="Texture2D" uid="uid://gdn3nyw5j44b" path="res://Level1_1/panels/Heart.PNG" id="8_bivvx"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="9_ururf"]
+[ext_resource type="PackedScene" uid="uid://d08ietvn8xjn" path="res://Level1_1/scenes/interaction_prompt.tscn" id="10_p2jat"]
+[ext_resource type="Script" uid="uid://i4oqylvtoik7" path="res://Advanced Roaming/info_panel3_3.gd" id="11_f8etp"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="12_mxhdh"]
+[ext_resource type="Script" uid="uid://015jt2r2plsf" path="res://Level1_1/scenes/welcome_panel2.gd" id="13_aax31"]
+[ext_resource type="Texture2D" uid="uid://ww31mehqk04s" path="res://Level1_1/panels/DialoguePanel.png" id="14_oybb2"]
+[ext_resource type="PackedScene" uid="uid://duhp7h6i08ug8" path="res://Level1_1/Settings.tscn" id="15_0nmf6"]
+[ext_resource type="AudioStream" uid="uid://b62t8ciuc7h4j" path="res://Level1_1/sounds/RoamingSound.mp3" id="16_uival"]
+[ext_resource type="AudioStream" uid="uid://onhoinscvw2m" path="res://Level1_1/sounds/dialogtyping.mp3" id="17_dc4i2"]
+[ext_resource type="AudioStream" uid="uid://dsxb3ivjumkdd" path="res://Level1_1/sounds/warning.mp3" id="18_ce2xh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fb3bb"]
+normal = Vector2(-1, 0)
+distance = 34.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f7p2x"]
+normal = Vector2(1, 0)
+distance = 34.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2xm1d"]
+distance = 31.0
+
+[sub_resource type="Theme" id="Theme_oi8yq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxle5"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5058824)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrfia"]
+bg_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_uvewu"]
+font = ExtResource("9_ururf")
+font_size = 4
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q063k"]
+load_path = "res://.godot/imported/Question Panel.png-536518b8b4aa9f4841162b4cbffac91f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y2q06"]
+texture = SubResource("CompressedTexture2D_q063k")
+
+[sub_resource type="LabelSettings" id="LabelSettings_6omji"]
+font = ExtResource("9_ururf")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exqp5"]
+texture = ExtResource("12_mxhdh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_po03v"]
+texture = ExtResource("12_mxhdh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nr501"]
+texture = ExtResource("12_mxhdh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7yrv"]
+texture = ExtResource("14_oybb2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vt3w2"]
+texture = ExtResource("12_mxhdh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dyvjh"]
+texture = ExtResource("12_mxhdh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oy5kp"]
+texture = ExtResource("12_mxhdh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_orb33"]
+texture = ExtResource("14_oybb2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jw1hr"]
+texture = ExtResource("12_mxhdh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e2y3b"]
+texture = ExtResource("12_mxhdh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jdxr2"]
+texture = ExtResource("12_mxhdh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqbi4"]
+bg_color = Color(0.6, 0.6, 0.6, 0.78039217)
+
+[node name="RoamingSceneAdv3" type="Node2D" unique_id=5272353]
+script = ExtResource("1_f8etp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1870705394]
+position = Vector2(73, -79.5)
+scale = Vector2(0.16770834, 0.20842822)
+texture = ExtResource("2_nxtls")
+
+[node name="Scroll" parent="." unique_id=945990366 instance=ExtResource("3_rbmas")]
+position = Vector2(-47, 8)
+script = ExtResource("4_amhck")
+
+[node name="Player" parent="." unique_id=1671932887 instance=ExtResource("5_x6aw3")]
+position = Vector2(-13, -30)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2031755335]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=939403533]
+position = Vector2(224, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1131587372]
+position = Vector2(26, -105)
+shape = SubResource("WorldBoundaryShape2D_fb3bb")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=659352445]
+position = Vector2(112, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1228575993]
+position = Vector2(-223, -101)
+shape = SubResource("WorldBoundaryShape2D_f7p2x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2014138513]
+position = Vector2(56, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=896813204]
+position = Vector2(0, -3)
+shape = SubResource("WorldBoundaryShape2D_2xm1d")
+
+[node name="InteractionManager" type="Node2D" parent="." unique_id=1589585880 groups=["Player"]]
+script = ExtResource("6_ggqi4")
+
+[node name="Control" type="Control" parent="." unique_id=994409140]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -55.0
+offset_top = -44.0
+offset_right = -15.0
+offset_bottom = -4.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TouchControls" parent="Control" unique_id=1819261268 instance=ExtResource("7_jwb83")]
+
+[node name="Health" type="ProgressBar" parent="Control" unique_id=923616418]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -110.0
+offset_right = 40.0
+offset_bottom = -97.0
+size_flags_horizontal = 0
+theme = SubResource("Theme_oi8yq")
+theme_override_colors/font_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 6
+theme_override_styles/background = SubResource("StyleBoxFlat_wxle5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vrfia")
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Heart" type="Sprite2D" parent="Control/Health" unique_id=1826499798]
+position = Vector2(1, 5)
+scale = Vector2(0.11, 0.09497393)
+texture = ExtResource("8_bivvx")
+
+[node name="Label" type="Label" parent="Control/Health" unique_id=1126582418]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 59.0
+offset_bottom = 10.0
+text = "Level 3"
+label_settings = SubResource("LabelSettings_uvewu")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=178544176]
+
+[node name="InteractionPrompt" parent="CanvasLayer" unique_id=1229392418 instance=ExtResource("10_p2jat")]
+offset_left = 455.0
+offset_top = 484.0
+offset_right = 695.0
+offset_bottom = 507.0
+metadata/_edit_use_anchors_ = true
+
+[node name="InfoPanel2" type="Control" parent="CanvasLayer" unique_id=1653319908]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_f8etp")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="CanvasLayer/InfoPanel2" unique_id=749448486]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 150.0
+offset_right = 941.0
+offset_bottom = 582.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_y2q06")
+metadata/_edit_use_anchors_ = true
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/InfoPanel2/Panel" unique_id=291212208]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 82.0
+offset_right = 528.0
+offset_bottom = 105.0
+text = "Neural Networks"
+label_settings = SubResource("LabelSettings_6omji")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ContentLabel" type="RichTextLabel" parent="CanvasLayer/InfoPanel2/Panel" unique_id=167152908]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 142.0
+offset_right = 524.0
+offset_bottom = 360.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("9_ururf")
+theme_override_fonts/bold_font = ExtResource("9_ururf")
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 10
+bbcode_enabled = true
+text = "Neural Networks are a type of machine learning model inspired by how the human brain works. They are designed to recognize patterns and process complex information using interconnected layers. Study these carefully before proceeding!
+
+1. Neural Network
+
+A Neural Network is a model made up of layers of connected nodes that work together to process information. These connections allow the system to learn patterns and make decisions.
+
+It is called a “neural” network because it is inspired by the structure of the human brain.
+
+Key idea:
+The model is built from many connected parts working together.
+
+2. Neurons (Nodes)
+
+The individual units in a Neural Network are called neurons. Each neuron receives information, processes it, and passes it to other neurons.
+
+Neurons are connected in layers, and each connection helps the system learn patterns.
+
+Key idea:
+Neurons are the basic building blocks that pass information through the network.
+
+3. Common Uses
+
+Neural Networks are especially useful for tasks that involve recognizing patterns in complex data. One of their most common uses is image recognition.
+
+They can learn to identify objects, faces, or patterns by analyzing large amounts of data.
+
+Examples of uses:
+
+Image recognition
+Speech recognition
+Pattern detection
+
+Key idea:
+They are used when tasks involve complex pattern recognition.
+
+💡 Quick Tip to Remember:
+
+Neural Network → Brain-like system with layers
+Neurons → Connected nodes passing information
+Use → Recognizing patterns (especially images)"
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/InfoPanel2/Panel" unique_id=784864107]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 324.0
+offset_right = 348.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("9_ururf")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_exqp5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_po03v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nr501")
+text = "Close"
+metadata/_edit_use_anchors_ = true
+
+[node name="WelcomePanel" type="Control" parent="CanvasLayer" unique_id=1434918622]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_aax31")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel1" type="Panel" parent="CanvasLayer/WelcomePanel" unique_id=1886503076]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 401.0
+offset_right = 1157.0
+offset_bottom = 707.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_o7yrv")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelText1" type="RichTextLabel" parent="CanvasLayer/WelcomePanel/Panel1" unique_id=827524766]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 86.0
+offset_right = 909.0
+offset_bottom = 240.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("9_ururf")
+text = "Excellent work out there! You handled that Guardian perfectly. You know the drill—grab the data scattered in this cave, study the concepts, and keep pushing forward. The next challenge is waiting!"
+scroll_active = false
+metadata/_edit_use_anchors_ = true
+
+[node name="NextButton" type="Button" parent="CanvasLayer/WelcomePanel/Panel1" unique_id=1640317646]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 169.0
+offset_right = 935.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("9_ururf")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_vt3w2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dyvjh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oy5kp")
+text = "Next"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/WelcomePanel" unique_id=90467769]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 402.0
+offset_right = 1157.0
+offset_bottom = 708.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_orb33")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelText2" type="RichTextLabel" parent="CanvasLayer/WelcomePanel/Panel2" unique_id=355927582]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 87.0
+offset_right = 924.0
+offset_bottom = 241.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("9_ururf")
+text = "Good luck po! "
+scroll_active = false
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/WelcomePanel/Panel2" unique_id=256466434]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 171.0
+offset_right = 936.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("9_ururf")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_jw1hr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e2y3b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jdxr2")
+text = "Got it!"
+metadata/_edit_use_anchors_ = true
+
+[node name="ReadyFight2" type="Control" parent="CanvasLayer" unique_id=1148528510]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/ReadyFight2" unique_id=224438146]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 724.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xqbi4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/ReadyFight2/Panel" unique_id=1329901607]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 242.0
+offset_right = 1073.0
+offset_bottom = 457.0
+theme_override_colors/default_color = Color(0.8940833, 4.885271e-06, 8.663535e-07, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("9_ururf")
+theme_override_font_sizes/normal_font_size = 30
+text = "Knowledge acquired. Another Guardian has detected your presence. You know what to do!"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" parent="CanvasLayer" unique_id=1111660280 instance=ExtResource("15_0nmf6")]
+offset_left = -99.0
+offset_top = 38.0
+offset_right = -45.0
+offset_bottom = 101.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="sfx_roaming" type="AudioStreamPlayer2D" parent="." unique_id=751105440]
+stream = ExtResource("16_uival")
+
+[node name="sfx_dialogtyping" type="AudioStreamPlayer2D" parent="." unique_id=756385434]
+stream = ExtResource("17_dc4i2")
+
+[node name="sfx_warning" type="AudioStreamPlayer2D" parent="." unique_id=262248409]
+stream = ExtResource("18_ce2xh")
+volume_db = 21.717
+
+[connection signal="pressed" from="CanvasLayer/WelcomePanel/Panel1/NextButton" to="CanvasLayer/WelcomePanel" method="_on_next_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/WelcomePanel/Panel2/CloseButton" to="CanvasLayer/WelcomePanel" method="_on_close_button_pressed"]

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c2i21wynvk30g"]
+
+[ext_resource type="PackedScene" uid="uid://d08ietvn8xjn" path="res://Level1_1/scenes/interaction_prompt.tscn" id="1_ky88o"]
+[ext_resource type="PackedScene" uid="uid://dw7ouvbst3rs7" path="res://Level1_1/scenes/info_panel.tscn" id="2_5f1n8"]
+[ext_resource type="PackedScene" uid="uid://bdfcosmqtyalj" path="res://Level1_1/scenes/welcome_panel.tscn" id="3_5f1n8"]
+[ext_resource type="PackedScene" uid="uid://cqbvi0td3telm" path="res://Level1_1/scenes/ready_fight.tscn" id="4_rbnd2"]
+[ext_resource type="AudioStream" uid="uid://onhoinscvw2m" path="res://Level1_1/sounds/dialogtyping.mp3" id="5_5q6y8"]
+[ext_resource type="AudioStream" uid="uid://dsxb3ivjumkdd" path="res://Level1_1/sounds/warning.mp3" id="6_t1sq7"]
+[ext_resource type="PackedScene" uid="uid://duhp7h6i08ug8" path="res://Level1_1/Settings.tscn" id="7_i3bns"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=12867465]
+
+[node name="InteractionPrompt" parent="." unique_id=1229392418 instance=ExtResource("1_ky88o")]
+offset_left = 669.0
+offset_top = 466.0
+offset_right = 909.0
+offset_bottom = 489.0
+
+[node name="InfoPanel" parent="." unique_id=913409965 instance=ExtResource("2_5f1n8")]
+
+[node name="WelcomePanel" parent="." unique_id=1131635997 instance=ExtResource("3_5f1n8")]
+
+[node name="ReadyFight" parent="." unique_id=1580205924 instance=ExtResource("4_rbnd2")]
+visible = false
+
+[node name="sfx_dialogtyping" type="AudioStreamPlayer2D" parent="." unique_id=1642142510]
+stream = ExtResource("5_5q6y8")
+
+[node name="sfx_warning" type="AudioStreamPlayer2D" parent="." unique_id=1517301672]
+stream = ExtResource("6_t1sq7")
+volume_db = 21.717
+
+[node name="Settings" parent="." unique_id=1111660280 instance=ExtResource("7_i3bns")]
+offset_left = -99.0
+offset_top = 38.0
+offset_right = -45.0
+offset_bottom = 101.0
+mouse_filter = 2

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://24enc4imwyo"]
+
+[ext_resource type="Script" uid="uid://bra6c6rgamyxs" path="res://Level1_1/scripts/scroll.gd" id="1_br36u"]
+
+[node name="Scroll" type="Node2D" unique_id=2024018136]
+script = ExtResource("1_br36u")

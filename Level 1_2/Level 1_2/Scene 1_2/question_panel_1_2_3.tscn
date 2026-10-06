@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://c385pgmggndq8"]
+
+[ext_resource type="Script" uid="uid://t2l6kyl5cw83" path="res://Level 1_2/Level 1_2/Scene 1_2/question_panel_1_2_3.gd" id="1_6vxbj"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="1_i7fwg"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="3_fdglu"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="4_hplnr"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="5_jmuhl"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="6_r3m1u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v1x6m"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_i7fwg")
+
+[sub_resource type="GDScript" id="GDScript_i7fwg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_52nfs"]
+font = ExtResource("3_fdglu")
+font_size = 17
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_px1ke"]
+line_spacing = 5.0
+font = ExtResource("3_fdglu")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aykvm"]
+line_spacing = 15.0
+font = ExtResource("6_r3m1u")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="Question Panel 1_2_3" type="Control" unique_id=959795050]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6vxbj")
+
+[node name="QuestionBox" type="Panel" parent="." unique_id=229546397]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 98.0
+offset_right = 1001.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_v1x6m")
+script = SubResource("GDScript_i7fwg")
+
+[node name="Label" type="Label" parent="QuestionBox" unique_id=940717126]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048010975
+anchor_top = 0.15882353
+anchor_right = 0.9506172
+anchor_bottom = 0.4
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "Question:
+Which type of learning uses rewards and punishments?
+"
+label_settings = SubResource("LabelSettings_52nfs")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptA" type="TextureButton" parent="QuestionBox" unique_id=1981450341]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 215.0
+offset_right = 347.0
+offset_bottom = 298.0
+texture_normal = ExtResource("4_hplnr")
+texture_hover = ExtResource("5_jmuhl")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptA" unique_id=407053087]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 29.0
+offset_right = 287.0
+offset_bottom = 54.0
+text = "A. Supervised Learning"
+label_settings = SubResource("LabelSettings_px1ke")
+
+[node name="OptB" type="TextureButton" parent="QuestionBox" unique_id=1800024880]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 327.0
+offset_right = 345.0
+offset_bottom = 410.0
+texture_normal = ExtResource("4_hplnr")
+texture_hover = ExtResource("5_jmuhl")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptB" unique_id=1665915588]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 29.0
+offset_right = 296.0
+offset_bottom = 54.0
+text = "B. Reinforcement   
+   Learning"
+label_settings = SubResource("LabelSettings_px1ke")
+
+[node name="OptC" type="TextureButton" parent="QuestionBox" unique_id=668549090]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 215.0
+offset_right = 664.0
+offset_bottom = 298.0
+texture_normal = ExtResource("4_hplnr")
+texture_hover = ExtResource("5_jmuhl")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptC" unique_id=804747940]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 29.0
+offset_right = 291.0
+offset_bottom = 56.0
+text = "C. Clustering"
+label_settings = SubResource("LabelSettings_px1ke")
+
+[node name="OptD" type="TextureButton" parent="QuestionBox" unique_id=1945628572]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 325.0
+offset_right = 661.0
+offset_bottom = 408.0
+texture_normal = ExtResource("4_hplnr")
+texture_hover = ExtResource("5_jmuhl")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptD" unique_id=841398095]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 33.0
+offset_right = 289.0
+offset_bottom = 58.0
+text = "D. Regression"
+label_settings = SubResource("LabelSettings_px1ke")
+
+[node name="HintLabel" type="Label" parent="QuestionBox" unique_id=1561383019]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 435.0
+offset_right = 694.0
+offset_bottom = 491.0
+text = " Hint 💡: This learning method is similar to training a 
+character in a game through rewards and penalties.
+"
+label_settings = SubResource("LabelSettings_aykvm")
+horizontal_alignment = 1

@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://c5cxuftgcbjhd"]
+
+[ext_resource type="Script" uid="uid://necudwaqjjr0" path="res://INTERMEDIATE LEVEL/LEVEL INT1_1/correct_answer_2_1_3.gd" id="1_2ejx5"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="1_nerjn"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="2_2ejx5"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="3_1nwy2"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="4_6emi7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j1l8t"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_nerjn")
+
+[sub_resource type="LabelSettings" id="LabelSettings_5b88t"]
+font = ExtResource("2_2ejx5")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1wfax"]
+line_spacing = 5.0
+font = ExtResource("2_2ejx5")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kxb7c"]
+font = ExtResource("2_2ejx5")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="Correct_answer2_1_3" type="Control" unique_id=507781489]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ejx5")
+
+[node name="CorrectAnsBox" type="Panel" parent="." unique_id=1287075845]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 135.0
+offset_right = 1014.0
+offset_bottom = 558.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j1l8t")
+
+[node name="Label" type="Label" parent="CorrectAnsBox" unique_id=1974231556]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05473963
+anchor_top = 0.17494091
+anchor_right = 0.9573459
+anchor_bottom = 0.34042552
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "The answer is...
+ B. Prediction"
+label_settings = SubResource("LabelSettings_5b88t")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CorrectAnsBox" unique_id=173638279]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035778847
+anchor_top = 0.3878366
+anchor_right = 0.8902514
+anchor_bottom = 0.56563294
+offset_left = 35.20166
+offset_top = 17.945099
+offset_right = 35.20172
+offset_bottom = 59.73726
+grow_horizontal = 2
+text = "That’s right! 
+The system gives an output (“Safe”), which is called a prediction. Predictions are results produced by a model."
+label_settings = SubResource("LabelSettings_1wfax")
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Okay" type="TextureButton" parent="CorrectAnsBox" unique_id=1561427810]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 340.0
+offset_right = 473.0
+offset_bottom = 397.0
+texture_normal = ExtResource("3_1nwy2")
+texture_hover = ExtResource("4_6emi7")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="CorrectAnsBox/Okay" unique_id=1521115959]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 201.0
+offset_bottom = 43.0
+text = "Nice!"
+label_settings = SubResource("LabelSettings_kxb7c")
+horizontal_alignment = 1

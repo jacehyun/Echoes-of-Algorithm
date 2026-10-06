@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d08ietvn8xjn"]
+
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="1_7wc3l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rcboj"]
+font = ExtResource("1_7wc3l")
+outline_size = 100
+outline_color = Color(0, 0, 0, 1)
+
+[node name="InteractionPrompt" type="Label" unique_id=1229392418]
+offset_left = 367.0
+offset_top = 229.0
+offset_right = 607.0
+offset_bottom = 252.0
+text = "Tap to interact"
+label_settings = SubResource("LabelSettings_rcboj")

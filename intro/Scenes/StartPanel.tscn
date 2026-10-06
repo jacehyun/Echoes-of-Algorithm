@@ -1,0 +1,269 @@
+[gd_scene format=3 uid="uid://dhlxgdqb82o62"]
+
+[ext_resource type="Script" uid="uid://ce6afy86dmyd4" path="res://intro/Scenes/start_panel.gd" id="1_0puen"]
+[ext_resource type="Texture2D" uid="uid://43g5bshmtb4j" path="res://intro/Assets/Background Image/start container.png" id="1_qfmj3"]
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://intro/Assets/Font/PressStart2P-Regular.ttf" id="2_0puen"]
+[ext_resource type="Texture2D" uid="uid://btbmdtk4cj3aq" path="res://intro/Assets/Buttons/help button.png" id="4_1kwwt"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="5_syb1b"]
+[ext_resource type="Texture2D" uid="uid://dnpcna3lrh8yc" path="res://intro/Assets/Buttons/basic button.png" id="6_x6pvq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1kwwt"]
+texture = ExtResource("1_qfmj3")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syb1b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x6pvq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfeu0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ea617"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eixev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dpfy5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s6fkl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_syb1b"]
+texture = ExtResource("4_1kwwt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6pvq"]
+texture = ExtResource("4_1kwwt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wfeu0"]
+texture = ExtResource("4_1kwwt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ea617"]
+texture = ExtResource("4_1kwwt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eixev"]
+texture = ExtResource("4_1kwwt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dpfy5"]
+texture = ExtResource("5_syb1b")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ea617"]
+line_spacing = 20.0
+font_size = 15
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s6fkl"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+texture = ExtResource("6_x6pvq")
+expand_margin_left = 25.0
+expand_margin_top = 10.0
+expand_margin_right = 25.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i35jo"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+texture = ExtResource("6_x6pvq")
+expand_margin_left = 25.0
+expand_margin_top = 10.0
+expand_margin_right = 25.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3i0b1"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+texture = ExtResource("6_x6pvq")
+expand_margin_left = 25.0
+expand_margin_top = 10.0
+expand_margin_right = 25.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_std2r"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+texture = ExtResource("6_x6pvq")
+expand_margin_left = 25.0
+expand_margin_top = 10.0
+expand_margin_right = 25.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqngj"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+texture = ExtResource("6_x6pvq")
+expand_margin_left = 25.0
+expand_margin_top = 10.0
+expand_margin_right = 25.0
+expand_margin_bottom = 10.0
+
+[node name="StartPanel" type="Control" unique_id=1099237404]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0puen")
+
+[node name="Start_Panel" type="PanelContainer" parent="." unique_id=2041403149]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.5
+offset_top = -110.0
+offset_right = 187.5
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1kwwt")
+
+[node name="MarginContainer" type="MarginContainer" parent="Start_Panel" unique_id=722499214]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Start_Panel/MarginContainer" unique_id=42737187]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Start_Panel/MarginContainer/VBoxContainer" unique_id=1528359073]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0puen")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxEmpty_syb1b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x6pvq")
+text = "Echoes of Algorithm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start_Button" type="Button" parent="Start_Panel/MarginContainer/VBoxContainer" unique_id=194863918]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0puen")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wfeu0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ea617")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eixev")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_dpfy5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s6fkl")
+text = "Start"
+
+[node name="Help" type="Button" parent="." unique_id=1967948690]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 90.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_syb1b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x6pvq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wfeu0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ea617")
+theme_override_styles/focus = SubResource("StyleBoxTexture_eixev")
+
+[node name="Help_Panel" type="PanelContainer" parent="." unique_id=261084764]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -312.5
+offset_right = 300.0
+offset_bottom = 312.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dpfy5")
+
+[node name="MarginContainer" type="MarginContainer" parent="Help_Panel" unique_id=1153741782]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 45
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Help_Panel/MarginContainer" unique_id=1283789903]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Help_Panel/MarginContainer/VBoxContainer" unique_id=1622661982]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Label" type="Label" parent="Help_Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1753298997]
+custom_minimum_size = Vector2(542, 630)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/paragraph_spacing = 0
+theme_override_fonts/font = ExtResource("2_0puen")
+theme_override_font_sizes/font_size = 17
+text = "How to Play: Echoes of Algorithm
+
+Welcome to the Data Realm. You play as Tejo, an explorer tasked with purging Data-Insects—corrupted manifestations of errors—to restore system balance. Knowledge is your only weapon.
+
+🕹️ Phase 1: Exploration & Scavenging
+The cave is filled with lost knowledge. Before you fight, you must prepare.
+
+Movement: Use the on-screen directional controls to navigate the sectors of the cave.
+
+Search for Scrolls: Scattered throughout the environment are Data Scrolls. Walk over them to collect them.
+
+Study the Intel: Each scroll contains vital concepts about Machine Learning. Read these carefully—the information found here will be the \"ammo\" you use in battle.
+
+⚔️ Phase 2: Combat & Learning
+Data-Insects block your path. Use your collected knowledge to delete them.
+
+Answer Questions: Select the correct answer based on the scrolls you found. Accuracy is key to damaging the enemy.
+
+Earn Rewards: Victory grants Experience Points (XP) which can increase your Max Health (System Resilience).
+
+The Hint System: If a question is too difficult, you will be given a hint at the 2nd chance!
+
+📈 Phase 3: Progression & Mastery
+The deeper you go, the more complex the errors become.
+
+Boss Battles: Each sector ends with a Boss Encounter. These enemies have higher health and test everything you learned in that level.
+
+Difficulty Tiers: Progress through three stages: Beginner, Intermediate, and Advanced."
+label_settings = SubResource("LabelSettings_ea617")
+autowrap_mode = 2
+
+[node name="Okay" type="Button" parent="Help_Panel/MarginContainer/VBoxContainer" unique_id=892397968]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0puen")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_s6fkl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i35jo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3i0b1")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_std2r")
+theme_override_styles/focus = SubResource("StyleBoxTexture_yqngj")
+text = "Okay"
+
+[connection signal="pressed" from="Start_Panel/MarginContainer/VBoxContainer/Start_Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="Help_Panel/MarginContainer/VBoxContainer/Okay" to="." method="_on_okay_pressed"]

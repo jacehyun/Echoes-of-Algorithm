@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dsuhv36g38sgi"]
+
+[ext_resource type="Script" uid="uid://pstirg7qpujt" path="res://Level1_1/scenes/scroll.gd" id="1_1mhtx"]
+[ext_resource type="Texture2D" uid="uid://blvamtip01ror" path="res://Scroll.png" id="2_74iwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anv3s"]
+size = Vector2(26, 17)
+
+[node name="Scroll" type="Area2D" unique_id=945990366]
+script = ExtResource("1_1mhtx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=183048924]
+position = Vector2(104, -38)
+scale = Vector2(0.32291666, 0.26041666)
+texture = ExtResource("2_74iwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1667567850]
+position = Vector2(104, -38.5)
+shape = SubResource("RectangleShape2D_anv3s")

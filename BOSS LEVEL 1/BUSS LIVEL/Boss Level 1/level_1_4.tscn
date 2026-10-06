@@ -1,0 +1,350 @@
+[gd_scene format=3 uid="uid://ckqy7uvwb1d0"]
+
+[ext_resource type="Script" uid="uid://bs72qa1qgvgbf" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/boss_level.gd" id="1_313d6"]
+[ext_resource type="Texture2D" uid="uid://xfqitr4os2op" path="res://Level 1_2/Level 1_2/Background Level 1_2/Level1_2.png" id="1_p7d8j"]
+[ext_resource type="PackedScene" uid="uid://dbys26aexumur" path="res://Level1_1/scenes/player.tscn" id="2_8bepo"]
+[ext_resource type="PackedScene" uid="uid://78rejxdttbl3" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/Boss Enemy/Enemy Boss.tscn" id="3_313d6"]
+[ext_resource type="Texture2D" uid="uid://gdn3nyw5j44b" path="res://Level1_1/panels/Heart.PNG" id="3_qnpvs"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="4_sj36s"]
+[ext_resource type="PackedScene" uid="uid://c7g0ibqsgrpyh" path="res://Level1_1/scenes/touch_controls.tscn" id="5_313d6"]
+[ext_resource type="PackedScene" uid="uid://bhcxu8a6ruku1" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/question_panel_boss_level.tscn" id="8_b36q3"]
+[ext_resource type="PackedScene" uid="uid://6tasawrtk8a5" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/correct_answer_boss_level.tscn" id="9_xw2dd"]
+[ext_resource type="PackedScene" uid="uid://dop61xdx0x03p" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/question_panel_boss_level_2.tscn" id="10_304um"]
+[ext_resource type="PackedScene" uid="uid://cq5fhgpiedm2x" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/correct_answer_boss_level_2.tscn" id="11_0srbh"]
+[ext_resource type="PackedScene" uid="uid://bjakflnib0dln" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/question_panel_boss_level_3.tscn" id="12_uxntw"]
+[ext_resource type="PackedScene" uid="uid://c3edqcd3raepl" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/correct_answer_boss_level_3.tscn" id="13_swcxb"]
+[ext_resource type="PackedScene" uid="uid://s3eiuyo2bewj" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/question_panel_boss_level_4.tscn" id="14_wal1w"]
+[ext_resource type="PackedScene" uid="uid://clpgkqh5am108" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/correct_answer_boss_level_4.tscn" id="15_ifhwq"]
+[ext_resource type="PackedScene" uid="uid://duhp7h6i08ug8" path="res://Level1_1/Settings.tscn" id="16_tlq05"]
+[ext_resource type="AudioStream" uid="uid://cdybt5jrmpqh2" path="res://Level1_1/sounds/gameover.mp3" id="17_dgl5a"]
+[ext_resource type="Texture2D" uid="uid://cxv5gg8ivb82u" path="res://Level1_1/panels/YouDiedPanel.png" id="18_3n3dv"]
+[ext_resource type="AudioStream" uid="uid://drskur6iatltb" path="res://Level1_1/sounds/BgMusicScene.mp3" id="18_7i27g"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="19_aoqoj"]
+[ext_resource type="Texture2D" uid="uid://bp8cdw2cw0cxl" path="res://Level1_1/panels/BossPanel.png" id="19_ap38r"]
+[ext_resource type="AudioStream" uid="uid://5h65pylwri1h" path="res://Level1_1/sounds/levelcleared.mp3" id="19_w3lb2"]
+[ext_resource type="Script" uid="uid://maobxod25ynl" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/level_cleared4.gd" id="21_ap38r"]
+[ext_resource type="AudioStream" uid="uid://dwx40mqrxd7gf" path="res://Level1_1/sounds/enemyboss.mp3" id="23_3n3dv"]
+[ext_resource type="AudioStream" uid="uid://dq5b7emfskscc" path="res://Level1_1/sounds/rightAnswer.wav" id="25_qdn4e"]
+[ext_resource type="AudioStream" uid="uid://dlymrnsvyqo2i" path="res://Level1_1/sounds/wrongAnswer.mp3" id="26_4u0j1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tgtbp"]
+distance = 31.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1r4ju"]
+normal = Vector2(1, 0)
+distance = 37.0
+
+[sub_resource type="Theme" id="Theme_aoqoj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uvoes"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5058824)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lie75"]
+bg_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_sr8bk"]
+font = ExtResource("4_sj36s")
+font_size = 4
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ap38r"]
+bg_color = Color(0, 0, 0, 0.90588236)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uvoes"]
+texture = ExtResource("18_3n3dv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lie75"]
+texture = ExtResource("19_aoqoj")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sr8bk"]
+texture = ExtResource("19_aoqoj")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sb38o"]
+texture = ExtResource("19_aoqoj")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ecps1"]
+texture = ExtResource("19_aoqoj")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ui3x"]
+texture = ExtResource("19_aoqoj")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6woip"]
+texture = ExtResource("19_ap38r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ip1b"]
+texture = ExtResource("19_aoqoj")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_top = 60.0
+expand_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yry2j"]
+texture = ExtResource("19_aoqoj")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_top = 60.0
+expand_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jwu4k"]
+texture = ExtResource("19_aoqoj")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_top = 60.0
+expand_margin_bottom = 60.0
+
+[node name="Level1_4" type="Node2D" unique_id=1065430118]
+script = ExtResource("1_313d6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736848831]
+position = Vector2(70.24999, -135.5)
+scale = Vector2(0.35770088, 0.44202903)
+texture = ExtResource("1_p7d8j")
+
+[node name="enemy boss" parent="." unique_id=40976920 groups=["enemy"] instance=ExtResource("3_313d6")]
+position = Vector2(115, -64)
+
+[node name="Player" parent="." unique_id=1671932887 instance=ExtResource("2_8bepo")]
+position = Vector2(-22, -91)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2093013394]
+position = Vector2(70.16942, -135.48865)
+scale = Vector2(0.14905429, 0.14985794)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=550130750]
+position = Vector2(56, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=712246201]
+position = Vector2(12, -55)
+shape = SubResource("WorldBoundaryShape2D_tgtbp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=149401772]
+position = Vector2(-84, -48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1464100973]
+position = Vector2(-27, -110)
+shape = SubResource("WorldBoundaryShape2D_1r4ju")
+
+[node name="Control" type="Control" parent="." unique_id=1914027756]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -55.0
+offset_top = -44.0
+offset_right = -15.0
+offset_bottom = -4.0
+
+[node name="TouchControls" parent="Control" unique_id=1819261268 instance=ExtResource("5_313d6")]
+
+[node name="Health" type="ProgressBar" parent="Control" unique_id=378095554]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -166.0
+offset_right = 36.0
+offset_bottom = -153.0
+size_flags_horizontal = 0
+theme = SubResource("Theme_aoqoj")
+theme_override_colors/font_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 6
+theme_override_styles/background = SubResource("StyleBoxFlat_uvoes")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lie75")
+show_percentage = false
+
+[node name="Heart" type="Sprite2D" parent="Control/Health" unique_id=1043145279]
+position = Vector2(1, 5)
+scale = Vector2(0.11, 0.09497393)
+texture = ExtResource("3_qnpvs")
+
+[node name="Label" type="Label" parent="Control/Health" unique_id=50960742]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 59.0
+offset_bottom = 10.0
+text = "Level 1"
+label_settings = SubResource("LabelSettings_sr8bk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2075421398]
+
+[node name="Question Panel Boss Level" parent="CanvasLayer" unique_id=1113061319 instance=ExtResource("8_b36q3")]
+
+[node name="Correct Answer Boss Level" parent="CanvasLayer" unique_id=37333478 instance=ExtResource("9_xw2dd")]
+
+[node name="Question Panel Boss Level 2" parent="CanvasLayer" unique_id=925355006 instance=ExtResource("10_304um")]
+visible = false
+
+[node name="Correct Answer Boss Level 2" parent="CanvasLayer" unique_id=1262485138 instance=ExtResource("11_0srbh")]
+
+[node name="Question Panel Boss Level 3" parent="CanvasLayer" unique_id=85452055 instance=ExtResource("12_uxntw")]
+visible = false
+
+[node name="Correct Answer Boss Level 3" parent="CanvasLayer" unique_id=12900948 instance=ExtResource("13_swcxb")]
+
+[node name="Question Panel Boss Level 4" parent="CanvasLayer" unique_id=13485437 instance=ExtResource("14_wal1w")]
+visible = false
+
+[node name="Correct Answer Boss Level 4" parent="CanvasLayer" unique_id=1464831469 instance=ExtResource("15_ifhwq")]
+
+[node name="GameOver" type="Control" parent="CanvasLayer" unique_id=168966140]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1277.0
+offset_bottom = 725.0
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/GameOver" unique_id=541500569]
+layout_mode = 0
+offset_right = 1290.0
+offset_bottom = 731.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ap38r")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/GameOver" unique_id=186722920]
+layout_mode = 0
+offset_left = -110.0
+offset_top = 66.0
+offset_right = 1416.0
+offset_bottom = 735.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_uvoes")
+
+[node name="TryAgain" type="Button" parent="CanvasLayer/GameOver/Panel" unique_id=913913350]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 450.0
+offset_right = 633.0
+offset_bottom = 624.0
+theme_override_colors/font_hover_color = Color(0.4546166, 0.45144266, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.31448293, 0.50542307, 0.19167912, 1)
+theme_override_fonts/font = ExtResource("4_sj36s")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lie75")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sr8bk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sb38o")
+text = "Try Again"
+
+[node name="Exit" type="Button" parent="CanvasLayer/GameOver/Panel" unique_id=2115683526]
+layout_mode = 0
+offset_left = 836.0
+offset_top = 454.0
+offset_right = 1099.0
+offset_bottom = 628.0
+theme_override_fonts/font = ExtResource("4_sj36s")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lie75")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ecps1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5ui3x")
+text = "Exit"
+
+[node name="FadeScreen" type="ColorRect" parent="CanvasLayer" unique_id=2013313094]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LevelCleared" type="Control" parent="CanvasLayer" unique_id=535908455]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("21_ap38r")
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/LevelCleared" unique_id=1109354747]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 31.955002
+anchor_bottom = 18.431002
+offset_right = 44.799927
+offset_bottom = 80.75995
+
+[node name="Panel" type="Panel" parent="CanvasLayer/LevelCleared" unique_id=583325225]
+layout_mode = 0
+offset_left = -35.0
+offset_top = 39.0
+offset_right = 1300.0
+offset_bottom = 693.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6woip")
+
+[node name="NextLevel" type="Button" parent="CanvasLayer/LevelCleared/Panel" unique_id=690822026]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 509.0
+offset_right = 811.0
+offset_bottom = 558.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_sj36s")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_5ip1b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yry2j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jwu4k")
+text = "Proceed to next level"
+
+[node name="Settings" parent="CanvasLayer" unique_id=1111660280 instance=ExtResource("16_tlq05")]
+offset_left = -99.0
+offset_top = 38.0
+offset_right = -45.0
+offset_bottom = 101.0
+mouse_filter = 2
+
+[node name="Sfx_gameover" type="AudioStreamPlayer2D" parent="." unique_id=397467570]
+stream = ExtResource("17_dgl5a")
+
+[node name="Sfx_bgmusic" type="AudioStreamPlayer2D" parent="." unique_id=1303102238]
+stream = ExtResource("18_7i27g")
+
+[node name="Sfx_levelCleared" type="AudioStreamPlayer2D" parent="." unique_id=228876467]
+stream = ExtResource("19_w3lb2")
+
+[node name="Sfx_enemy" type="AudioStreamPlayer2D" parent="." unique_id=203452612]
+stream = ExtResource("23_3n3dv")
+
+[node name="Sfx_rightAnswer" type="AudioStreamPlayer2D" parent="." unique_id=449107429]
+stream = ExtResource("25_qdn4e")
+
+[node name="Sfx_wrongAnswer" type="AudioStreamPlayer2D" parent="." unique_id=1089181600]
+stream = ExtResource("26_4u0j1")
+volume_db = 5.0
+
+[connection signal="enemy_died" from="enemy boss" to="." method="_on_enemy_died"]
+[connection signal="pressed" from="CanvasLayer/GameOver/Panel/TryAgain" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameOver/Panel/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/LevelCleared/Panel/NextLevel" to="CanvasLayer/LevelCleared" method="_on_next_level_pressed"]

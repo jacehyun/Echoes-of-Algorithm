@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://ck8hfd1otaiei"]
+
+[ext_resource type="Script" uid="uid://jgg2pcvruo1a" path="res://Level1_1/scripts/question_panel.gd" id="1_sb8t7"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="2_y5cwk"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="3_k7lhe"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="4_m2g6a"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="5_j2ffp"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="6_s4y3b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ygfd"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("2_y5cwk")
+
+[sub_resource type="LabelSettings" id="LabelSettings_24yqq"]
+font = ExtResource("3_k7lhe")
+font_size = 17
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xg8jr"]
+line_spacing = 5.0
+font = ExtResource("3_k7lhe")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aic8k"]
+line_spacing = 15.0
+font = ExtResource("6_s4y3b")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="QuestionPanelAdvanced_3_2_2" type="Control" unique_id=1849418445]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = 9.0
+offset_right = -13.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sb8t7")
+
+[node name="QuestionBox" type="Panel" parent="." unique_id=1865103281]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 98.0
+offset_right = 1001.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5ygfd")
+
+[node name="Label" type="Label" parent="QuestionBox" unique_id=1177581425]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043895748
+anchor_top = 0.115686275
+anchor_right = 0.946502
+anchor_bottom = 0.44509804
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "Scenario:
+The system works only on old data but fails on new data.
+
+Question:
+ Why is this bad?
+"
+label_settings = SubResource("LabelSettings_24yqq")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptA" type="TextureButton" parent="QuestionBox" unique_id=833690341]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 215.0
+offset_right = 347.0
+offset_bottom = 298.0
+texture_normal = ExtResource("4_m2g6a")
+texture_hover = ExtResource("5_j2ffp")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptA" unique_id=914910361]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 29.0
+offset_right = 287.0
+offset_bottom = 54.0
+text = "A. It is faster"
+label_settings = SubResource("LabelSettings_xg8jr")
+
+[node name="OptB" type="TextureButton" parent="QuestionBox" unique_id=1531076325]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 327.0
+offset_right = 345.0
+offset_bottom = 410.0
+texture_normal = ExtResource("4_m2g6a")
+texture_hover = ExtResource("5_j2ffp")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptB" unique_id=1136436168]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 281.0
+offset_bottom = 60.0
+text = "B. It cannot generalize"
+label_settings = SubResource("LabelSettings_xg8jr")
+
+[node name="OptC" type="TextureButton" parent="QuestionBox" unique_id=1690519296]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 215.0
+offset_right = 664.0
+offset_bottom = 298.0
+texture_normal = ExtResource("4_m2g6a")
+texture_hover = ExtResource("5_j2ffp")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptC" unique_id=32373619]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 29.0
+offset_right = 298.0
+offset_bottom = 54.0
+text = "C. It stores more data"
+label_settings = SubResource("LabelSettings_xg8jr")
+
+[node name="OptD" type="TextureButton" parent="QuestionBox" unique_id=448805646]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 325.0
+offset_right = 661.0
+offset_bottom = 408.0
+texture_normal = ExtResource("4_m2g6a")
+texture_hover = ExtResource("5_j2ffp")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptD" unique_id=545723912]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 33.0
+offset_right = 289.0
+offset_bottom = 58.0
+text = "D. It improves accuracy"
+label_settings = SubResource("LabelSettings_xg8jr")
+
+[node name="HintLabel" type="Label" parent="QuestionBox" unique_id=62023385]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 435.0
+offset_right = 694.0
+offset_bottom = 491.0
+text = " Hint 💡: Instead of following strict rules, this concept 
+involves studying informationto figure things out on its own."
+label_settings = SubResource("LabelSettings_aic8k")

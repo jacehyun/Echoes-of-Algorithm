@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bru4nodvndrry"]
+
+[ext_resource type="Script" uid="uid://cpisb32ce7ywq" path="res://intro/Scenes/leaderboard_entry_row.gd" id="1_2pjry"]
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://intro/Assets/Font/PressStart2P-Regular.ttf" id="2_pco27"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pco27"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 2.0
+bg_color = Color(0.97000533, 0.38401586, 0.2682268, 1)
+
+[node name="LeaderboardEntryRow" type="HBoxContainer" unique_id=314202653]
+custom_minimum_size = Vector2(0, 32)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+script = ExtResource("1_2pjry")
+
+[node name="RankLabel" type="Label" parent="." unique_id=1700798223]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pco27")
+theme_override_font_sizes/font_size = 13
+
+[node name="NameLabel" type="Label" parent="." unique_id=1958428681]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_pco27")
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 3
+
+[node name="YouBadge" type="Label" parent="." unique_id=1547818612]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_pco27")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_pco27")
+text = "YOU"
+
+[node name="LevelLabel" type="Label" parent="." unique_id=1616762053]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3579813, 0.5567824, 1.92523e-07, 1)
+theme_override_fonts/font = ExtResource("2_pco27")
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 2

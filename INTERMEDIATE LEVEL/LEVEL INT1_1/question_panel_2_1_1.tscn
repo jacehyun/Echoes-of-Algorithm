@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://b26go82ecynio"]
+
+[ext_resource type="Script" uid="uid://h1xtra7tj4ef" path="res://INTERMEDIATE LEVEL/LEVEL INT1_1/question_panel_2_1_1.gd" id="1_3m1ie"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="1_r82t7"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="2_3m1ie"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="3_s6h8q"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="4_nk15l"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="5_w5jjy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_68nyd"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_r82t7")
+
+[sub_resource type="LabelSettings" id="LabelSettings_qx6vt"]
+font = ExtResource("2_3m1ie")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ecdfh"]
+line_spacing = 5.0
+font = ExtResource("2_3m1ie")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_l0s7x"]
+line_spacing = 15.0
+font = ExtResource("5_w5jjy")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="Question_Panel2-1-1" type="Control" unique_id=543352273]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3m1ie")
+
+[node name="QuestionBox" type="Panel" parent="." unique_id=1575182014]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 98.0
+offset_right = 1001.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_68nyd")
+
+[node name="Label" type="Label" parent="QuestionBox" unique_id=1556700379]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.042524006
+anchor_top = 0.105882354
+anchor_right = 0.9887284
+anchor_bottom = 0.4194314
+offset_right = -23.78302
+offset_bottom = 0.08999634
+grow_horizontal = 2
+text = "Scenario:
+ Inside the cave, Tejo finds an ancient system that has already learned patterns from past data and can now make decisions.
+Question:
+ What is this system called?"
+label_settings = SubResource("LabelSettings_qx6vt")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptA" type="TextureButton" parent="QuestionBox" unique_id=855991770]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 215.0
+offset_right = 347.0
+offset_bottom = 298.0
+texture_normal = ExtResource("3_s6h8q")
+texture_hover = ExtResource("4_nk15l")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptA" unique_id=1330459173]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 29.0
+offset_right = 287.0
+offset_bottom = 54.0
+text = " A. Dataset"
+label_settings = SubResource("LabelSettings_ecdfh")
+
+[node name="OptB" type="TextureButton" parent="QuestionBox" unique_id=993390922]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 327.0
+offset_right = 345.0
+offset_bottom = 410.0
+texture_normal = ExtResource("3_s6h8q")
+texture_hover = ExtResource("4_nk15l")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptB" unique_id=320846028]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 292.0
+offset_bottom = 60.0
+text = " B. Model"
+label_settings = SubResource("LabelSettings_ecdfh")
+
+[node name="OptC" type="TextureButton" parent="QuestionBox" unique_id=910308472]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 215.0
+offset_right = 664.0
+offset_bottom = 298.0
+texture_normal = ExtResource("3_s6h8q")
+texture_hover = ExtResource("4_nk15l")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptC" unique_id=1829800229]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 29.0
+offset_right = 298.0
+offset_bottom = 54.0
+text = " C. Feature"
+label_settings = SubResource("LabelSettings_ecdfh")
+
+[node name="OptD" type="TextureButton" parent="QuestionBox" unique_id=473674988]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 325.0
+offset_right = 661.0
+offset_bottom = 408.0
+texture_normal = ExtResource("3_s6h8q")
+texture_hover = ExtResource("4_nk15l")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptD" unique_id=2064801155]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 33.0
+offset_right = 289.0
+offset_bottom = 58.0
+text = " D. Storage"
+label_settings = SubResource("LabelSettings_ecdfh")
+
+[node name="HintLabel" type="Label" parent="QuestionBox" unique_id=1849680740]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 435.0
+offset_right = 694.0
+offset_bottom = 491.0
+text = " Hint 💡: Instead of following strict rules, this concept 
+involves studying informationto figure things out on its own."
+label_settings = SubResource("LabelSettings_l0s7x")

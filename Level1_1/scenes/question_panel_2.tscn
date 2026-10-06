@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://cigyde0l0xfux"]
+
+[ext_resource type="Script" uid="uid://7r23km7ahjtw" path="res://Level1_1/scenes/question_panel_2.gd" id="1_n43di"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="2_bw40g"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="3_6vq8m"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="4_74nif"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="5_alj40"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="6_80q57"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8fab"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("2_bw40g")
+
+[sub_resource type="LabelSettings" id="LabelSettings_th7dn"]
+font = ExtResource("3_6vq8m")
+font_size = 17
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bseav"]
+line_spacing = 5.0
+font = ExtResource("3_6vq8m")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uudo3"]
+line_spacing = 15.0
+font = ExtResource("6_80q57")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="QuestionPanel2" type="Control" unique_id=1185327854]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n43di")
+
+[node name="QuestionBox" type="Panel" parent="." unique_id=98989369]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 98.0
+offset_right = 1001.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_p8fab")
+
+[node name="Label" type="Label" parent="QuestionBox" unique_id=1165592010]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.042524006
+anchor_top = 0.14313726
+anchor_right = 0.9451302
+anchor_bottom = 0.38431373
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "Question:
+What is the main purpose of
+Machine Learning
+"
+label_settings = SubResource("LabelSettings_th7dn")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptA" type="TextureButton" parent="QuestionBox" unique_id=166947554]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 215.0
+offset_right = 347.0
+offset_bottom = 298.0
+texture_normal = ExtResource("4_74nif")
+texture_hover = ExtResource("5_alj40")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptA" unique_id=564217282]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 28.0
+offset_right = 305.0
+offset_bottom = 55.0
+text = "A. To replace 
+electricity"
+label_settings = SubResource("LabelSettings_bseav")
+
+[node name="OptB" type="TextureButton" parent="QuestionBox" unique_id=167632141]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 327.0
+offset_right = 345.0
+offset_bottom = 410.0
+texture_normal = ExtResource("4_74nif")
+texture_hover = ExtResource("5_alj40")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptB" unique_id=2015587418]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 18.0
+offset_right = 305.0
+offset_bottom = 61.0
+text = "B. Allow computers to 
+learn from data and 
+improve performance"
+label_settings = SubResource("LabelSettings_bseav")
+
+[node name="OptC" type="TextureButton" parent="QuestionBox" unique_id=738231697]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 215.0
+offset_right = 664.0
+offset_bottom = 298.0
+texture_normal = ExtResource("4_74nif")
+texture_hover = ExtResource("5_alj40")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptC" unique_id=624617149]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 27.0
+offset_right = 301.0
+offset_bottom = 54.0
+text = "C. To create computer 
+viruses"
+label_settings = SubResource("LabelSettings_bseav")
+
+[node name="OptD" type="TextureButton" parent="QuestionBox" unique_id=732093189]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 323.0
+offset_right = 669.0
+offset_bottom = 406.0
+texture_normal = ExtResource("4_74nif")
+texture_hover = ExtResource("5_alj40")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptD" unique_id=125542333]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 29.0
+offset_right = 288.0
+offset_bottom = 56.0
+text = "D. To delete information
+automatically"
+label_settings = SubResource("LabelSettings_bseav")
+
+[node name="HintLabel" type="Label" parent="QuestionBox" unique_id=924634639]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 435.0
+offset_right = 694.0
+offset_bottom = 491.0
+text = " Hint 💡: It’s the process of a computer getting 
+better at a task through experience"
+label_settings = SubResource("LabelSettings_uudo3")
+horizontal_alignment = 1

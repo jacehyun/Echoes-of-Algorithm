@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://dw7ouvbst3rs7"]
+
+[ext_resource type="Script" uid="uid://dtb02p0h51vtk" path="res://Level1_1/scripts/info_panel.gd" id="1_6n02p"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="2_6n02p"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="2_8p6go"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6n02p"]
+load_path = "res://.godot/imported/Question Panel.png-536518b8b4aa9f4841162b4cbffac91f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rodih"]
+texture = SubResource("CompressedTexture2D_6n02p")
+
+[sub_resource type="LabelSettings" id="LabelSettings_aeaq3"]
+font = ExtResource("2_6n02p")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aeaq3"]
+texture = ExtResource("2_8p6go")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6n02p"]
+texture = ExtResource("2_8p6go")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_41wht"]
+texture = ExtResource("2_8p6go")
+
+[node name="InfoPanel" type="Control" unique_id=913409965]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6n02p")
+
+[node name="Panel" type="Panel" parent="." unique_id=464817450]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 150.0
+offset_right = 941.0
+offset_bottom = 582.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_rodih")
+
+[node name="TitleLabel" type="Label" parent="Panel" unique_id=1780225842]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 82.0
+offset_right = 528.0
+offset_bottom = 105.0
+text = "Introduction to Machine Learning"
+label_settings = SubResource("LabelSettings_aeaq3")
+horizontal_alignment = 1
+
+[node name="ContentLabel" type="RichTextLabel" parent="Panel" unique_id=331584772]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 142.0
+offset_right = 524.0
+offset_bottom = 360.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("2_6n02p")
+theme_override_fonts/bold_font = ExtResource("2_6n02p")
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 10
+bbcode_enabled = true
+text = "Machine Learning is a significant field within the broader scope of Artificial Intelligence (AI). It provides computer systems with the ability to automatically learn and improve from experience without being explicitly programmed.
+
+The Core Concept
+
+Instead of relying on rigid, pre-programmed code for every possible decision, Machine Learning allows a system to analyze vast amounts of data, identify patterns within that data, and then use those patterns to make predictions or decisions.
+
+Purpose and Applications
+
+The primary purpose of Machine Learning is to allow computers to learn from data and improve their performance on a specific task over time with minimal human intervention.
+
+Examples of Machine Learning in Daily Life:
+
+Spam Email Filters: These systems analyze the text and patterns of emails to automatically classify messages as spam or not spam using Machine Learning.
+
+Recommendation Systems: Services like Netflix or Spotify use your past activity (data) to learn your preferences and recommend movies or songs (predictions).
+
+Image Recognition: This technology allows computers to identify objects, people, and scenes in photos or videos."
+
+[node name="CloseButton" type="Button" parent="Panel" unique_id=1700280445]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 324.0
+offset_right = 348.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("2_6n02p")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_aeaq3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6n02p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_41wht")
+text = "Close"

@@ -1,0 +1,403 @@
+[gd_scene format=3 uid="uid://bqebn6mbefifb"]
+
+[ext_resource type="Script" uid="uid://d1l62vdff46u4" path="res://Intermediate Roaming/roaming_scene_int_1.gd" id="1_4ufaq"]
+[ext_resource type="Texture2D" uid="uid://ygn7x1v3cktb" path="res://INTERMEDIATE LEVEL/INTERMIDIATE BG/intermediate bg.png" id="2_n7y2c"]
+[ext_resource type="PackedScene" uid="uid://dsuhv36g38sgi" path="res://Level1_1/scenes/scroll.tscn" id="3_ovrr7"]
+[ext_resource type="Script" uid="uid://ceh5bg0winrbr" path="res://Level1_1/scenes/scroll2.gd" id="4_h1mra"]
+[ext_resource type="PackedScene" uid="uid://dbys26aexumur" path="res://Level1_1/scenes/player.tscn" id="5_dbmu1"]
+[ext_resource type="Script" uid="uid://yojjx8n16xed" path="res://Level1_1/scripts/interaction_manager.gd" id="6_364ep"]
+[ext_resource type="PackedScene" uid="uid://c7g0ibqsgrpyh" path="res://Level1_1/scenes/touch_controls.tscn" id="7_7v8ed"]
+[ext_resource type="Texture2D" uid="uid://gdn3nyw5j44b" path="res://Level1_1/panels/Heart.PNG" id="8_5vxu7"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="9_55fg0"]
+[ext_resource type="PackedScene" uid="uid://d08ietvn8xjn" path="res://Level1_1/scenes/interaction_prompt.tscn" id="10_xbiae"]
+[ext_resource type="Script" uid="uid://dmoenajv32xg3" path="res://Intermediate Roaming/info_panel2_1.gd" id="11_axsxt"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="12_6658e"]
+[ext_resource type="Script" uid="uid://015jt2r2plsf" path="res://Level1_1/scenes/welcome_panel2.gd" id="13_q54x2"]
+[ext_resource type="Texture2D" uid="uid://ww31mehqk04s" path="res://Level1_1/panels/DialoguePanel.png" id="14_3x0y2"]
+[ext_resource type="PackedScene" uid="uid://duhp7h6i08ug8" path="res://Level1_1/Settings.tscn" id="15_ytwv8"]
+[ext_resource type="AudioStream" uid="uid://b62t8ciuc7h4j" path="res://Level1_1/sounds/RoamingSound.mp3" id="16_dudju"]
+[ext_resource type="AudioStream" uid="uid://onhoinscvw2m" path="res://Level1_1/sounds/dialogtyping.mp3" id="17_wc6wj"]
+[ext_resource type="AudioStream" uid="uid://dsxb3ivjumkdd" path="res://Level1_1/sounds/warning.mp3" id="18_2wg5w"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uqv0w"]
+normal = Vector2(-1, 0)
+distance = 34.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_drbm4"]
+normal = Vector2(1, 0)
+distance = 34.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oydgy"]
+distance = 31.0
+
+[sub_resource type="Theme" id="Theme_7gy2d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sn5dy"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5058824)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kw1tn"]
+bg_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_8yfpa"]
+font = ExtResource("9_55fg0")
+font_size = 4
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6n02p"]
+load_path = "res://.godot/imported/Question Panel.png-536518b8b4aa9f4841162b4cbffac91f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a7oy6"]
+texture = SubResource("CompressedTexture2D_6n02p")
+
+[sub_resource type="LabelSettings" id="LabelSettings_nej6u"]
+font = ExtResource("9_55fg0")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_js5yt"]
+texture = ExtResource("12_6658e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8hcin"]
+texture = ExtResource("12_6658e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r33tu"]
+texture = ExtResource("12_6658e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_brld7"]
+texture = ExtResource("14_3x0y2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m21bs"]
+texture = ExtResource("12_6658e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tf83"]
+texture = ExtResource("12_6658e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8p0f6"]
+texture = ExtResource("12_6658e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhskp"]
+texture = ExtResource("14_3x0y2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ky4ea"]
+texture = ExtResource("12_6658e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wektk"]
+texture = ExtResource("12_6658e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qjxeh"]
+texture = ExtResource("12_6658e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ndsv"]
+bg_color = Color(0.6, 0.6, 0.6, 0.78039217)
+
+[node name="RoamingSceneInt1" type="Node2D" unique_id=1890687128]
+script = ExtResource("1_4ufaq")
+
+[node name="Beginnerbg" type="Sprite2D" parent="." unique_id=422336599]
+position = Vector2(71.999985, -78.500015)
+scale = Vector2(0.16770834, 0.21298403)
+texture = ExtResource("2_n7y2c")
+
+[node name="Scroll" parent="." unique_id=945990366 instance=ExtResource("3_ovrr7")]
+position = Vector2(-47, 8)
+script = ExtResource("4_h1mra")
+
+[node name="Player" parent="." unique_id=1671932887 instance=ExtResource("5_dbmu1")]
+position = Vector2(-13, -30)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=952736968]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=340163887]
+position = Vector2(224, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=263925537]
+position = Vector2(26, -105)
+shape = SubResource("WorldBoundaryShape2D_uqv0w")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1998338364]
+position = Vector2(112, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1418021007]
+position = Vector2(-223, -101)
+shape = SubResource("WorldBoundaryShape2D_drbm4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2080087895]
+position = Vector2(56, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1416827600]
+position = Vector2(0, -3)
+shape = SubResource("WorldBoundaryShape2D_oydgy")
+
+[node name="InteractionManager" type="Node2D" parent="." unique_id=1661280939 groups=["Player"]]
+script = ExtResource("6_364ep")
+
+[node name="Control" type="Control" parent="." unique_id=167319347]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -55.0
+offset_top = -44.0
+offset_right = -15.0
+offset_bottom = -4.0
+
+[node name="TouchControls" parent="Control" unique_id=1819261268 instance=ExtResource("7_7v8ed")]
+
+[node name="Health" type="ProgressBar" parent="Control" unique_id=101090023]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -110.0
+offset_right = 40.0
+offset_bottom = -97.0
+size_flags_horizontal = 0
+theme = SubResource("Theme_7gy2d")
+theme_override_colors/font_color = Color(0.25882354, 0.4117647, 0.043137256, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 6
+theme_override_styles/background = SubResource("StyleBoxFlat_sn5dy")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kw1tn")
+show_percentage = false
+
+[node name="Heart" type="Sprite2D" parent="Control/Health" unique_id=90659896]
+position = Vector2(1, 5)
+scale = Vector2(0.11, 0.09497393)
+texture = ExtResource("8_5vxu7")
+
+[node name="Label" type="Label" parent="Control/Health" unique_id=962723315]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 59.0
+offset_bottom = 10.0
+text = "Level 2"
+label_settings = SubResource("LabelSettings_8yfpa")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1389407561]
+
+[node name="InteractionPrompt" parent="CanvasLayer" unique_id=1229392418 instance=ExtResource("10_xbiae")]
+offset_left = 455.0
+offset_top = 484.0
+offset_right = 695.0
+offset_bottom = 507.0
+
+[node name="InfoPanel2" type="Control" parent="CanvasLayer" unique_id=1532318865]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_axsxt")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/InfoPanel2" unique_id=1430704463]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 150.0
+offset_right = 941.0
+offset_bottom = 582.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a7oy6")
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/InfoPanel2/Panel" unique_id=1591213807]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 82.0
+offset_right = 528.0
+offset_bottom = 105.0
+text = "Model, Training, and Prediction"
+label_settings = SubResource("LabelSettings_nej6u")
+horizontal_alignment = 1
+
+[node name="ContentLabel" type="RichTextLabel" parent="CanvasLayer/InfoPanel2/Panel" unique_id=1198518341]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 142.0
+offset_right = 524.0
+offset_bottom = 360.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("9_55fg0")
+theme_override_fonts/bold_font = ExtResource("9_55fg0")
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 10
+bbcode_enabled = true
+text = "Model, Training, and Prediction are the three fundamental parts of how a machine learning system works. Study these carefully before proceeding!
+
+1. Model
+
+A model is the system that has already learned patterns from data. It is created after the training process and is used to make decisions or predictions based on what it has learned.
+
+2. Training
+
+Training is the process where a system learns from data. During this stage, data is fed into the system so it can recognize patterns and improve its ability to make accurate decisions.
+
+3. Prediction
+
+Prediction is the output produced by a model. After learning from data, the model uses its knowledge to generate answers, decisions, or classifications.
+
+💡 Quick Tip to Remember:
+
+Training → Learning process
+Model → Trained system
+Prediction → Output or answer"
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/InfoPanel2/Panel" unique_id=788064328]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 324.0
+offset_right = 348.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("9_55fg0")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_js5yt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8hcin")
+theme_override_styles/hover = SubResource("StyleBoxTexture_r33tu")
+text = "Close"
+
+[node name="WelcomePanel" type="Control" parent="CanvasLayer" unique_id=330945603]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_q54x2")
+
+[node name="Panel1" type="Panel" parent="CanvasLayer/WelcomePanel" unique_id=1929743556]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 401.0
+offset_right = 1157.0
+offset_bottom = 707.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_brld7")
+
+[node name="PanelText1" type="RichTextLabel" parent="CanvasLayer/WelcomePanel/Panel1" unique_id=1154761514]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 86.0
+offset_right = 909.0
+offset_bottom = 240.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("9_55fg0")
+text = "Welcome to the Intermediate level! This level contains a much harder set of questions, so you better be ready. You know the drill—grab the data scattered in this cave, study the concepts, and keep pushing forward. The next challenge is waiting!"
+scroll_active = false
+
+[node name="NextButton" type="Button" parent="CanvasLayer/WelcomePanel/Panel1" unique_id=703712689]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 169.0
+offset_right = 935.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("9_55fg0")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_m21bs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0tf83")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8p0f6")
+text = "Next"
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/WelcomePanel" unique_id=1664329438]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 402.0
+offset_right = 1157.0
+offset_bottom = 708.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhskp")
+
+[node name="PanelText2" type="RichTextLabel" parent="CanvasLayer/WelcomePanel/Panel2" unique_id=1492993707]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 87.0
+offset_right = 924.0
+offset_bottom = 241.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("9_55fg0")
+text = "Good luck po! "
+scroll_active = false
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/WelcomePanel/Panel2" unique_id=1504032156]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 171.0
+offset_right = 936.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.73195416, 0, 1)
+theme_override_fonts/font = ExtResource("9_55fg0")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_ky4ea")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wektk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qjxeh")
+text = "Got it!"
+
+[node name="ReadyFight2" type="Control" parent="CanvasLayer" unique_id=1073145075]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/ReadyFight2" unique_id=990024113]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 724.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ndsv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/ReadyFight2/Panel" unique_id=2118144433]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 242.0
+offset_right = 1073.0
+offset_bottom = 457.0
+theme_override_colors/default_color = Color(0.8940833, 4.885271e-06, 8.663535e-07, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("9_55fg0")
+theme_override_font_sizes/normal_font_size = 30
+text = "Knowledge acquired. Another Guardian has detected your presence. You know what to do!"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" parent="CanvasLayer" unique_id=1111660280 instance=ExtResource("15_ytwv8")]
+offset_left = -99.0
+offset_top = 38.0
+offset_right = -45.0
+offset_bottom = 101.0
+mouse_filter = 2
+
+[node name="sfx_roaming" type="AudioStreamPlayer2D" parent="." unique_id=110511404]
+stream = ExtResource("16_dudju")
+
+[node name="sfx_dialogtyping" type="AudioStreamPlayer2D" parent="." unique_id=1920005670]
+stream = ExtResource("17_wc6wj")
+
+[node name="sfx_warning" type="AudioStreamPlayer2D" parent="." unique_id=1315287880]
+stream = ExtResource("18_2wg5w")
+volume_db = 21.717
+
+[connection signal="pressed" from="CanvasLayer/WelcomePanel/Panel1/NextButton" to="CanvasLayer/WelcomePanel" method="_on_next_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/WelcomePanel/Panel2/CloseButton" to="CanvasLayer/WelcomePanel" method="_on_close_button_pressed"]

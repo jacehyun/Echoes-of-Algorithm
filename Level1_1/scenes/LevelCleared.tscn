@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://oplqbagxr3cw"]
+
+[ext_resource type="Script" uid="uid://58mi74lf4wjs" path="res://Level1_1/scenes/level_cleared.gd" id="1_se30j"]
+[ext_resource type="Texture2D" uid="uid://bo3hfel3i8upi" path="res://Level1_1/panels/LevelCleared.png" id="1_xkf4p"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="2_r1waf"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="3_ari0u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ivoqb"]
+texture = ExtResource("1_xkf4p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h6w8k"]
+texture = ExtResource("3_ari0u")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_top = 60.0
+expand_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_se30j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4pcbg"]
+texture = ExtResource("3_ari0u")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_top = 60.0
+expand_margin_bottom = 60.0
+
+[node name="LevelCleared" type="Control" unique_id=722605595]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_se30j")
+
+[node name="Panel2" type="Panel" parent="." unique_id=38596529]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=86146244]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 39.0
+offset_right = 1287.0
+offset_bottom = 693.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ivoqb")
+
+[node name="NextLevel" type="Button" parent="Panel" unique_id=1651339258]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 509.0
+offset_right = 809.0
+offset_bottom = 558.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_r1waf")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_h6w8k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_se30j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4pcbg")
+text = "Proceed to next level"
+
+[connection signal="pressed" from="Panel/NextLevel" to="." method="_on_next_level_pressed"]

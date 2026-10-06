@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://cgywvqks2s7pi"]
+
+[ext_resource type="Script" uid="uid://bdkh2q7xrpeet" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/question_panel_2_4_4.gd" id="1_e0ejf"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="1_thb4h"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="2_e0ejf"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="3_tyoqq"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="4_nfupn"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="5_dc1u6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2o31b"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_thb4h")
+
+[sub_resource type="LabelSettings" id="LabelSettings_kdcmo"]
+font = ExtResource("2_e0ejf")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kj3wy"]
+line_spacing = 5.0
+font = ExtResource("2_e0ejf")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0kf22"]
+line_spacing = 15.0
+font = ExtResource("5_dc1u6")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="Question_Panel2_4_4" type="Control" unique_id=325437373]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e0ejf")
+
+[node name="QuestionBox" type="Panel" parent="." unique_id=1161955926]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 98.0
+offset_right = 1001.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2o31b")
+
+[node name="Label" type="Label" parent="QuestionBox" unique_id=1318678900]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017832648
+anchor_top = 0.09803922
+anchor_right = 0.99970233
+anchor_bottom = 0.4194314
+offset_right = -23.78302
+offset_bottom = 0.08999634
+grow_horizontal = 2
+text = "Scenario:
+ Tejo uses a system that takes inputs like size and speed of a creature to decide 
+if it is dangerous.
+Question:
+ What are “size” and “speed” called in Machine Learning?"
+label_settings = SubResource("LabelSettings_kdcmo")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptA" type="TextureButton" parent="QuestionBox" unique_id=894058007]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 215.0
+offset_right = 347.0
+offset_bottom = 298.0
+texture_normal = ExtResource("3_tyoqq")
+texture_hover = ExtResource("4_nfupn")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptA" unique_id=814695174]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 28.0
+offset_right = 291.0
+offset_bottom = 61.0
+text = " A. Labels
+ "
+label_settings = SubResource("LabelSettings_kj3wy")
+
+[node name="OptB" type="TextureButton" parent="QuestionBox" unique_id=640563412]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 327.0
+offset_right = 345.0
+offset_bottom = 410.0
+texture_normal = ExtResource("3_tyoqq")
+texture_hover = ExtResource("4_nfupn")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptB" unique_id=191163656]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 34.0
+offset_right = 293.0
+offset_bottom = 67.0
+text = " B. Features"
+label_settings = SubResource("LabelSettings_kj3wy")
+
+[node name="OptC" type="TextureButton" parent="QuestionBox" unique_id=691359663]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 215.0
+offset_right = 664.0
+offset_bottom = 298.0
+texture_normal = ExtResource("3_tyoqq")
+texture_hover = ExtResource("4_nfupn")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptC" unique_id=1461045976]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 32.0
+offset_right = 294.0
+offset_bottom = 57.0
+text = " C. Predictions"
+label_settings = SubResource("LabelSettings_kj3wy")
+
+[node name="OptD" type="TextureButton" parent="QuestionBox" unique_id=1086438286]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 325.0
+offset_right = 661.0
+offset_bottom = 408.0
+texture_normal = ExtResource("3_tyoqq")
+texture_hover = ExtResource("4_nfupn")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptD" unique_id=981268929]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 33.0
+offset_right = 289.0
+offset_bottom = 58.0
+text = " D. Outputs"
+label_settings = SubResource("LabelSettings_kj3wy")
+
+[node name="HintLabel" type="Label" parent="QuestionBox" unique_id=646006199]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 435.0
+offset_right = 694.0
+offset_bottom = 491.0
+text = " Hint 💡: Instead of following strict rules, this concept 
+involves studying informationto figure things out on its own."
+label_settings = SubResource("LabelSettings_0kf22")

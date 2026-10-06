@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://jul7rmc4cocc"]
+
+[ext_resource type="Texture2D" uid="uid://b58f7jqpvhku1" path="res://intro/Assets/Buttons/left button.png" id="1_kh11r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_et1cx"]
+texture = ExtResource("1_kh11r")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0p6hv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nppm7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q1ige"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhfbo"]
+
+[node name="Back Button" type="Control" unique_id=29266318]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Return_Button" type="Button" parent="." unique_id=1959589226]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 65.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_et1cx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0p6hv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nppm7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_q1ige")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dhfbo")

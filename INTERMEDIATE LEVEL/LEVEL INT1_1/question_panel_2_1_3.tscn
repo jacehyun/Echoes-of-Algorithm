@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://18brxxwa4tkq"]
+
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="1_c4wew"]
+[ext_resource type="Script" uid="uid://bitpxnllhfggu" path="res://INTERMEDIATE LEVEL/LEVEL INT1_1/question_panel_2_1_3.gd" id="1_qbieg"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="2_qbieg"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="3_5d12f"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="4_hanvh"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="5_wkb0w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yimry"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_c4wew")
+
+[sub_resource type="LabelSettings" id="LabelSettings_de2yp"]
+font = ExtResource("2_qbieg")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c4wew"]
+line_spacing = 5.0
+font = ExtResource("2_qbieg")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qbieg"]
+line_spacing = 5.0
+font = ExtResource("2_qbieg")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nvtlw"]
+line_spacing = 5.0
+font = ExtResource("2_qbieg")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_14j5c"]
+line_spacing = 15.0
+font = ExtResource("5_wkb0w")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="Question_Panel2-1-3" type="Control" unique_id=363057807]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qbieg")
+
+[node name="QuestionBox" type="Panel" parent="." unique_id=445348217]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 98.0
+offset_right = 1001.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yimry")
+
+[node name="Label" type="Label" parent="QuestionBox" unique_id=298410584]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0521262
+anchor_top = 0.11960784
+anchor_right = 0.9451302
+anchor_bottom = 0.47254902
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 16
+text = "Scenario:
+ After learning, the system tells Tejo that a tunnel is “Safe.”
+Question:
+ What is this result called?
+"
+label_settings = SubResource("LabelSettings_de2yp")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptA" type="TextureButton" parent="QuestionBox" unique_id=856624957]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 215.0
+offset_right = 347.0
+offset_bottom = 298.0
+texture_normal = ExtResource("3_5d12f")
+texture_hover = ExtResource("4_hanvh")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptA" unique_id=1239107669]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 35.0
+offset_right = 287.0
+offset_bottom = 60.0
+text = " A. Dataset"
+label_settings = SubResource("LabelSettings_c4wew")
+
+[node name="OptB" type="TextureButton" parent="QuestionBox" unique_id=628650401]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 327.0
+offset_right = 345.0
+offset_bottom = 410.0
+texture_normal = ExtResource("3_5d12f")
+texture_hover = ExtResource("4_hanvh")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptB" unique_id=1771129622]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 292.0
+offset_bottom = 60.0
+text = " B. Prediction"
+label_settings = SubResource("LabelSettings_qbieg")
+
+[node name="OptC" type="TextureButton" parent="QuestionBox" unique_id=1113578745]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 215.0
+offset_right = 664.0
+offset_bottom = 298.0
+texture_normal = ExtResource("3_5d12f")
+texture_hover = ExtResource("4_hanvh")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptC" unique_id=800464497]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 29.0
+offset_right = 309.0
+offset_bottom = 54.0
+text = " C. Feature
+"
+label_settings = SubResource("LabelSettings_nvtlw")
+
+[node name="OptD" type="TextureButton" parent="QuestionBox" unique_id=2050265533]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 325.0
+offset_right = 661.0
+offset_bottom = 408.0
+texture_normal = ExtResource("3_5d12f")
+texture_hover = ExtResource("4_hanvh")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptD" unique_id=1625965503]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 33.0
+offset_right = 289.0
+offset_bottom = 58.0
+text = " D. Training"
+label_settings = SubResource("LabelSettings_nvtlw")
+
+[node name="HintLabel" type="Label" parent="QuestionBox" unique_id=1132322917]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 435.0
+offset_right = 694.0
+offset_bottom = 491.0
+text = " Hint 💡: Instead of following strict rules, this concept 
+involves studying informationto figure things out on its own."
+label_settings = SubResource("LabelSettings_14j5c")

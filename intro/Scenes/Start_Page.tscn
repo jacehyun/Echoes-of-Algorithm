@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://mani44ajby7j"]
+
+[ext_resource type="Script" uid="uid://cbmo2ucqmcc5a" path="res://intro/Scenes/start_page.gd" id="1_u6eq3"]
+[ext_resource type="Texture2D" uid="uid://rghd7j1ppsyv" path="res://intro/Assets/Background Image/startpage_bg.png" id="2_h1grb"]
+[ext_resource type="Texture2D" uid="uid://43g5bshmtb4j" path="res://intro/Assets/Background Image/start container.png" id="4_ydwf3"]
+[ext_resource type="FontFile" uid="uid://bn8y7b28klofk" path="res://intro/Assets/Font/PressStart2P-Regular.ttf" id="5_65yo2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mn3ih"]
+texture = ExtResource("2_h1grb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w5jyx"]
+texture = ExtResource("4_ydwf3")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w4e6t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j30sv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cpign"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mb2em"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v12hv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vuenn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0g1of"]
+
+[node name="StartPage" type="Control" unique_id=1501118415]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u6eq3")
+
+[node name="StartPage_BG" type="Panel" parent="." unique_id=915877741]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mn3ih")
+
+[node name="Start_Panel" type="PanelContainer" parent="StartPage_BG" unique_id=1731742838]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.5
+offset_top = -210.0
+offset_right = 187.5
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w5jyx")
+
+[node name="MarginContainer" type="MarginContainer" parent="StartPage_BG/Start_Panel" unique_id=1048764517]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartPage_BG/Start_Panel/MarginContainer" unique_id=98638351]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="StartPage_BG/Start_Panel/MarginContainer/VBoxContainer" unique_id=1342174327]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_65yo2")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w4e6t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j30sv")
+text = "Echoes of Algorithm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start_Button" type="Button" parent="StartPage_BG/Start_Panel/MarginContainer/VBoxContainer" unique_id=887121971]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_65yo2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cpign")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mb2em")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v12hv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vuenn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0g1of")
+text = "Start"
+
+[connection signal="pressed" from="StartPage_BG/Start_Panel/MarginContainer/VBoxContainer/Start_Button" to="." method="_on_start_button_pressed"]

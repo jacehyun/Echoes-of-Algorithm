@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cqbvi0td3telm"]
+
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="1_4oqd3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4oqd3"]
+bg_color = Color(0.6, 0.6, 0.6, 0.78039217)
+
+[node name="ReadyFight" type="Control" unique_id=1580205924]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="." unique_id=1016229725]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 724.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4oqd3")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=1445698576]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 242.0
+offset_right = 1073.0
+offset_bottom = 457.0
+theme_override_colors/default_color = Color(0.8940833, 4.885271e-06, 8.663535e-07, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("1_4oqd3")
+theme_override_font_sizes/normal_font_size = 30
+text = "Knowledge acquired. System Guardian has detected your presence. Prepare for battle!"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

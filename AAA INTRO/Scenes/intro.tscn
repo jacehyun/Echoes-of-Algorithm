@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://d12llv00wqtwq"]
+
+[ext_resource type="Script" uid="uid://duh5tsejvjr58" path="res://AAA INTRO/Scenes/intro.gd" id="1_64l75"]
+[ext_resource type="Texture2D" uid="uid://cbn2dk5hhxd3y" path="res://AAA INTRO/Assets/Background Image/intro bg.png" id="1_p88x6"]
+[ext_resource type="PackedScene" uid="uid://bt875swtyavm0" path="res://intro/Character/intro_player.tscn" id="2_31yrn"]
+[ext_resource type="PackedScene" uid="uid://dg2wdgvmx37j1" path="res://AAA INTRO/Scenes/dialogue_panel.tscn" id="3_31yrn"]
+[ext_resource type="Texture2D" uid="uid://cl1jqpp8v3xmx" path="res://AAA INTRO/Assets/Background Image/cave cut.png" id="4_q0sde"]
+[ext_resource type="AudioStream" uid="uid://dnuudjakr7yyt" path="res://intro/Assets/Music/xDeviruchi - Title Theme .wav" id="6_64l75"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_31yrn"]
+distance = 22.0
+
+[node name="Intro 1" type="Node2D" unique_id=622479741]
+script = ExtResource("1_64l75")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=463385899]
+position = Vector2(72, -80)
+zoom = Vector2(4, 4)
+
+[node name="IntroBg" type="Sprite2D" parent="." unique_id=59818639]
+position = Vector2(72, -79.99999)
+scale = Vector2(0.26778242, 0.32786888)
+texture = ExtResource("1_p88x6")
+
+[node name="Intro Player" parent="." unique_id=1464439105 instance=ExtResource("2_31yrn")]
+position = Vector2(-95, -11)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1492460298]
+position = Vector2(74, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=534053825]
+position = Vector2(0, 5)
+shape = SubResource("WorldBoundaryShape2D_31yrn")
+
+[node name="Panel" type="CanvasLayer" parent="." unique_id=1583207067]
+
+[node name="Dialogue Panel" parent="Panel" unique_id=1573700213 instance=ExtResource("3_31yrn")]
+
+[node name="CaveCut" type="Sprite2D" parent="." unique_id=38085503]
+position = Vector2(212.99998, -80)
+scale = Vector2(0.267, 0.328)
+texture = ExtResource("4_q0sde")
+
+[node name="introbg" type="AudioStreamPlayer2D" parent="." unique_id=469973247]
+stream = ExtResource("6_64l75")

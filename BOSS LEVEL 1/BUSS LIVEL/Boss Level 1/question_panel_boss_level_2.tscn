@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://dop61xdx0x03p"]
+
+[ext_resource type="Script" uid="uid://dvmgducpwedud" path="res://BOSS LEVEL 1/BUSS LIVEL/Boss Level 1/question_panel_boss_level_2.gd" id="1_h6sor"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="1_ywo0f"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="2_h6sor"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="3_wxrw1"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="4_gdbn2"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="5_btnej"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_awb8x"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_ywo0f")
+
+[sub_resource type="LabelSettings" id="LabelSettings_1nykg"]
+font = ExtResource("2_h6sor")
+font_size = 15
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ep075"]
+line_spacing = 5.0
+font = ExtResource("2_h6sor")
+font_size = 13
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fwhcs"]
+line_spacing = 15.0
+font = ExtResource("5_btnej")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[node name="Question Panel Boss Level_2" type="Control" unique_id=925355006]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 7.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h6sor")
+
+[node name="QuestionBox" type="Panel" parent="." unique_id=810612639]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 19.0
+offset_right = 1016.0
+offset_bottom = 692.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_awb8x")
+
+[node name="Label" type="Label" parent="QuestionBox" unique_id=1541124363]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043596737
+anchor_top = 0.10846954
+anchor_right = 0.9632152
+anchor_bottom = 0.640416
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "                  Question:
+
+The explorer studies cave insects and records the following information:
+
+• Wing Size
+• Body Color
+• Number of Legs
+
+The goal is to predict whether the insect is dangerous or harmless. What are Wing Size, Body Color, and Number of Legs called?
+"
+label_settings = SubResource("LabelSettings_1nykg")
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptA" type="TextureButton" parent="QuestionBox" unique_id=1548055752]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 424.0
+offset_right = 355.0
+offset_bottom = 507.0
+texture_normal = ExtResource("3_wxrw1")
+texture_hover = ExtResource("4_gdbn2")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptA" unique_id=1532052466]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 36.0
+offset_right = 302.0
+offset_bottom = 67.0
+text = "A. Labels"
+label_settings = SubResource("LabelSettings_ep075")
+
+[node name="OptB" type="TextureButton" parent="QuestionBox" unique_id=76449950]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 519.0
+offset_right = 355.0
+offset_bottom = 602.0
+texture_normal = ExtResource("3_wxrw1")
+texture_hover = ExtResource("4_gdbn2")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptB" unique_id=1165212287]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 35.0
+offset_right = 303.0
+offset_bottom = 66.0
+text = "B. Features"
+label_settings = SubResource("LabelSettings_ep075")
+
+[node name="OptC" type="TextureButton" parent="QuestionBox" unique_id=442345701]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 421.0
+offset_right = 664.0
+offset_bottom = 504.0
+texture_normal = ExtResource("3_wxrw1")
+texture_hover = ExtResource("4_gdbn2")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptC" unique_id=70990079]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 35.0
+offset_right = 301.0
+offset_bottom = 66.0
+text = "C. Predictions"
+label_settings = SubResource("LabelSettings_ep075")
+
+[node name="OptD" type="TextureButton" parent="QuestionBox" unique_id=1289598880]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 518.0
+offset_right = 665.0
+offset_bottom = 601.0
+texture_normal = ExtResource("3_wxrw1")
+texture_hover = ExtResource("4_gdbn2")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="QuestionBox/OptD" unique_id=318484767]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 33.0
+offset_right = 305.0
+offset_bottom = 58.0
+text = "D. Rewards"
+label_settings = SubResource("LabelSettings_ep075")
+
+[node name="HintLabel" type="Label" parent="QuestionBox" unique_id=1220943368]
+visible = false
+layout_mode = 0
+offset_left = -4.0
+offset_top = 573.0
+offset_right = 715.0
+offset_bottom = 665.0
+text = " Hint 💡: These are input values used to
+ help make the prediction.
+"
+label_settings = SubResource("LabelSettings_fwhcs")
+horizontal_alignment = 1

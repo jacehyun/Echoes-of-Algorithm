@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://b3nkgn7sdfovn"]
+
+[ext_resource type="Script" uid="uid://dmm5uhreld2sh" path="res://intro/Scenes/new_player.gd" id="1_f6s2f"]
+[ext_resource type="Texture2D" uid="uid://d00byovu4hv87" path="res://intro/Assets/Background Image/NewPlayerPanel.png" id="1_ulwho"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="2_u4sel"]
+[ext_resource type="Texture2D" uid="uid://6442kribpajv" path="res://AAA INTRO/Assets/Buttons/next button.png" id="3_tlbvl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u4sel"]
+texture = ExtResource("1_ulwho")
+expand_margin_left = 200.0
+expand_margin_top = 150.0
+expand_margin_right = 200.0
+expand_margin_bottom = 150.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlbvl"]
+bg_color = Color(0.97529536, 0.97529536, 0.97529536, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_f6s2f"]
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6s2f"]
+texture = ExtResource("3_tlbvl")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tlbvl"]
+texture = ExtResource("3_tlbvl")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7mh21"]
+texture = ExtResource("3_tlbvl")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oxtir"]
+texture = ExtResource("3_tlbvl")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qunpd"]
+texture = ExtResource("3_tlbvl")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2jq6t"]
+texture = ExtResource("3_tlbvl")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3tpou"]
+texture = ExtResource("3_tlbvl")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5lcjd"]
+texture = ExtResource("3_tlbvl")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="NewPlayer" type="CanvasLayer" unique_id=1498984229]
+script = ExtResource("1_f6s2f")
+
+[node name="Panel" type="Panel" parent="." unique_id=1661716058]
+visible = false
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1912506894]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=327676371]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_u4sel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer" unique_id=1070408526]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=2091163621]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_fonts/font = ExtResource("2_u4sel")
+text = "► NEW GAME ◄"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1967784515]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_u4sel")
+text = "ENTER YOUR NAME:"
+horizontal_alignment = 1
+
+[node name="NameInput" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=231049514]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_tlbvl")
+
+[node name="ErrorLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1687454789]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_f6s2f")
+justification_flags = 162
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1353615064]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=221288743]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13755041, 0.13755077, 0.13755047, 1)
+theme_override_colors/font_pressed_color = Color(0.109599076, 0.61715657, 3.85046e-07, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_u4sel")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_f6s2f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tlbvl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7mh21")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_oxtir")
+text = "Confirm"
+
+[node name="CancelButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=2106818552]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.62902457, 0, 0.102303155, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_u4sel")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_qunpd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2jq6t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3tpou")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_5lcjd")
+text = "Cancel"
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/ConfirmButton" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/CancelButton" to="." method="_on_cancel_pressed"]

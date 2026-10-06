@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bt0msclwg33rb"]
+
+[ext_resource type="Texture2D" uid="uid://bo3hfel3i8upi" path="res://Level1_1/panels/LevelCleared.png" id="1_kyxo5"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="2_lvvr1"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="3_h46tp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ivoqb"]
+texture = ExtResource("1_kyxo5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h6w8k"]
+texture = ExtResource("3_h46tp")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+expand_margin_top = 60.0
+expand_margin_bottom = 60.0
+
+[node name="LevelCleared" type="Control" unique_id=722605595]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=86146244]
+layout_mode = 0
+offset_left = -35.0
+offset_top = 39.0
+offset_right = 1300.0
+offset_bottom = 693.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ivoqb")
+
+[node name="NextLevel" type="Button" parent="Panel" unique_id=1651339258]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 439.0
+offset_right = 808.0
+offset_bottom = 488.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lvvr1")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_h6w8k")
+text = "Proceed to next level"

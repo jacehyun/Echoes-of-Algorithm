@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://d4iuxhigrf7rp"]
+
+[ext_resource type="Script" uid="uid://cy1vmcwu1g85n" path="res://intro/Scenes/leardearboard_panel.gd" id="1_eqdf8"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="2_pgcxb"]
+[ext_resource type="FontFile" uid="uid://cbjom6hqrqob5" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="3_sk8bn"]
+[ext_resource type="Texture2D" uid="uid://6442kribpajv" path="res://AAA INTRO/Assets/Buttons/next button.png" id="4_7k7ae"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8n0o"]
+content_margin_left = 100.0
+content_margin_top = 50.0
+content_margin_right = 100.0
+content_margin_bottom = 20.0
+texture = ExtResource("2_pgcxb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v4vdr"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("4_7k7ae")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1jxc"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("4_7k7ae")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8yu0x"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("4_7k7ae")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7is1p"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("4_7k7ae")
+
+[node name="LeardearboardPanel" type="CanvasLayer" unique_id=2130111611]
+script = ExtResource("1_eqdf8")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=509736922]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=1576234901]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_n8n0o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer" unique_id=1148256743]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1094175697]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_sk8bn")
+theme_override_font_sizes/font_size = 14
+text = "★ LEADERBOARD ★"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1735410036]
+layout_mode = 2
+
+[node name="EntriesList" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=120356220]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1637581996]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=983068125]
+layout_mode = 2
+alignment = 1
+
+[node name="CloseButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=2146235980]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.6103435, 0.17752677, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.6117647, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("3_sk8bn")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxTexture_v4vdr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o1jxc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8yu0x")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_7is1p")
+text = "CLOSE"
+icon_alignment = 1

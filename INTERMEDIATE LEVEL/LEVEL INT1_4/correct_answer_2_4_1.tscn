@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://d036h48lc03wk"]
+
+[ext_resource type="Script" uid="uid://b80m6tpxhinwu" path="res://INTERMEDIATE LEVEL/LEVEL INT1_4/correct_answer_2_4_1.gd" id="1_0i6vw"]
+[ext_resource type="Texture2D" uid="uid://de6xq6mq4w86" path="res://Level1_1/panels/Question Panel.png" id="1_y7o8a"]
+[ext_resource type="FontFile" uid="uid://dttmy8a74cedl" path="res://Fonts/Inter,Poppins,Press_Start_2P/Press_Start_2P/PressStart2P-Regular (2).ttf" id="2_0i6vw"]
+[ext_resource type="Texture2D" uid="uid://cjxopjke4ep5h" path="res://Level1_1/panels/answerbutton.png" id="3_oyqt4"]
+[ext_resource type="Texture2D" uid="uid://cyahiisnc2jy4" path="res://Level1_1/panels/hoverbutton.png" id="4_rkwcj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0ml7"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_y7o8a")
+
+[sub_resource type="LabelSettings" id="LabelSettings_setcq"]
+font = ExtResource("2_0i6vw")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bfnmj"]
+line_spacing = 5.0
+font = ExtResource("2_0i6vw")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a5yng"]
+font = ExtResource("2_0i6vw")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="Correct_answer2_4_1" type="Control" unique_id=878796582]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0i6vw")
+
+[node name="CorrectAnsBox" type="Panel" parent="." unique_id=1644509661]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 135.0
+offset_right = 1014.0
+offset_bottom = 558.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_h0ml7")
+
+[node name="Label" type="Label" parent="CorrectAnsBox" unique_id=2083409285]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05473963
+anchor_top = 0.17494091
+anchor_right = 0.9573459
+anchor_bottom = 0.32387707
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+text = "The answer is...
+ B. Decision Tree"
+label_settings = SubResource("LabelSettings_setcq")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CorrectAnsBox" unique_id=1858903288]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035778847
+anchor_top = 0.3878366
+anchor_right = 0.8902514
+anchor_bottom = 0.5065313
+offset_left = 35.20166
+offset_top = 17.945099
+offset_right = 35.20172
+offset_bottom = 59.73726
+grow_horizontal = 2
+text = "That’s right! 
+The system uses condition-based rules (if-else), which is the main feature of a Decision Tree."
+label_settings = SubResource("LabelSettings_bfnmj")
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Okay" type="TextureButton" parent="CorrectAnsBox" unique_id=278030868]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 340.0
+offset_right = 473.0
+offset_bottom = 397.0
+texture_normal = ExtResource("3_oyqt4")
+texture_hover = ExtResource("4_rkwcj")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="CorrectAnsBox/Okay" unique_id=1724736751]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 201.0
+offset_bottom = 43.0
+text = "Nice!"
+label_settings = SubResource("LabelSettings_a5yng")
+horizontal_alignment = 1
